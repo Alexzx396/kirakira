@@ -1,0 +1,10 @@
+DirectoryIndex index.html
+
+RewriteEngine On
+
+# Si la solicitud no corresponde a un archivo real...
+RewriteCond %{REQUEST_FILENAME} !-f
+# Y tampoco a un directorio real...
+RewriteCond %{REQUEST_FILENAME} !-d
+# Entonces, reescribe la URL añadiendo .html al final (internamente en el servidor)
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
