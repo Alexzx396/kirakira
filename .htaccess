@@ -2,7 +2,7 @@ DirectoryIndex index.html
 
 RewriteEngine On
 
-# Si la solicitud no corresponde a un archivo real...
+# Si la solicitud no corresponde a un archivo real...ddddddd
 RewriteCond %{REQUEST_FILENAME} !-f
 # Y tampoco a un directorio real...
 RewriteCond %{REQUEST_FILENAME} !-d
