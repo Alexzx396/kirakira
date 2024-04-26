@@ -1,31 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Función para manejar la respuesta del fetch.
-  function handleResponse(id, data) {
-    // Aquí se establece el contenido del placeholder específico con el HTML obtenido.
-    document.getElementById(id).innerHTML = data;
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
-    // Si se carga el contenido de contacto, entonces se inicializa AOS (Animate On Scroll).
+  function handleResponse(id, data) {
+    document.getElementById(id).innerHTML = data;
     if (id === "contacto-placeholder") {
       AOS.init();
     }
   }
 
-  // Función para manejar los errores.
   function handleError(id, error) {
-    // Si hay un error durante el fetch, se muestra en la consola.
     console.error(`Error loading ${id}:`, error);
   }
 
-  // Función para cargar el contenido de un archivo externo.
   function loadContent(id, filePath) {
-    // Se hace un fetch al archivo.
     fetch(filePath)
-      .then((response) => response.text()) // Se convierte la respuesta a texto.
-      .then((data) => handleResponse(id, data)) // Se maneja la respuesta.
-      .catch((error) => handleError(id, error)); // Se maneja el error.
+      .then(response => response.text())
+      .then(data => handleResponse(id, data))
+      .catch(error => handleError(id, error));
   }
 
-  // Lista de los placeholders y los archivos correspondientes a cargar.
   const placeholders = [
     { id: "footer-placeholder", filePath: "footer.html" },
     { id: "contacto-placeholder", filePath: "contacto.html" },
@@ -35,19 +28,34 @@ document.addEventListener("DOMContentLoaded", function () {
     { id: "generalProjects-placeholder", filePath: "generalProjects.html" },
   ];
 
-  // Se inicia un fetch para cada placeholder de manera simultánea.
-  placeholders.forEach((placeholder) => {
-    loadContent(placeholder.id, placeholder.filePath);
-  });
-  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-  const currentUrl = window.location.pathname; // Obtiene la ruta actual
+  placeholders.forEach(placeholder => loadContent(placeholder.id, placeholder.filePath));
+
+  function setActiveLink() {
+    const currentPath = window.location.pathname.replace("/index.html", "/").replace(".html", "");
+    navLinks.forEach(link => {
+      const linkPath = new URL(link.href).pathname.replace("/index.html", "/").replace(".html", "");
+      if (linkPath === currentPath) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  setActiveLink();
 
   navLinks.forEach(link => {
-      if (link.href.includes(currentUrl)) {
-          link.classList.add('active'); // Añade 'active' al enlace que coincide con la URL
-      } else {
-          link.classList.remove('active'); // Asegura remover 'active' donde no se necesita
-      }
+    link.addEventListener('click', function () {
+      navLinks.forEach(l => l.classList.remove('active'));
+      this.classList.add('active');
+      // Guardar la última pestaña activa en localStorage
+      localStorage.setItem('activeNav', this.getAttribute('href'));
+    });
   });
-});
 
+  // Restaurar la pestaña activa de localStorage
+  const activeNav = localStorage.getItem('activeNav');
+  if (activeNav) {
+    document.querySelector(`.navbar-nav .nav-link[href="${activeNav}"]`).classList.add('active');
+  }
+});
