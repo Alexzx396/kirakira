@@ -5,7 +5,7 @@
   border: 8px solid ; /* Borde transparente para no mostrar color de borde sólido */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra suave para destacar las tarjetas */
   color: white; /* Texto en color blanco */
-  margin: 50px; /* Aumenta significativamente el margen inferior para separar más las tarjetas */
+  margin: 60px; /* Aumenta significativamente el margen inferior para separar más las tarjetas */
   padding: 10px 30px; /* Padding adecuado para tamaño interno */
   display: flex;
   flex-direction: column;
@@ -43,14 +43,14 @@
 /* Estilos para los títulos y textos dentro de las tarjetas */
 .contenedores .card-title {
   
-  font-size: 45px; /* Ajuste de tamaño de fuente para los nombres */
+  font-size: 30px; /* Ajuste de tamaño de fuente para los nombres */
   margin-bottom: 10px; /* Reducir el espacio entre el título y el subtítulo */
   margin-top: 60px; /* Reducir el espacio entre el título y el subtítulo */
 }
 
 .contenedores .card-title2 {
   color: #FFFFFF; /* Blanco para títulos principales */
-  font-size: 80px; /* Tamaño de fuente más grande para títulos principales */
+  font-size: 60px; /* Tamaño de fuente más grande para títulos principales */
   margin-bottom: 10px; /* Reducir el espacio entre el título y el subtítulo */
 
 }
@@ -70,9 +70,7 @@
 
 /* Botones de redes sociales dentro de las tarjetas */
 .btn-social {
-  font-size: 18px; /* Tamaño de fuente para los botones de redes sociales */
-  padding: 10px 20px; /* Padding reducido para los botones */
-  margin-right: 5px; /* Menor espacio entre botones de redes sociales */
+  padding: 5px 20px; /* Padding reducido para los botones */
   border-radius: 50px; /* Bordes más redondeados */
 }
 
@@ -97,17 +95,10 @@
   transform: scale(1.1); /* Hace que el botón crezca */
 }
 
-/* Estilo específico para los botones de redes sociales */
-.btn-social {
-  font-size: 24px; /* Tamaño del icono más grande */
-  border-radius: 30px; /* Bordes más redondeados para un aspecto suave */
-  transition: all 0.3s ease; /* Transición suave para efectos de hover */
-  
-}
-
 .btn-social i {
   font-size: 24px; /* Asegura que el tamaño del icono sea adecuado */
-  visibility: visible; /* Asegura que el icono sea siempre visible */
+  border-radius: 30px; /* Bordes más redondeados para un aspecto suave */
+  transition: all 0.3s ease; /* Transición suave para efectos de hover */
 }
 
 
