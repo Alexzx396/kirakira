@@ -1,14 +1,18 @@
 RewriteEngine On
 
+# Establecer index.html como la página de inicio predeterminada
+DirectoryIndex index.html
+
 # Reescribir solo si la solicitud no es por un directorio existente
 RewriteCond %{REQUEST_FILENAME} !-d
 
 # Reescribir solo si la solicitud no es por un archivo existente
-RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteCond %{REQUEST_FILENAME} !-f
 
 # Reescribir a ".html"
+RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.+)$ $1.html [L,QSA]
 
 # Redirigir para eliminar la extensión .html si se accede directamente
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.html\ HTTP/
-RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+RewriteCond %{THE_REQUEST} \s/+(.+)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L,NE]
