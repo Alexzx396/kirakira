@@ -42,7 +42,6 @@
 
 /* Estilos para los títulos y textos dentro de las tarjetas */
 .contenedores .card-title {
-  
   font-size: 30px; /* Ajuste de tamaño de fuente para los nombres */
   margin-bottom: 10px; /* Reducir el espacio entre el título y el subtítulo */
   margin-top: 60px; /* Reducir el espacio entre el título y el subtítulo */
@@ -50,8 +49,8 @@
 
 .contenedores .card-title2 {
   color: #FFFFFF; /* Blanco para títulos principales */
-  font-size: 60px; /* Tamaño de fuente más grande para títulos principales */
-  margin-bottom: 10px; /* Reducir el espacio entre el título y el subtítulo */
+  font-size: 50px; /* Tamaño de fuente más grande para títulos principales */
+  margin-bottom: 5px; /* Reducir el espacio entre el título y el subtítulo */
 
 }
 
