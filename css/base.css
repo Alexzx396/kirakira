@@ -10,7 +10,7 @@ body {
   background: #151515; /* Establece el color de fondo a negro */
   color: #fff; /* Establece el color de texto a blanco para garantizar el contraste */
   font-family: 'Monrope', sans-serif; /* Asegura que la fuente sea consistente */
-  background-image: url('/img/fondogradiente.png'); /* Imagen de fondo con gradiente */
+  background-image: linear-gradient(to right, #000000,  #1d1911 , #353023); /* Fondo rosa inicial */
   background-size: 100%; /* Cubre todo el espacio del contenedor */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: 10px 80%; 
