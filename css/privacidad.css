@@ -25,7 +25,7 @@ body {
   
 
   main.privacy-container {
-    background-image: url("/img/fondogradiente.png");
+    background-image: linear-gradient(to right, #000000,  #1d1911 , #353023); /* Fondo rosa inicial */
     background-size: 95%;
     width: 80%; /* Controla el ancho del contenedor para no ocupar toda la página */
     margin: auto; /* Centra el contenedor automáticamente en la página */

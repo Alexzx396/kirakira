@@ -72,63 +72,48 @@ h1, h2, h3, h4, h5, h6 {
 
 
 @media (max-width: 768px) {
-    body {
-        font-size: 16px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
-        background-image: none; /* Elimina la imagen de fondo en dispositivos móviles */
-    }
+  .contenedores .card-title {
+      font-size: 18px; /* Reducir el tamaño del título para móviles */
+  }
 
-    main.container {
-        width: 95%; /* Aumenta el ancho para pantallas más pequeñas */
-        padding: 50px; /* Menor padding para maximizar el espacio disponible */
-        min-height: calc(100vh - 20px); /* Ajuste de altura mínima */
-    }
+  body {
+    background-image: none; /* Elimina la imagen de fondo en dispositivos móviles */
+  }
 
-    .contenedores .card-title {
-        font-size: 18px; /* Reducir el tamaño del título para móviles */
-    }
-
-    .logo-container {
-      width: 140px; /* Más pequeño para dispositivos móviles */
-      padding-bottom: 85%; 
-    }
+  .logo-container {
+    width: 140px; /* Más pequeño para dispositivos móviles */
+    padding-bottom: 85%; 
+  }
 
 
-    .button-container {
-      flex-direction: column; /* Mantiene los botones apilados verticalmente */
-      align-items: center; /* Centra los botones horizontalmente */
-      justify-content: center; /* Centra los botones verticalmente */
-      padding-bottom: 115%; /* Ajusta el padding para reducir el espacio */
-    }
+  .button-container {
+    flex-direction: column; /* Mantiene los botones apilados verticalmente */
+    align-items: center; /* Centra los botones horizontalmente */
+    justify-content: center; /* Centra los botones verticalmente */
+    padding-bottom: 115%; /* Ajusta el padding para reducir el espacio */
+  }
 
-    #home .btn-primary {
-      width: 50%; /* Ajusta el ancho al contenido, o usa un valor en % o px */
-      padding: 5px 45px; /* Reduce el padding para hacer el botón físicamente más pequeño */
-      font-size: 7px; /* Tamaño de fuente más adecuado y legible */
-      margin: 5px; /* Ajusta el margen para manejar mejor el espacio */
-      border-radius: 50px; /* Puedes ajustar el border-radius si es necesario */
-    }
+  #home .btn-primary {
+    width: 50%; /* Ajusta el ancho al contenido, o usa un valor en % o px */
+    padding: 5px 45px; /* Reduce el padding para hacer el botón físicamente más pequeño */
+    font-size: 7px; /* Tamaño de fuente más adecuado y legible */
+    margin: 5px; /* Ajusta el margen para manejar mejor el espacio */
+    border-radius: 50px; /* Puedes ajustar el border-radius si es necesario */
+  }
 
-    #home .btn-primary i {
-      display: none; /* Esto ocultará cualquier ícono dentro de los botones btn-primary */
-    }
+  #home .btn-primary i {
+    display: none; /* Esto ocultará cualquier ícono dentro de los botones btn-primary */
+  }
 
-    .steam-icon-container {
-      display: none; /* Esto ocultará el icono de Steam en todas las resoluciones */
-    }
+  .steam-icon-container {
+    display: none; /* Esto ocultará el icono de Steam en todas las resoluciones */
+  }
 
 }
 
 
 /* Ajustes específicos para pantallas muy pequeñas */
 @media (max-width: 480px) {
-  body {
-      font-size: 14px; /* Aún más pequeño para dispositivos muy pequeños */
-  }
-
-  main.privacy-container {
-      padding: 20px; /* Menos padding para dispositivos muy pequeños */
-  }
-
   .contenedores .card-title {
       font-size: 24px; /* Más pequeño para pantallas muy pequeñas */
   }
