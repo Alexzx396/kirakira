@@ -25,11 +25,10 @@ body {
   
 
   main.privacy-container {
-    background-image: linear-gradient(to right, #000000,  #1d1911 , #353023); /* Fondo rosa inicial */
-    background-size: 95%;
-    width: 80%; /* Controla el ancho del contenedor para no ocupar toda la página */
+    background-color: #000; /* Fondo negro */
+    width: 100%; /* Controla el ancho del contenedor para no ocupar toda la página */
     margin: auto; /* Centra el contenedor automáticamente en la página */
-    padding: 150px; /* Espaciado interno para el contenido */
+    padding: 400px; /* Espaciado interno para el contenido */
     padding-top: 150px; /* Espaciado interno para el contenido */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para destacar el contenedor */
     border-radius: 8px; /* Bordes redondeados */
