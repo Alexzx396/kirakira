@@ -1,10 +1,17 @@
 <IfModule mod_rewrite.c>
+    # Establecer el archivo de índice predeterminado
     DirectoryIndex index.html
+
+    # Habilitar el motor de reescritura
     RewriteEngine On
-    # Si la solicitud no corresponde a un archivo real...ddddddd
+
+    # Condición: La URL solicitada no debe corresponder a un archivo físico existente
     RewriteCond %{REQUEST_FILENAME} !-f
-    # Y tampoco a un directorio real...
+
+    # Condición: La URL solicitada no debe corresponder a un directorio existente
     RewriteCond %{REQUEST_FILENAME} !-d
-    # Entonces, reescribe la URL añadiendo .html al final (internamente en el servidor)
+
+    # Regla de reescritura: Si la URL no incluye un punto (es decir, no tiene extensión),
+    # añadir .html al final internamente en el servidor
     RewriteRule ^([^\.]+)$ $1.html [NC,L]
 </IfModule>
