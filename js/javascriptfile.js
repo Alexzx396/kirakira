@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function handleResponse(id, data) {
     document.getElementById(id).innerHTML = data;
     if (id === "contacto-placeholder") {
-      AOS.init();
+      AOS.init(); // Inicializa AOS cuando se carga el contenido de contacto.
     }
   }
 
@@ -34,10 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const currentPath = window.location.pathname.replace("/index.html", "/").replace(".html", "");
     navLinks.forEach(link => {
       const linkPath = new URL(link.href).pathname.replace("/index.html", "/").replace(".html", "");
-      if (linkPath === currentPath) {
+      link.classList.remove('active');
+      if (linkPath === currentPath || (currentPath === "/" && linkPath === "/index")) {
         link.classList.add('active');
-      } else {
-        link.classList.remove('active');
       }
     });
   }
@@ -46,7 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   navLinks.forEach(link => {
     link.addEventListener('click', function () {
+      // Remueve 'active' de todos los enlaces
       navLinks.forEach(l => l.classList.remove('active'));
+      // Añade 'active' al enlace clicado
       this.classList.add('active');
       // Guardar la última pestaña activa en localStorage
       localStorage.setItem('activeNav', this.getAttribute('href'));
