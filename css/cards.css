@@ -1,14 +1,12 @@
 /* Estilos para las tarjetas dentro de contenedores */
 .contenedores .card {
-  position: relative; /* Posicionamiento necesario para elementos absolutamente posicionados */
   background-color: rgba(54, 65, 65, 0.8); /* Fondo oscuro con transparencia */
   border-radius: 100px; /* Bordes más redondeados */
   border: 8px solid ; /* Borde transparente para no mostrar color de borde sólido */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra suave para destacar las tarjetas */
   color: white; /* Texto en color blanco */
-  margin: 60px; /* Aumenta significativamente el margen inferior para separar más las tarjetas */
-  padding: 10px 40px; /* Padding adecuado para tamaño interno */
-  min-height: 250px; /* Altura mínima adecuada */
+  margin: 50px; /* Aumenta significativamente el margen inferior para separar más las tarjetas */
+  padding: 10px 30px; /* Padding adecuado para tamaño interno */
   display: flex;
   flex-direction: column;
   justify-content: center;
