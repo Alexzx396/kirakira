@@ -74,41 +74,40 @@
 
 
 
-
-/* Media query para ajustes en dispositivos pequeños */
-@media (max-width: 768px) {
-  /* Muestra el botón de navegación (hamburguesa) */
-  .navbar-toggler {
-    display: block; /* Asegura que el toggler se muestre en dispositivos pequeños */
-
-  }
-
-  /* Ajustes para el menú desplegable */
-  .navbar-collapse {
-    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro para el menú desplegable para mejorar la legibilidad */
-  }
-
-  /* Ajusta el padding del contenedor del navegador para alinear correctamente los elementos dentro de él */
+/* Ajustes responsivos para diferentes tamaños de pantalla */
+@media (max-width: 1024px) {
   #navegador .container-fluid {
-    padding: 0 15px; /* Ajusta el padding para dispositivos más pequeños */
+    width: 95%; /* Aumenta el ancho para dispositivos más pequeños para mejor aprovechamiento del espacio */
   }
 
-  /* Hace que el fondo del navegador sea transparente y elimina cualquier sombra para un look más limpio */
-  #navegador {
-    background-color: transparent; /* Elimina el fondo */
-    box-shadow: none; /* Elimina la sombra */
+  #navegador a {
+    font-size: 18px; /* Reduce el tamaño de la fuente para mejor adaptación */
   }
-
-  /* Oculta el logo en dispositivos pequeños */
-  .navbar-brand {
-    display: none; /* Oculta el logo */
-  }
-
-  .home-image img {
-    width: 100%; /* Asegura que la imagen cubra completamente el ancho */
-    height: auto;/* Mantiene la proporción de la imagen */
-    margin-bottom: 20px; /* Espacio adicional si es necesario */
-  }
-
- 
 }
+
+@media (max-width: 768px) {
+  #navegador {
+    padding: 5px 0; /* Reduce el padding para más espacio vertical */
+  }
+
+  .logo-container {
+    top: 50%; /* Ajuste para alineación vertical perfecta */
+  }
+
+  #navegador .nav-link {
+    font-size: 14px; /* Reduce el tamaño de la fuente para mejorar la legibilidad */
+    padding: 3px; /* Menos padding para compactar los enlaces */
+  }
+}
+
+@media (max-width: 480px) {
+  #navegador a {
+    font-size: 16px; /* Ajuste para pantallas muy pequeñas */
+    margin: 5px; /* Reduce el margen entre enlaces */
+  }
+
+  .logo-container {
+    display: none; /* Oculta el logo en dispositivos muy pequeños para ahorrar espacio */
+  }
+}
+

@@ -1,4 +1,3 @@
-
 /* Estilos básicos para el footer */
 #footer {
   color: #fff; /* Texto en blanco para alto contraste */
@@ -37,22 +36,46 @@
   color: #4bc0c8; /* Cambia el color al pasar el ratón */
 }
 
-
-/* Media Queries para adaptación a dispositivos móviles */
-@media (max-width: 768px) {
-  #footer {
-    padding: 10px; /* Reduce el padding en dispositivos móviles */
-  }
-
+/* Media Queries para adaptación a diferentes tamaños de pantalla */
+@media (max-width: 1024px) {
   #footer .container {
-    padding: 0 10px; /* Reduce el padding para los contenedores en dispositivos móviles */
+    width: 70%; /* Aumentar el ancho en pantallas más pequeñas para mejor ajuste */
   }
 
   #footer .centered-logo {
-    width: 80px; /* Reduce el tamaño del logo para dispositivos móviles */
+    width: 10%; /* Ajustar el tamaño del logo para visibilidad */
+  }
+}
+
+@media (max-width: 768px) {
+  #footer {
+    padding: 15px; /* Reducir aún más el padding para ahorrar espacio */
   }
 
-  #footer h4, #footer p {
-    font-size: 12px; /* Reduce el tamaño de fuente para mejor legibilidad en pantallas pequeñas */
+  #footer h4 {
+    font-size: 14px; /* Reducir el tamaño de la fuente para mejorar la legibilidad */
+  }
+
+  #footer .container {
+    width: 80%; /* Ajustar el ancho del contenedor para una mejor visualización */
+  }
+
+  #footer .centered-logo {
+    margin-top: 20px; /* Menor espacio por encima del logo */
+  }
+}
+
+@media (max-width: 480px) {
+  #footer {
+    padding: 10px; /* Minimizar el padding en dispositivos muy pequeños */
+  }
+
+  #footer h4 {
+    font-size: 12px; /* Tamaño de fuente más pequeño para pantallas de teléfonos */
+  }
+
+  #footer .centered-logo {
+    width: 15%; /* Ajustar el tamaño del logo para que sea más visible */
+    margin-top: 10px; /* Reducir el espacio superior para compactar el diseño */
   }
 }

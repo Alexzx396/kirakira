@@ -1,9 +1,7 @@
-
 /* Estilo general de la sección del equipo */
 #nuestro-equipo {
     text-align: center; /* Asegura que todo el contenido esté centrado */
     padding: 50px 0; /* Agrega un poco de espacio alrededor de toda la sección */
-  
   }
   
   /* Estilo de las tarjetas del equipo */
@@ -94,50 +92,66 @@
   }
   
   #home h2 {
+    padding-top: 25%;
     font-size: 35px;
     color: #87CEFA; /* Color para el subtítulo */
   }
   
   #home h1 {
-    font-size: 150px; /* Tamaño más grande para mayor impacto visual */
+    font-size: 130px; /* Tamaño más grande para mayor impacto visual */
   }
   
   #home p {
     font-size: 19px; /* Tamaño adecuado para el texto descriptivo */
   }
-  
-  /* Media Queries para mejorar la responsividad */
-  @media (max-width: 768px) {
-    #home .text-container {
-        width: 90%; /* Aumenta el ancho para facilitar la lectura */
-        top: 60%; /* Baja el texto para evitar que esté demasiado arriba */
-        left: 45%; /* Ajusta para centrar */
-        transform: translate(-50%, -50%); /* Asegura centrado perfecto */
-    }
-  
-    #home h1 {
-        font-size: 45px; /* Tamaño de fuente más pequeño para pantallas medianas */
-    }
-  
-    #home h2 {
-        font-size: 20px; /* Tamaño de fuente ajustado para subtítulos */
-    }
-  
-    #home p {
-        font-size: 13px; /* Tamaño de fuente ajustado para texto descriptivo */
-    }
+
+  /* Media Queries para adaptación a diferentes tamaños de pantalla */
+@media (max-width: 1024px) {
+  #nuestro-equipo .card {
+    width: 80%; /* Ajuste porcentual para adaptarse mejor a tabletas */
+    height: auto; /* Altura automática para mantener la proporción */
   }
-  
-  @media (max-width: 480px) {
-    #home .text-container {
-        top: 70%; /* Ajusta aún más abajo para pantallas pequeñas */
-    }
-  
-    #home h1 {
-        font-size: 50px; /* Tamaño más pequeño para pantallas pequeñas */
-    }
-  
-    #home h2 {
-        font-size: 25px; /* Subtítulo más pequeño para mejorar legibilidad */
-    }
+
+  #nuestro-equipo h1 {
+    font-size: 80px;
   }
+
+  #nuestro-equipo h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  #nuestro-equipo .card {
+    width: 90%; /* Más grande para pantallas más pequeñas */
+  }
+
+  #nuestro-equipo .card-title, #nuestro-equipo .card-text {
+    font-size: 20px; /* Tamaño de fuente reducido para pantallas más pequeñas */
+  }
+
+  #nuestro-equipo h1, #nuestro-equipo h2 {
+    font-size: 60px; /* Ajuste para h1 y h2 para legibilidad */
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  #nuestro-equipo {
+    padding: 30px 0;
+  }
+
+  #nuestro-equipo .card {
+    width: 95%; /* Casi todo el ancho disponible */
+  }
+
+  #nuestro-equipo h1, #nuestro-equipo h2 {
+    font-size: 40px; /* Reducción significativa para dispositivos muy pequeños */
+    margin-bottom: 10px;
+  }
+
+  #home .text-container, #home-nosotros .text-container {
+    width: 100%; /* Aprovecha todo el ancho disponible */
+    padding: 10px; /* Padding reducido */
+  }
+}

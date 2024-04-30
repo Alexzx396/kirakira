@@ -2,18 +2,31 @@
 .contenedores .card {
   background-color: rgba(54, 65, 65, 0.8); /* Fondo oscuro con transparencia */
   border-radius: 100px; /* Bordes más redondeados */
-  border: 8px solid ; /* Borde transparente para no mostrar color de borde sólido */
+  border: 8px solid transparent; /* Borde transparente para no mostrar color de borde sólido */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra suave para destacar las tarjetas */
   color: white; /* Texto en color blanco */
-  margin: 60px; /* Aumenta significativamente el margen inferior para separar más las tarjetas */
-  padding: 10px 30px; /* Padding adecuado para tamaño interno */
+  margin: 20px; /* Aumenta significativamente el margen inferior para separar más las tarjetas */
+  padding: 15px 30px; /* Padding adecuado para tamaño interno */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   border-image: url('/img/BordeRGB.png') 1 stretch; /* Usa la imagen como borde */
+  position: relative; /* Establecer posición relativa para contener elementos absolutos como el icono */
 }
+
+.contenedores .card-icon {
+  position: absolute;
+  top: -15%; /* Porcentaje basado en la altura del contenedor para ajuste dinámico */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 22vw; /* Ancho basado en el ancho del viewport para escalar automáticamente */
+  height: auto; /* Altura automática para mantener la proporción */
+  max-width: 100%; /* Asegura que el ícono no sobrepase el ancho de la tarjeta */
+}
+
+
 
 
 
@@ -27,16 +40,6 @@
   border-radius: 5px; /* Bordes redondeados para un look moderno */
   cursor: pointer; /* Cursor tipo puntero para indicar que es clickeable */
   transition: background-color 0.3s; /* Transición suave al cambiar de color */
-}
-
-
-.contenedores .card-icon {
-  position: absolute;
-  top: -240px; /* Ajusta según el tamaño del ícono */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50%; /* O el tamaño deseado */
-  height: auto;
 }
 
 
@@ -100,49 +103,96 @@
   transition: all 0.3s ease; /* Transición suave para efectos de hover */
 }
 
-
-/* Media queries para adaptar las tarjetas en dispositivos móviles */
-@media (max-width: 768px) {
-  .contenedores .card {  
-    margin: 60px 0px;
-    min-height: 300px;
+/* Media Queries para adaptación a diferentes tamaños de pantalla */
+@media (max-width: 1024px) {
+  .contenedores .card {
+    margin: 30px; /* Reducir el margen para pantallas más pequeñas */
+    padding: 20px; /* Ajustar el padding interno */
+    border-radius: 50px; /* Bordes menos redondeados para ajuste visual */
+    border-width: 6px; /* Borde más delgado */
   }
 
   .contenedores .card-icon {
-    top: -80px; /* Ajusta la posición superior para dispositivos móviles */
+    width: 5vw; /* Ancho basado en el ancho del viewport para escalar automáticamente */
+    height: auto; /* Altura automática para mantener la proporción */
+
+  }
+
+  .contenedores .card-title {
+    font-size: 25px; /* Reducción del tamaño de fuente para títulos */
   }
 
   .contenedores .card-title2 {
-    font-size: 45px; /* Reducir el tamaño del título principal para móviles */
+    font-size: 40px; /* Tamaño de fuente ajustado para subtítulos más grandes */
   }
+
   .contenedores .card-text {
-      font-size: 14px; /* Reducir el tamaño de la descripción para una mejor legibilidad en móviles */
+    font-size: 16px; /* Tamaño de fuente más pequeño para textos descriptivos */
   }
-  #acerca .contenedor-interior, #proyectos .contenedor-interior {
-      padding: 10px; /* Reducir el padding general para los contenedores internos */
-      margin: 55px;
-      margin: auto !important;
-  }
-}
 
-/* Ajustes adicionales para pantallas muy pequeñas */
-@media (max-width: 480px) {
+  .contenedores .btn-primary {
+    padding: 8px 16px; /* Reducir el padding para botones */
+    font-size: 16px; /* Reducir el tamaño de la fuente para mejor ajuste */
+    width: 180px; /* Ancho ajustado para el botón */
+  }
+
   .contenedores .card-icon {
-    top: -10px; /* Posiciona la imagen aún más cerca del borde superior */
-  }
-
-  .btn-social {
-    font-size: 18px; /* Tamaño de fuente más pequeño para pantallas muy pequeñas */
-    padding: 10px 20px; /* Reduce aún más el padding para adaptarse a pantallas pequeñas */
+    top: -180px; /* Ajustar la posición del ícono */
+    width: 40%; /* Reducir el tamaño del ícono */
   }
 
   .btn-social i {
-    font-size: 18px; /* Reduce el tamaño del ícono para mejorar la proporción */
+    font-size: 18px; /* Reducir el tamaño del ícono de redes sociales */
   }
 }
 
+@media (max-width: 768px) {
+  .contenedores .card {
+    margin: 50px; /* Margen más reducido */
+    padding: 25px; /* Menor padding */
+    border-radius: 30px; /* Radio de borde más suave */
+    flex-direction: column; /* Mantener la dirección de la columna */
+  }
 
+  .contenedores .card-icon {
+    width: 30vw; /* Ancho basado en el ancho del viewport para escalar automáticamente */
+    top: 1%; 
+  }
 
+  .contenedores .card-title, .contenedores .card-title2, .contenedores .card-text {
+    text-align: center; /* Centrar el texto en dispositivos más pequeños */
+  }
 
+  .contenedores .btn-primary {
+    width: 100%; /* Botones de ancho completo para mejor accesibilidad */
+    margin: 11px; /* Ajuste del margen para separación */
+  }
 
+  .btn-social {
+    width: 100%; /* Botones sociales de ancho completo */
+  }
+}
 
+@media (max-width: 480px) {
+  .contenedores .card {
+    margin: 10px; /* Margen aún más pequeño */
+    padding: 10px; /* Padding reducido */
+  }
+
+  .contenedores .card-title {
+    font-size: 20px; /* Tamaño de fuente más pequeño para títulos */
+  }
+
+  .contenedores .card-title2 {
+    font-size: 30px; /* Tamaño de fuente más pequeño para subtítulos principales */
+  }
+
+  .contenedores .card-text {
+    font-size: 14px; /* Tamaño de fuente reducido para descripciones */
+  }
+
+  .contenedores .btn-primary, .btn-social {
+    padding: 5px 10px; /* Padding más pequeño para todos los botones */
+    font-size: 14px; /* Tamaño de fuente más pequeño para textos de botón */
+  }
+}
