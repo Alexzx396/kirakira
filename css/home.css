@@ -23,6 +23,7 @@
   z-index: 10; /* Asegura que el logo esté sobre otros elementos */
   width: auto; /* Ancho automático basado en el contenido del logo */
   display: block; /* Asegura que el logo se muestre por defecto */
+  
 }
 
 .background-image {
