@@ -17,7 +17,7 @@
 
 .logo-container {
   position: absolute;
-  top: 50%; /* Centrado verticalmente */
+  top: 40%; /* Centrado verticalmente */
   left: 50%; /* Centrado horizontalmente */
   transform: translate(-50%, -50%);
   z-index: 10; /* Asegura que el logo esté sobre otros elementos */
