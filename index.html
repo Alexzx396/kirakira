@@ -22,7 +22,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
     <!-- CSS -->
-
     <link rel="stylesheet" href="css/responsive.css">
    
     <link rel="stylesheet" href="css/base.css">
@@ -46,7 +45,7 @@
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse justify-content-end textos" id="navbarNav">
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                         <ul class="navbar-nav menuItems">
                             <li class="nav-item">
                                 <a class="nav-link animacion-nav" aria-current="page" href="index.html" data-item='HOME'><h5>HOME</h5></a>
@@ -63,8 +62,8 @@
             </nav>
         </header>
         <!-- Home -->
-        <section id="home" >
-            <div class="container-fluid">
+        <section id="home" class="container-fluid">
+            <div>
                 <div class="row">
                     <div class="col m-0 p-0 mb-5">
                         <!-- Contenedor de imagen de fondo -->
@@ -72,7 +71,7 @@
                             <img src="/img/fondo.png" alt="imagen-portada" width="100%">
                             <!-- Contenedor para centrar la imagen de logo -->
                             <div class="logo-container">
-                                <img src="/img/kirakiraslime_logo.png" alt="Logo KiraKiraSlime" class="centered-logo" width="100%">
+                                <img src="/img/kirakiraslime_logo.png" alt="Logo KiraKiraSlime" class="centered-logo " width="100%">
                             </div>
                             <!-- Icono de Steam agregado -->
                             <div class="steam-icon-container">
@@ -90,17 +89,18 @@
         </section>
         
         <!-- Main Content -->
+        
         <main class="container-fluid" id="seccion-post-home">
            <!-- Bienvenido -->
-            <section id="acerca" class="container-fluid contenedores p-5" >
+            <section id="acerca" class="contenedores p-4" >
                 <div class="container-fluid contenedor-interior">
-                    <div class="row pb-10">
+                    <div class="row">
                         <!-- Columna de Imagen -->
-                        <div class="col-sm-12 col-md-6 text-center align-items-center my-auto">
+                        <div class="col-md-6 text-center">
                             <img src="/img-marca/Vector.png" alt="Logo de EtherDreams" class="mi-foto img-fluid pt-5" data-aos="fade-right">
                         </div>
                         <!-- Columna de Texto -->
-                        <div class="container-fluid col-sm-15 col-md-6 p-5">
+                        <div class="col-md-6">
                             <h2 class=" titulos-secciones bold " data-aos="fade-left">WELCOME TO</h2>
                             <h1 class="pt-2" data-aos="fade-down"><strong>ETHER DREAMS</strong></h1>
                             <p class="card-text2" data-aos="fade-top">We are an indie videogame development company based in Chile and exclusively dedicated to the exciting world of digital entertainment. Our main goal is to create unique, inspiring and entertaining gaming experiences for gamers of all ages.</p><br>
@@ -113,10 +113,10 @@
             </section> 
 
            <!--  Tarjetas // red Social // unete a nosotros // -->
+           
            <section id="proyectos" class="container-fluid mt-3 contenedores p-4">
-            <div class="container-fluid p-5 contenedor-interior">
+            <div class="p-5 contenedor-interior">
                 <div class="row pt-5">
-                    <!-- Ejemplo de Tarjeta 1 -->
                     <div class="col-md-6">
                         <div class="card">
                             <img src="/img/tigre-web.png" alt="Icon" class="card-icon"> 

@@ -1,0 +1,54 @@
+/* Estilos base para dispositivos con pantalla menor a 1024px */
+@media (max-width: 1024px) {
+    html, body {
+        max-height: 100%; /* Asegurar que no sea más alto que la ventana visible */
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Ocultar desplazamiento horizontal */
+        overflow-y: auto; /* Permitir desplazamiento vertical si es necesario */
+    }
+    .steam-icon-container {
+        display: none; /* Oculta el contenedor del icono en pantallas pequeñas */
+    }
+    .button-container {
+        padding: 10px 24px; /* Padding reducido para pantallas más pequeñas */
+        padding-bottom: 70%; /* Padding reducido para pantallas más pequeñas */
+        font-size: 14px; /* Reducción del tamaño de la fuente */
+        width: 100%; /* Ancho completo para mejor accesibilidad */
+        transform: translate(-50%, -20%);
+      }
+
+}
+
+/* Estilos para dispositivos con pantalla menor a 768px */
+@media (max-width: 768px) {
+    .contenedores .card {
+        max-height: 100%; /* Asegurar que no sea más alto que la ventana visible */
+        max-height: 75vh;
+        margin: 50px;
+        padding: 10px;
+    }
+    .steam-icon-container {
+        display: none; /* Oculta el contenedor del icono en pantallas pequeñas */
+    }
+    .logo-container {
+        display: none; /* Oculta el contenedor del icono en pantallas pequeñas */
+    }
+
+   
+}
+
+/* Estilos para dispositivos con pantalla menor a 480px */
+@media (max-width: 480px) {
+    .contenedores .card {
+        max-height: 100%; /* Asegurar que no sea más alto que la ventana visible */
+    }
+    .steam-icon-container {
+        display: none; /* Oculta el contenedor del icono en pantallas pequeñas */
+    }
+    .logo-container {
+        display: none; /* Oculta el contenedor del icono en pantallas pequeñas */
+      }
+  
+}
+

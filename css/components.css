@@ -1,6 +1,6 @@
 .button-container {
   position: absolute;
-  top: 88%; /* Posición ajustada para bajar los botones */
+  top: 88%; /* Posición ajustada para mantener los botones accesibles */
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -11,53 +11,83 @@
 .btn-primary {
   background-color: #000; /* Fondo negro */
   color: white; /* Texto en color blanco */
-  border: 1px solid #c779d0; /* Borde sutil */
-  border-radius: 50px; /* Bordes redondeados */
-  margin: 10px; /* Espacio alrededor de cada botón */
-  transition: all 0.3s ease; /* Transición suave al cambiar estilos */
-  padding: 16px 32px; /* Padding generoso para comodidad al clicar */
+  border: 1px solid #c779d0; /* Borde sutil que complementa el diseño */
+  border-radius: 50px; /* Bordes redondeados para un aspecto moderno */
+  margin: 10px;
+  transition: all 0.3s ease; /* Transición suave para efectos visuales al interactuar */
+  padding: 16px 32px; /* Padding cómodo */
   width: 200px; /* Ancho fijo para uniformidad */
 }
 
 .btn-primary:hover {
-  background-image: linear-gradient(to right, #feac5e, #c779d0, #4bc0c8); /* Gradiente dinámico al pasar el ratón */
-  color: black; /* Cambio de color de texto al pasar el ratón */
-  transform: scale(1.1); /* Efecto de crecimiento al pasar el ratón */
+  background-image: linear-gradient(to right, #feac5e, #c779d0, #4bc0c8); /* Gradiente atractivo al pasar el ratón */
+  color: black; /* Cambio de color de texto para mejor contraste */
+  transform: scale(1.1); /* Efecto de crecimiento para destacar al interactuar */
 }
 
-/* Media Queries para responsividad */
+/* Media Queries para adaptación en diferentes tamaños de pantalla */
 @media (max-width: 1024px) {
   .button-container {
-    top: 85%; /* Ligeramente más alto para evitar solapamientos */
+    top: 85%; /* Posición más alta para evitar superposición con otros elementos */
+    padding-bottom: 600px; /* Espacio adicional debajo para evitar cortes */
   }
 
   .btn-primary {
-    padding: 12px 24px; /* Ligeramente más pequeño para ahorrar espacio */
-    width: 180px; /* Ancho reducido */
+    width: 90%; /* Ancho ajustado al tamaño de la pantalla */
+    padding: 12px 20px; /* Padding ajustado para conservar espacio */
   }
 }
+
+
 
 @media (max-width: 768px) {
   .button-container {
-    flex-direction: column; /* Cambio a disposición vertical */
-    top: 80%; /* Ajuste en la posición para dispositivos más pequeños */
-    transform: translateY(-50%); /* Centrado verticalmente */
+    top: 80%; /* Ajuste de posición para optimizar la visualización en tabletas */
+    padding-bottom: 1100px; /* Reducción de padding para más contenido en pantalla */
   }
 
   .btn-primary {
-    width: 160px; /* Ajuste de ancho para pantallas más pequeñas */
-    margin: 5px; /* Menor margen para compactar elementos */
+    font-size: 14px; /* Reducción del tamaño de la fuente para adaptarse a tamaños menores */
+    padding: 10px 18px; /* Padding más compacto */
+    width: 100%; /* Aprovechar todo el ancho disponible */
+    margin: 5px 0; /* Margen ajustado para mantener la disposición */
   }
 }
 
-@media (max-width: 480px) {
+
+
+@media (max-width: 412px) {
   .button-container {
-    top: 75%; /* Más ajustes para pantallas muy pequeñas */
+    top: 75%; /* Ajuste superior para pantallas de teléfonos */
+    padding-bottom: 1000px; /* Reducción de padding para más contenido en pantalla */
   }
 
   .btn-primary {
-    font-size: 14px; /* Reducción de tamaño de fuente */
-    padding: 10px 20px; /* Reducción del padding */
-    width: 140px; /* Ancho más pequeño */
+    padding: 8px 16px; /* Reducción aún mayor del padding para pantallas pequeñas */
+    font-size: 13px; /* Tamaño de fuente más pequeño para mayor compatibilidad */
+  }
+}
+
+@media (max-width: 393px) {
+  .button-container {
+    top: 75%; /* Ajuste superior para pantallas de teléfonos */
+    padding-bottom: 950px; /* Reducción de padding para más contenido en pantalla */
+  }
+
+  .btn-primary {
+    padding: 8px 16px; /* Reducción aún mayor del padding para pantallas pequeñas */
+    font-size: 13px; /* Tamaño de fuente más pequeño para mayor compatibilidad */
+  }
+}
+
+@media (max-width: 360px) {
+  .button-container {
+    top: 75%; /* Ajuste superior para pantallas de teléfonos */
+    padding-bottom: 750px; /* Reducción de padding para más contenido en pantalla */
+  }
+
+  .btn-primary {
+    padding: 8px 16px; /* Reducción aún mayor del padding para pantallas pequeñas */
+    font-size: 13px; /* Tamaño de fuente más pequeño para mayor compatibilidad */
   }
 }

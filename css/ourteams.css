@@ -105,53 +105,116 @@
     font-size: 19px; /* Tamaño adecuado para el texto descriptivo */
   }
 
-  /* Media Queries para adaptación a diferentes tamaños de pantalla */
+/* Media Queries para adaptar el tamaño de texto en la sección #home */
 @media (max-width: 1024px) {
-  #nuestro-equipo .card {
-    width: 80%; /* Ajuste porcentual para adaptarse mejor a tabletas */
-    height: auto; /* Altura automática para mantener la proporción */
+  #home .display-4 {
+      font-size: 2rem; /* Ajustado para tabletas */
+      color: #C27CD0;
   }
 
-  #nuestro-equipo h1 {
-    font-size: 80px;
+  #home .display-3 {
+      font-size: 4rem; /* Ajustado para encabezados grandes en tabletas */
+      
   }
 
+  #home .lead {
+      font-size: 1rem; /* Ajustado para texto descriptivo en tabletas */
+  }
   #nuestro-equipo h2 {
-    font-size: 30px;
-  }
+    font-size: 1.5rem; /* Tamaño más pequeño para tablets */
+}
+#nuestro-equipo h1 {
+    font-size: 3.5rem; /* Tamaño adecuado para un impacto visual en tablets */
+}
 }
 
 @media (max-width: 768px) {
-  #nuestro-equipo .card {
-    width: 90%; /* Más grande para pantallas más pequeñas */
+  #home .display-4 {
+      font-size: 2rem; /* Reducido para dispositivos móviles medianos */
+      color: #C27CD0;
   }
 
-  #nuestro-equipo .card-title, #nuestro-equipo .card-text {
-    font-size: 20px; /* Tamaño de fuente reducido para pantallas más pequeñas */
+  #home .display-3 {
+      font-size: 3rem; /* Adecuado para encabezados en dispositivos móviles medianos */
+      width: 220%;
   }
 
-  #nuestro-equipo h1, #nuestro-equipo h2 {
-    font-size: 60px; /* Ajuste para h1 y h2 para legibilidad */
-    margin-bottom: 15px;
+  #home .lead {
+      font-size: 0.7rem; /* Tamaño de fuente adecuado para texto descriptivo en dispositivos móviles */
+      width: 180%;
   }
+  #nuestro-equipo h2 {
+        font-size: 1.5rem; /* Tamaño reducido para dispositivos móviles */
+    }
+    #nuestro-equipo h1 {
+        font-size: 3rem; /* Sigue siendo prominente pero adecuado para pantallas más pequeñas */
+    }
+    #nuestro-equipo .card {
+      width: 100%; /* Ampliar las tarjetas para usar el ancho completo en modo vertical */
+      margin: 20px 0; /* Espaciado vertical sin margen lateral */
+    }
+
+    #nuestro-equipo .card-img-top {
+      height: auto; /* Altura auto para mantener la proporción de la imagen sin recortar */
+    }
+
+    #nuestro-equipo .card-title,
+    #nuestro-equipo .card-text {
+      font-size: 16px; /* Tamaño de fuente reducido para mantener la proporción y legibilidad */
+    }
+
+    #home .text-container, #home-nosotros .text-container {
+      width: 90%; /* Reducción del ancho del contenedor para mejorar la legibilidad */
+    }
+
+    #home h2, #home h1 {
+      font-size: 24px; /* Reducción del tamaño de los títulos para evitar el desbordamiento */
+
+    }
+
+    #home p {
+      font-size: 14px; /* Reducir el tamaño de la fuente del texto descriptivo */
+    }
+
+    /* Ajustar el logo y otros elementos centrados para evitar la superposición */
+    .logo-container {
+      width: 50%; /* Ajustar el tamaño del logo */
+      top: 25%; /* Ajustar la posición vertical del logo */
+      transform: translate(-50%, -25%);
+    }
+
+    /* Ajustar contenedores y botones para mejorar la interfaz de usuario */
+    .button-container {
+      position: absolute;
+      top: 85%; /* Mover hacia arriba para evitar solapamientos */
+      left: 50%;
+      transform: translateX(-50%);
+    }
 }
 
 @media (max-width: 480px) {
-  #nuestro-equipo {
-    padding: 30px 0;
+  #home .display-4 {
+      font-size: 0.8rem; /* Reducido para dispositivos muy pequeños */
+      color: #C27CD0;
   }
 
-  #nuestro-equipo .card {
-    width: 95%; /* Casi todo el ancho disponible */
+  #home .display-3 {
+      font-size: 1.5rem; /* Ajustado para encabezados en dispositivos muy pequeños */
+      width: 200%;
   }
 
-  #nuestro-equipo h1, #nuestro-equipo h2 {
-    font-size: 40px; /* Reducción significativa para dispositivos muy pequeños */
-    margin-bottom: 10px;
+  #home .lead {
+      font-size: 0.55rem; /* Tamaño de fuente muy pequeño para texto descriptivo en dispositivos muy pequeños */
+      width: 220%;
   }
 
-  #home .text-container, #home-nosotros .text-container {
-    width: 100%; /* Aprovecha todo el ancho disponible */
-    padding: 10px; /* Padding reducido */
+  #home .container {
+      padding: 0 15px; /* Añade padding para mantener el texto alejado de los bordes en pantallas pequeñas */
   }
+  #nuestro-equipo h2 {
+    font-size: 1rem; /* Adecuado para dispositivos muy pequeños */
+}
+#nuestro-equipo h1 {
+    font-size: 2.2rem; /* Impactante aún en pantallas pequeñas */
+}
 }

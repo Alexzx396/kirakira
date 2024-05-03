@@ -48,44 +48,72 @@
   display: block; /* Bloque para evitar comportamientos inline */
 }
 
-/* Media Queries para adaptación a dispositivos móviles y pantallas más pequeñas */
-@media (max-width: 768px) {
+/* Media Queries para ajustar estilos en dispositivos más pequeños sin cambiar la alineación a la derecha */
+@media (max-width: 1024px) {
   #acerca .contenedor-interior h1 {
-    font-size: 50px; /* Reducir para pantallas más pequeñas */
+    font-size: 75px;
   }
 
   #acerca .contenedor-interior h2 {
-    font-size: 24px; /* Adecuado para la legibilidad en dispositivos móviles */
+    font-size: 30px;
   }
 
-  #acerca .contenedor-interior p, #acerca .contenedor-interior p strong {
-    font-size: 16px; /* Reducir el tamaño del texto */
+  #acerca .contenedor-interior p {
+    font-size: 16px;
+  }
+
+  #acerca .contenedor-interior p strong {
+    font-size: 50px;
   }
 
   #acerca .mi-foto {
-    width: 70%; /* Aumentar ligeramente para mejorar la visibilidad en dispositivos móviles */
+    width: 60%;
+    margin: 35px auto;
   }
 }
 
-@media (max-width: 480px) {
-  #acerca .contenedor-interior {
-    text-align: center; /* Centrar el texto para una mejor legibilidad en pantallas muy pequeñas */
+@media (max-width: 768px) {
+  #acerca .contenedor-interior h1 {
+    font-size: 50px;
   }
 
+  #acerca .contenedor-interior h2 {
+    font-size: 24px;
+  }
+
+  #acerca .contenedor-interior p {
+    font-size: 14px;
+  }
+
+  #acerca .contenedor-interior p strong {
+    font-size: 40px;
+  }
+
+  #acerca .mi-foto {
+    width: 70%;
+    margin: 35px auto;
+  }
+}
+
+@media (max-width: 360px) {
   #acerca .contenedor-interior h1 {
-    font-size: 30px; /* Más pequeño para pantallas muy pequeñas */
+    font-size: 36px;
   }
 
   #acerca .contenedor-interior h2 {
     font-size: 18px;
   }
 
-  #acerca .contenedor-interior p, #acerca .contenedor-interior p strong {
-    font-size: 14px;
+  #acerca .contenedor-interior p {
+    font-size: 12px;
+  }
+
+  #acerca .contenedor-interior p strong {
+    font-size: 28px;
   }
 
   #acerca .mi-foto {
-    width: 80%; /* Aprovechar mejor el espacio disponible */
-    max-width: 300px; /* Reducir el tamaño máximo para evitar sobredimensionamiento */
+    width: 50%;
+    margin: 55px;
   }
 }

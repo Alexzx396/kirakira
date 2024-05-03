@@ -1,113 +1,119 @@
-/* Navegación fija con fondo semi-transparente */
+/* Estilos base para la navegación */
 #navegador {
-  position: fixed; /* Mantiene la barra de navegación fija en la parte superior */
-  width: 100%; /* Asegura que la barra ocupe el ancho completo de la pantalla */
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con transparencia media */
-  z-index: 1000; /* Alta prioridad en la pila de capas */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25); /* Sombra suave para mayor visibilidad sobre contenido */
-  padding: 10px 0; /* Añade un poco de espacio vertical dentro de la barra */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  padding: 10px 0;
 }
 
 #navegador .container-fluid {
-  width: 90%; /* Ajusta el ancho del contenedor dentro de la barra */
-  margin: auto; /* Centra el contenedor horizontalmente */
+  width: 90%;
+  margin: auto;
 }
-
 
 .logo-container {
-  position: absolute; /* Posicionamiento absoluto para el logo */
-  top: 40%; /* Centrado verticalmente */
+  position: absolute;
+  top: 50%; /* Centrado verticalmente */
   left: 50%; /* Centrado horizontalmente */
-  transform: translate(-50%, -50%); /* Ajuste fino para centrar exactamente */
-  z-index: 10; /* Asegura que el logo esté sobre el fondo */
-}
-
-.home-image {
-  position: relative; /* Posición relativa para posicionar absolutamente los botones dentro */
-  width: 100%; /* Asegura que la imagen cubra el ancho del contenedor */
-  height: auto; /* Altura automática basada en la imagen */
+  transform: translate(-50%, -50%);
+  z-index: 10; /* Asegura que el logo esté sobre otros elementos */
+  width: auto; /* Ancho automático basado en el contenido del logo */
+  display: block; /* Asegura que el logo se muestre por defecto */
 }
 
 .background-image {
-  width: 100%; /* Asegura que la imagen cubra el contenedor */
-  height: auto; /* Mantiene la proporción de la imagen */
-  display: block; /* Elimina cualquier espacio extra */
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 #navegador a {
-  color: white; /* Establece el color de texto a blanco */
-  font-size: 20px; /* Tamaño de la fuente */
-  font-weight: 900; /* Peso de la fuente más grueso para mejorar la visibilidad */
+  color: white;
+  font-size: 20px;
+  font-weight: 900;
   margin: 10px;
-  text-decoration: none; /* Elimina cualquier subrayado por defecto */
-  transition: color 0.3s ease-in-out; /* Suaviza la transición de color */
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
 }
 
 #navegador a:hover {
-  color: #87CEFA; /* Color celeste en hover */
+  color: #87CEFA;
 }
 
-/* Ajuste de imagen y logo en la barra de navegación */
 .navbar-brand img {
   width: 100%;
-  max-width: 180px; /* Limita el tamaño máximo del logo */
-  height: 100%;
+  max-width: 180px;
 }
 
-/* Mejora la visibilidad de los enlaces en dispositivos pequeños */
 #navegador .nav-link {
-  font-size: 16px; /* Ajusta según sea necesario para mejorar la legibilidad */
+  font-size: 16px;
   margin: 5px;
   padding: 5px;
 }
 
 .navbar-nav .nav-link h5 {
-  border-bottom: 7px solid transparent; /* Mantiene el diseño consistente sin color */
-  transition: border-color 0.3s ease; /* Suaviza la transición del color del borde */
-  padding-bottom: 20px; /* Espacio suficiente para la línea sin que toque el texto */
+  border-bottom: 7px solid transparent;
+  transition: border-color 0.3s ease;
+  padding-bottom: 20px;
 }
 
 .navbar-nav .nav-link:hover h5,
-.navbar-nav .nav-link.active h5 { /* Estilos para hover y enlaces activos */
-  border-bottom: 7px solid #C779D0; /* Barra rosada para elementos activos y en hover */
+.navbar-nav .nav-link.active h5 {
+  border-bottom: 7px solid #C779D0;
 }
 
-
-
-/* Ajustes responsivos para diferentes tamaños de pantalla */
+/* Media Queries para mejorar la responsividad */
 @media (max-width: 1024px) {
-  #navegador .container-fluid {
-    width: 95%; /* Aumenta el ancho para dispositivos más pequeños para mejor aprovechamiento del espacio */
+  #navegador {
+    padding: 5px 0;
   }
 
-  #navegador a {
-    font-size: 18px; /* Reduce el tamaño de la fuente para mejor adaptación */
+  #navegador .container-fluid {
+    width: 95%;
+  }
+
+  .logo-container {
+    max-width: 400px;  /* Ajuste del tamaño del logo */
+    top: 28%;
   }
 }
 
 @media (max-width: 768px) {
-  #navegador {
-    padding: 5px 0; /* Reduce el padding para más espacio vertical */
+  #navegador a {
+    font-size: 14px;  /* Reducción del tamaño de fuente */
   }
 
   .logo-container {
-    top: 50%; /* Ajuste para alineación vertical perfecta */
+    max-width: 260px;  /* Ajuste del tamaño del logo */
+    top: 8%;  /* Ajusta la posición vertical del logo */
+    transform: translate(-50%, -20%);
   }
 
-  #navegador .nav-link {
-    font-size: 14px; /* Reduce el tamaño de la fuente para mejorar la legibilidad */
-    padding: 3px; /* Menos padding para compactar los enlaces */
+  .navbar-nav .nav-link h5 {
+    font-size: 14px;  /* Ajuste del tamaño de fuente dentro de los enlaces */
   }
 }
 
 @media (max-width: 480px) {
-  #navegador a {
-    font-size: 16px; /* Ajuste para pantallas muy pequeñas */
-    margin: 5px; /* Reduce el margen entre enlaces */
+  #navegador .navbar-toggler {
+    margin-right: 10px;  /* Ajuste del margen para el toggler */
   }
 
   .logo-container {
-    display: none; /* Oculta el logo en dispositivos muy pequeños para ahorrar espacio */
+    max-width: 80px;  /* Ajuste del tamaño del logo */
+    top: 5%;
+  }
+
+  .navbar-nav .nav-link h5 {
+    padding-bottom: 5px;  /* Ajusta el espaciado */
+    font-size: 12px;  /* Reducción adicional del tamaño de fuente para legibilidad */
+  }
+
+  #navegador .nav-link {
+    padding: 2px;  /* Reduce el padding para maximizar el espacio disponible */
   }
 }
-

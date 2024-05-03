@@ -32,7 +32,7 @@
 <body>
         <!-- Header -->
         <header >
-            <nav class="navbar navbar-expand-lg" id="navegador">
+            <nav  class="navbar navbar-expand-lg fixed-top" id="navegador">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="index.html">
                         <img src="/img-marca/blanco-v3.png" width="180" alt="logo" class="logo-principal">
@@ -56,25 +56,25 @@
                 </div>
             </nav>
         </header>
-         <!-- Home -->
-         <section id="home">
+       <!-- Home -->
+        <section id="home" class="pt-5">
             <div class="container-fluid">
-                <div class="row">
-                    <div class="col m-0 p-0 mb-5">
+                <div class="row justify-content-center">
+                    <div class="col-12 p-0">
                         <!-- Contenedor de imagen de fondo -->
-                        <div class="background-container">
-                            <img src="/img/FondoNosotros.png" alt="imagen-portada" width="100%">
+                        <div class="position-relative text-white text-center">
+                            <img src="/img/FondoNosotros.png" alt="imagen-portada" class="img-fluid">
                             <!-- Contenedor para centrar la imagen de logo -->
-                            <div class="logo-container" style="transform: translateX(-100%) translateY(-40%); opacity: 1.5">
-                                <img src="/img/EtherTrasparente.png"  class="centered-logo" width="55%">
+                            <div class="position-absolute" style="top: 50%; left: 40%; transform: translate(-50%, -50%);">
+                                <img src="/img/EtherTrasparente.png" class="img-fluid" style="width: 55%;">
                             </div>
-                            <!-- Icono de Steam agregado -->
-                            <div class="button-container">
-                                <div class="text-container">
-                                    <h2 >WE ARE</h2>  
-                                    <h1 >ETHER DREAMS</h1>  
-                                    <p>Ether dreams was founded in 2024 by a group a friends after a horrible experience in the game industy. We all have a shared passion for indie video games and we are inspired by the possibility of positively impacting the digital entertainment industry and making our mark in the world of video game development.
-                                    <br><br><planet class="Strong"> Our dreams are beyond this</planet></p>
+                            <!-- Texto sobre la imagen -->
+                            <div class="position-absolute w-50" style="top: -10%;">
+                                <div class="container">
+                                    <h2 class="display-4">WE ARE</h2>  
+                                    <h1 class="display-3">ETHER DREAMS</h1>  
+                                    <p class="lead">Ether dreams was founded in 2024 by a group of friends after a horrible experience in the game industry. We all have a shared passion for indie video games and are inspired by the possibility of positively impacting the digital entertainment industry and making our mark in the world of video game development.
+                                    <br><br><strong>Our dreams are beyond this</strong></p>
                                 </div>
                             </div>
                         </div>
@@ -82,6 +82,8 @@
                 </div>
             </div>
         </section>
+
+
         <!-- Sección Equipo -->
         <section id="nuestro-equipo" class="container">
             <h2 data-aos="fade-left">SAY HELLO TO A</h2>

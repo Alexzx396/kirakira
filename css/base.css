@@ -13,7 +13,7 @@ body {
   background-image: linear-gradient(to right, #000000, #1d1911, #353023);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 10px 80%; 
+  background-position: center center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -28,13 +28,13 @@ h1, h2, h3, h4, h5, h6 {
 .contenedores .card-title {
   color: #87CEFA;
   font-size: 30px;
-  margin-bottom: 45px;
+  margin-bottom: 20px;
 }
 
 .contenedores .card-title2 {
   color: white;
   font-size: 75px;
-  margin-bottom: 45px;
+  margin-bottom: 20px;
 }
 
 .contenedores .card-text {
@@ -64,22 +64,18 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-/* Media Queries para adaptación a diferentes tamaños de pantalla */
+/* Media Queries para adaptar el diseño a diferentes tamaños de pantalla */
 @media (max-width: 1024px) {
   .contenedores .card-title {
-    font-size: 24px;
+    font-size: 2.5rem;
   }
 
   .contenedores .card-title2 {
-    font-size: 50px;
+    font-size: 4rem;
   }
 
-  .contenedores .card-text {
-    font-size: 18px;
-  }
-
-  .card-title.h2 {
-    font-size: 20px;
+  .contenedores .card-text, .contenedores .btn-primary, .card-title.h2 {
+    font-size: 1.25rem;
   }
 
   .steam-icon-container {
@@ -88,38 +84,57 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
-  body {
-    background-position: center; /* Centrar el fondo para mejor visualización en dispositivos móviles */
-  }
-
   .contenedores .card-title {
-    font-size: 20px;
+    font-size: 2rem;
   }
 
   .contenedores .card-title2 {
-    font-size: 40px;
+    font-size: 3.5rem;
   }
 
-  .contenedores .card-text, .card-title.h2 {
-    font-size: 16px;
-  }
-
-  .contenedores .btn-primary {
-    font-size: 14px;
+  .contenedores .card-text, .contenedores .btn-primary, .card-title.h2 {
+    font-size: 1rem;
   }
 
   .steam-icon-container {
-    top: 70%;
-    font-size: 40px;
+    display: none; /* Ocultar el icono para evitar sobrecarga visual en pantallas pequeñas */
   }
 }
 
 @media (max-width: 480px) {
-  .contenedores .card-title, .contenedores .card-title2, .contenedores .card-text, .card-title.h2 {
-    text-align: center; /* Centrar texto para mejorar la legibilidad en pantallas pequeñas */
+  body {
+    background-position: top center; /* Ajustar la posición del fondo para mejor visibilidad */
   }
 
-  .steam-icon-container {
-    display: none; /* Ocultar el icono en dispositivos muy pequeños */
+  .contenedores .card-title, .contenedores .card-title2, .contenedores .card-text {
+    text-align: center; /* Mejor alineación y presentación para leer en dispositivos pequeños */
+    font-size: 1.5rem; /* Uniformidad en el tamaño del texto */
+  }
+
+  .contenedores .btn-primary {
+    width: 100%; /* Botones de ancho completo para facilitar la interacción */
+    padding: 12px 0; /* Ajuste del padding */
+  }
+
+  .card-title.h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .contenedores .card-title, .contenedores .card-title2, .contenedores .card-text {
+    font-size: 1.2rem; /* Ajuste adicional para pantallas extremadamente pequeñas */
+  }
+
+  .contenedores .btn-primary {
+    padding: 10px 0; /* Ajuste del padding para facilitar la interacción */
+  }
+
+  .card-title.h2 {
+    font-size: 1rem; /* Ajuste del tamaño de la fuente para una mejor legibilidad */
+  }
+
+  #footer p {
+    font-size: 0.875rem; /* Reduce el tamaño de la fuente para adaptar el texto al espacio disponible */
   }
 }
