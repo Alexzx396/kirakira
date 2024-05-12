@@ -37,7 +37,7 @@
             <nav class="navbar navbar-expand-lg" id="navegador">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="index.html">
-                        <img src="/img-marca/blanco-v3.png" width="180" alt="logo" class="logo-principal">
+                        <img src="/img-marca/blanco-v3.png" alt="logo" class="logo-principal">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -59,25 +59,29 @@
             </nav>
         </header>
         <!-- Home -->
-        <section id="home" >
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col m-0 p-0 mb-5">
-                        <!-- Contenedor de imagen de fondo -->
-                        <div class="background-container" >
-                            <img src="/img/fondo.png" alt="imagen-portada" width="100%">
+        <section id="home">
+            <div class="container-fluid px-0">
+                <div class="row no-gutters">
+                    <div class="col-12">
+                        <!-- Contenedor de imagen de fondo con ajuste de imagen completo -->
+                        <div class="position-relative text-center">
+                            <!-- Imagen de fondo -->
+                            <img src="/img/fondo.png" alt="Imagen de fondo" class="img-fluid w-100">
                             <!-- Contenedor para centrar la imagen de logo -->
-                            <div class="logo-container">
-                                <img src="/img/kirakiraslime_logo.png" alt="Logo KiraKiraSlime" class="centered-logo" width="100%">
+                            <div class="position-absolute" style="top: 45%; left: 50%; transform: translate(-50%, -50%);">
+                                <img src="/img/kirakiraslime_logo.png" alt="Logo KiraKiraSlime" class="img-fluid" style="width: 100%;">
                             </div>
                             <!-- Icono de Steam agregado -->
-                            <div class="steam-icon-container">
-                                <i class="fa-brands fa-steam"></i>
+                            <div class="position-absolute" style="top: 77%; left: 50%; transform: translate(-50%, -50%);">
+                                <i class="fa-brands fa-steam fa-3x"></i>
                             </div>
-                            <div class="button-container">
-                                <a href="#" class="btn btn-primary"><i class="fa-brands fa-steam "></i> <h6>WISHLIST NOW</h6> </a>
-                                <a href="#" class="btn btn-primary"><i class="fa-solid fa-gamepad"></i> <h6>MORE INFO</h6></a>
-                                <a href="#" class="btn btn-primary"><i class="fa-solid fa-play"></i> <h6>TRAILER</h6></a>
+                            <!-- Botones de acción -->
+                            <div class="position-absolute w-100" style="bottom: 5%;">
+                                <div class="d-inline-block">
+                                    <a href="#" class="btn btn-primary m-1"><i class="fa-brands fa-steam"></i> Wishlist Now</a>
+                                    <a href="#" class="btn btn-primary m-1"><i class="fa-solid fa-gamepad"></i> More Info</a>
+                                    <a href="#" class="btn btn-primary m-1"><i class="fa-solid fa-play"></i> Trailer</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -87,7 +91,6 @@
         
         <!-- Main Content -->
         <main class="container-fluid" id="seccion-post-home">
-           <!-- Bienvenido -->
         </main>
         <!-- Footer -->
         <div id="footer-placeholder"></div>

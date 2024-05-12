@@ -1,54 +1,55 @@
 /* Estilos base para dispositivos con pantalla menor a 1024px */
 @media (max-width: 1024px) {
     html, body {
-        max-height: 100%; /* Asegurar que no sea más alto que la ventana visible */
+        max-height: 100%;
         margin: 0;
         padding: 0;
-        overflow-x: hidden; /* Ocultar desplazamiento horizontal */
-        overflow-y: auto; /* Permitir desplazamiento vertical si es necesario */
+        overflow-x: hidden; /* Evita desplazamiento horizontal */
+        overflow-y: auto; /* Permite desplazamiento vertical si necesario */
     }
-    .steam-icon-container {
-        display: none; /* Oculta el contenedor del icono en pantallas pequeñas */
+    
+    .steam-icon-container, .logo-container {
+        display: none; /* Oculta iconos no necesarios en pantallas pequeñas */
     }
-    .button-container {
-        padding: 10px 24px; /* Padding reducido para pantallas más pequeñas */
-        padding-bottom: 70%; /* Padding reducido para pantallas más pequeñas */
-        font-size: 14px; /* Reducción del tamaño de la fuente */
-        width: 100%; /* Ancho completo para mejor accesibilidad */
-        transform: translate(-50%, -20%);
-      }
 
+    .button-container {
+        padding: 10px; /* Padding uniforme */
+        width: 100%; /* Ajuste de ancho para mejor accesibilidad */
+        bottom: 10%; /* Ajuste de posición para accesibilidad */
+        position: absolute; /* Posicionamiento absoluto para sobreponerse correctamente */
+        left: 50%; /* Centralización */
+        transform: translateX(-50%); /* Alineación precisa */
+        font-size: 14px; /* Ajuste del tamaño de fuente para legibilidad */
+    }
 }
 
 /* Estilos para dispositivos con pantalla menor a 768px */
 @media (max-width: 768px) {
     .contenedores .card {
-        max-height: 100%; /* Asegurar que no sea más alto que la ventana visible */
-        max-height: 75vh;
-        margin: 50px;
-        padding: 10px;
+        margin: 20px; /* Margen reducido para más espacio */
+        padding: 10px; /* Padding reducido para más espacio de contenido */
+        max-height: 75vh; /* Ajuste de altura máxima para evitar desbordamiento */
     }
-    .steam-icon-container {
-        display: none; /* Oculta el contenedor del icono en pantallas pequeñas */
+    .steam-icon-container, .logo-container {
+        display: none; /* Oculta iconos no necesarios en pantallas muy pequeñas */
     }
-    .logo-container {
-        display: none; /* Oculta el contenedor del icono en pantallas pequeñas */
-    }
-
-   
 }
 
 /* Estilos para dispositivos con pantalla menor a 480px */
 @media (max-width: 480px) {
     .contenedores .card {
-        max-height: 100%; /* Asegurar que no sea más alto que la ventana visible */
+        margin: 10px; /* Margen aún más reducido para maximizar el espacio */
     }
-    .steam-icon-container {
-        display: none; /* Oculta el contenedor del icono en pantallas pequeñas */
+    .steam-icon-container, .logo-container {
+        display: none; /* Continúa ocultando iconos en las menores resoluciones */
     }
-    .logo-container {
-        display: none; /* Oculta el contenedor del icono en pantallas pequeñas */
-      }
-  
 }
 
+@-moz-document url-prefix() {
+    .vector {
+        width: auto; /* Ajuste específico para Firefox */
+    }
+    #acerca .contenedor-interior {
+        padding: auto; /* Ajustes adicionales si es necesario */
+    }
+}

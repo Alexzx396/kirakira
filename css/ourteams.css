@@ -50,11 +50,6 @@
     padding: 20px; /* Opcional: añade algo de padding para evitar que el texto toque los bordes */
   }
   
-  /* Asegura que el contenedor principal siga centrado */
-  #home .container-fluid {
-    text-align: center;
-  }
-  
   /* Estilos específicos para los títulos */
   #home h2, #home h1 {
     text-align: left; /* Asegura que los títulos también estén alineados a la izquierda */
@@ -69,12 +64,6 @@
   
   #home-nosotros h2, #home-nosotros h1 {
     text-align: left; /* Asegura que los títulos también estén alineados a la izquierda */
-  }
-  
-  /* Estilos para la sección "Home" */
-  #home .background-container {
-    position: relative;
-    width: 100%;
   }
   
   #home .text-container {

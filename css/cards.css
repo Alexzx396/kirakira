@@ -1,194 +1,211 @@
-/* Estilos para las tarjetas dentro de contenedores */
 .contenedores .card {
-  background-color: rgba(54, 65, 65, 0.8); /* Fondo oscuro con transparencia */
-  border-radius: 100px; /* Bordes más redondeados */
-  border: 8px solid transparent; /* Borde transparente para no mostrar color de borde sólido */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra suave para destacar las tarjetas */
-  color: white; /* Texto en color blanco */
-  margin: 20px; /* Aumenta significativamente el margen inferior para separar más las tarjetas */
-  padding: 15px 30px; /* Padding adecuado para tamaño interno */
+  margin: 30px;
+  padding: 35px 45px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-image: url('/img/BordeRGB.png') 1 stretch; /* Usa la imagen como borde */
-  position: relative; /* Establecer posición relativa para contener elementos absolutos como el icono */
+  position: relative;
+  width: auto;
+  height: auto;
+  background-color: rgba(54, 65, 65, 0.8); /* Fondo oscuro con transparencia */
+  border-radius: 50px; /* Redondea los bordes del contenido de la tarjeta */
+
 }
+
+.contenedores .card::before {
+  content: "";
+  position: absolute;
+  top: -3px; /* Sutilmente más grande para cubrir como un borde */
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(to right, #feac5e, #c779d0, #4bc0c8, #feac5e, #c779d0, #4bc0c8);
+  border-radius: 50px; /* Asegura que el 'borde' también sea redondeado */
+  z-index: -1; /* Mantiene el pseudoelemento detrás del contenido de la tarjeta */
+}
+
 
 .contenedores .card-icon {
   position: absolute;
-  top: -15%; /* Porcentaje basado en la altura del contenedor para ajuste dinámico */
+  top: -13vw; /* Posición ajustada a la vista del viewport */
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 22vw; /* Ancho basado en el ancho del viewport para escalar automáticamente */
-  height: auto; /* Altura automática para mantener la proporción */
-  max-width: 100%; /* Asegura que el ícono no sobrepase el ancho de la tarjeta */
+  transform: translateX(-50%);
+  width: 20vw; /* Ancho relativo al ancho de la ventana del navegador */
+  height: auto; /* Mantiene la proporción del icono */
 }
-
 
 /* Botones estilizados dentro de contenedores */
 .contenedores .btn-primary {
-  background-color: #000; /* Botón de fondo negro */
-  color: #fff; /* Texto del botón en blanco */
-  border: none; /* Sin bordes para un estilo limpio */
-  padding: 10px 20px; /* Padding generoso para hacer el botón más fácil de clicar */
-  font-size: 18px; /* Tamaño de fuente grande para facilidad de lectura */
-  border-radius: 5px; /* Bordes redondeados para un look moderno */
-  cursor: pointer; /* Cursor tipo puntero para indicar que es clickeable */
-  transition: background-color 0.3s; /* Transición suave al cambiar de color */
+  background-image: linear-gradient(to right,#4bc0c8,  #c779d0, #feac5e );
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px; /* Tamaño de fuente adecuado para la legibilidad */
+  border-radius: 25px; /* Bordes suavemente redondeados */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Transiciones para interacción visual */
+  border: 1px solid #c779d0; /* Borde sutil que complementa el diseño */
 }
-
 
 /* Estilos para los títulos y textos dentro de las tarjetas */
 .contenedores .card-title {
-  font-size: 30px; /* Ajuste de tamaño de fuente para los nombres */
-  margin-bottom: 10px; /* Reducir el espacio entre el título y el subtítulo */
-  margin-top: 60px; /* Reducir el espacio entre el título y el subtítulo */
+  font-size: 20px; /* Tamaño consistente y legible */
+  margin: 15px 0;
 }
 
 .contenedores .card-title2 {
-  color: #FFFFFF; /* Blanco para títulos principales */
-  font-size: 50px; /* Tamaño de fuente más grande para títulos principales */
-  margin-bottom: 5px; /* Reducir el espacio entre el título y el subtítulo */
+  font-size: 42px; /* Más prominente que el título secundario */
+  margin-bottom: 5px;
+}
 
+.contenedores .proyects-title2{
+  color:#FCD569;
+}
+
+.contenedores .proyects-title{
+  color: #BABAED;
 }
 
 .contenedores .card-text {
-  font-size: 18px; /* Tamaño de fuente para los textos descriptivos */
-  margin-bottom: 10px; /* Reducir el espacio entre el título y el subtítulo */
-}
-
-.contenedores .card-title.proyects-title {
-  color: #BABAED; /* Cambia este valor al color deseado */
-}
-
-.contenedores .card-title.proyects-title2 {
-  color: #FCD569; /* Color celeste para los nombres */
+  font-size: 16px; /* Optimizado para la legibilidad en diferentes dispositivos */
+  margin-bottom: 10px;
 }
 
 /* Botones de redes sociales dentro de las tarjetas */
-.btn-social {
-  padding: 5px 20px; /* Padding reducido para los botones */
-  border-radius: 50px; /* Bordes más redondeados */
-}
-
 .btn-social i {
-  font-size: 20px; /* Tamaño del icono dentro del botón */
-}
-
-/* Estilo básico del botón */
-.contenedores .btn-primary {
-  font-size: 18px; /* Tamaño de fuente más grande para una mejor interacción */
-  background-image: linear-gradient(to right, #4bc0c8,  #c779d0 , #feac5e); /* Fondo rosa inicial */
-  color: White; /* Color del texto */
-  border: none; /* Remueve el borde predeterminado */
-  border-radius: 25px; /* Bordes más redondeados */
-  transition: all 0.3s ease; /* Transición suave para efectos de fondo y transformaciones */
+  border-radius: 80px; 
+  font-size: 40px;
+  color: white; /* Fondo oscuro con transparencia */
 }
 
 /* Estilo del botón al pasar el mouse */
 .contenedores .btn-primary:hover {
-  background-image: linear-gradient(to right,  #feac5e, #c779d0, #4bc0c8); /* Degradado de rosa a celeste */
-  color: black; /* Cambia el color del texto a algo más oscuro para contraste */
-  transform: scale(1.1); /* Hace que el botón crezca */
+  background-image: linear-gradient(to right, #feac5e, #c779d0, #4bc0c8);
+  transform: scale(1.05); /* Efecto sutil para indicar interactividad */
+  color: black; 
+}
+/* Estilo del botón al pasar el mouse */
+.contenedores .btn-social i:hover {
+  transform: scale(1.05); /* Efecto sutil para indicar interactividad */
+  color: black; 
 }
 
-.btn-social i {
-  font-size: 24px; /* Asegura que el tamaño del icono sea adecuado */
-  border-radius: 30px; /* Bordes más redondeados para un aspecto suave */
-  transition: all 0.3s ease; /* Transición suave para efectos de hover */
-}
 
-/* Media Queries para ajustar la responsividad */
+/* Media Queries para adaptar los estilos en diferentes tamaños de pantalla */
 @media (max-width: 1024px) {
-  .contenedores .card {
-    border-radius: 50px;
-    padding: 2px 30px;
-    margin: 30px auto; /* Asegura un margen vertical y horizontal uniforme */
+  .contenedores .card-icon {
+    width: 200px; /* Reducción significativa para adaptarse a pantallas pequeñas */
+    top: -110px;
   }
 
+  .contenedores .btn-primary, .btn-social {
+    font-size: 14px; /* Reducción del tamaño de fuente de los botones */
+    padding: 8px 16px;
+  }
   .contenedores .card-title {
-    font-size: 24px;
+    font-size: 24px; /* Ligeramente más pequeño para adaptarse a pantallas más compactas */
   }
 
   .contenedores .card-title2 {
-    font-size: 35px;
+    font-size: 35px; /* Ajuste para mantener la jerarquía visual */
   }
 
   .contenedores .card-text {
-    font-size: 14px;
-  }
-
-  .contenedores .card-icon {
-    width: 15vw;
-    padding-top: 60px;
+    font-size: 16px; /* Adecuado para la mayoría de tabletas y dispositivos grandes */
   }
 }
 
-/* Media Queries para ajustar responsividad en distintos tamaños de pantalla */
 @media (max-width: 768px) {
   .contenedores .card {
-    margin: 10px auto; /* Asegura un margen vertical y horizontal uniforme */
-    padding: 10px 42px;
+    padding: 8px 10px;
   }
+
   .contenedores .card-icon {
-    width: 25vw;
-    padding-top: 55px;
+    width: 130px; /* Mayor reducción del tamaño del icono */
+    top: -70px;
+  }
+
+  .contenedores .btn-primary, .btn-social {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .contenedores .btn-primary{
+    font-size: 8px;
+    max-width: 20px;
+  }
+  .contenedores .card-title {
+    font-size: 20px; /* Reducción adicional para pantallas de tabletas más pequeñas */
+  }
+
+  .contenedores .card-title2 {
+    font-size: 30px; /* Continúa destacando pero es menos dominante */
+  }
+
+  .contenedores .card-text {
+    font-size: 14px; /* Más compacto, adecuado para espacios reducidos */
   }
 }
-
 
 @media (max-width: 480px) {
   .contenedores .card {
-    flex-direction: column;
-    align-items: center;
-    padding: 8px 10px;
-    margin: 10px;
-    border-radius: 40px;
-    margin: 20px auto; /* Asegura un margen vertical y horizontal uniforme */
-  }
-
-  .contenedores .card-title {
-    margin-top: 10px;
-    font-size: 18px;
-  }
-
-  .contenedores .card-title2 {
-    font-size: 28px;
-  }
-
-  .contenedores .card-text {
-    font-size: 12px;
+    padding: 6px 8px;
+    max-width: 100%; /* Reducción significativa para adaptarse a pantallas pequeñas */
+    width: 100%; /* Reducción significativa para adaptarse a pantallas pequeñas */
+    content: center;
   }
 
   .contenedores .card-icon {
-    width: 100px; /* Ajuste específico para iconos pequeños */
-    top: -20px;
+    width: 100px; /* Reducción significativa para adaptarse a pantallas pequeñas */
+    top: -50px; /* Ajuste de la posición para no sobreponer demasiado */
   }
 
-  .btn-social i {
-    font-size: 16px;
+  .contenedores .btn-primary, .btn-social {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+  .contenedores .card-title {
+    font-size: 18px; /* Adecuado para smartphones */
+  }
+
+  .contenedores .card-title2 {
+    font-size: 25px; /* Sigue siendo prominente pero no sobrecargado */
+  }
+
+  .contenedores .card-text {
+    font-size: 12px; /* Mínimo viable para legibilidad en dispositivos muy pequeños */
   }
 }
 
 @media (max-width: 360px) {
-  .contenedores .card-title {
-    font-size: 18px; /* Ajuste adicional para tamaños de pantalla muy pequeños */
+  .contenedores .card {
+    padding: 4px 15px; /* Ajuste de padding para una visualización adecuada */
+    width: 200%; /* Aprovecha todo el ancho disponible */
+  }
 
+  .contenedores .card-icon {
+    width: 100px; /* Reducción significativa para adaptarse a pantallas pequeñas */
+    top: -50px; /* Ajuste de posición para reducir la sobresalida */
+  }
+
+  .contenedores .btn-primary {
+    size: 5px; /* Tamaño de fuente reducido para los botones */
+    padding: 2px 12px; /* Padding ajustado para mantener la funcionalidad */
+    width: 20%; /* Ajuste al ancho completo para mejorar la accesibilidad */
+  }
+
+  .contenedores .card-title {
+    font-size: 14px; /* Más pequeño aún para garantizar adaptabilidad */
   }
 
   .contenedores .card-title2 {
-    font-size: 28px;
+    font-size: 20px; /* Reducción para adaptarse a los límites de pantalla más ajustados */
   }
 
   .contenedores .card-text {
-    font-size: 12px;
-  }
-
-  .contenedores .btn-primary, .btn-social {
-    padding: 8px 16px; /* Reducción de padding para adaptarse a la pantalla */
-    font-size: 14px; /* Reducción del tamaño de fuente para mantener la proporción */
-    width: 100%; /* Botones de ancho completo para facilitar la interacción */
+    padding: 20px; /* Agrega algo de padding para evitar que el texto toque los bordes de la tarjeta */
+    font-size: 8px; /* Mantén un tamaño de fuente legible incluso en pantallas muy pequeñas */
   }
 }

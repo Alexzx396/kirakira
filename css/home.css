@@ -1,120 +1,142 @@
-/* Estilos base para la navegación */
-#navegador {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
-  padding: 10px 0;
-}
-
-#navegador .container-fluid {
-  width: 90%;
-  margin: auto;
-}
-
-.logo-container {
-  position: absolute;
-  top: 40%; /* Centrado verticalmente */
-  left: 50%; /* Centrado horizontalmente */
-  transform: translate(-50%, -50%);
-  z-index: 10; /* Asegura que el logo esté sobre otros elementos */
-  width: auto; /* Ancho automático basado en el contenido del logo */
-  display: block; /* Asegura que el logo se muestre por defecto */
-  
-}
-
-.background-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-#navegador a {
-  color: white;
-  font-size: 20px;
-  font-weight: 900;
-  margin: 10px;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-
-#navegador a:hover {
-  color: #87CEFA;
-}
-
-.navbar-brand img {
-  width: 100%;
-  max-width: 180px;
-}
-
-#navegador .nav-link {
-  font-size: 16px;
-  margin: 5px;
-  padding: 5px;
-}
-
-.navbar-nav .nav-link h5 {
-  border-bottom: 7px solid transparent;
-  transition: border-color 0.3s ease;
-  padding-bottom: 20px;
-}
-
-.navbar-nav .nav-link:hover h5,
-.navbar-nav .nav-link.active h5 {
-  border-bottom: 7px solid #C779D0;
-}
-
-/* Media Queries para mejorar la responsividad */
-@media (max-width: 1024px) {
+  /* Estilos base para la navegación */
   #navegador {
-    padding: 5px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    padding: 10px 0;
   }
 
   #navegador .container-fluid {
-    width: 95%;
+    width: 90%;
+    margin: auto;
+  }
+
+  #navegador a {
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    margin: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+
+  #navegador a:hover {
+    color: #87CEFA;
+  }
+
+
+  .logo-container {
+    position: absolute;
+    transform: translate(-10%, -50%); /* Ajuste fino para centrar exactamente el logo */
+    z-index: 10; /* Asegura que el logo esté sobre otros elementos */
+    width: auto; /* Ancho automático basado en el contenido del logo */
+    display: block; /* Asegura que el logo se muestre por defecto */
+  }
+
+  #navegador a {
+    color: white; /* Color de texto para los enlaces */
+    font-size: 20px; /* Tamaño de texto grande para mejor legibilidad */
+    font-weight: 900; /* Negrita para destacar */
+    margin: 10px; /* Espacio alrededor de los enlaces */
+    text-decoration: none; /* No subrayado */
+    transition: color 0.3s ease-in-out; /* Transición suave al cambiar de color */
+  }
+
+  #navegador a:hover {
+    color: #87CEFA; /* Color de hover para enlaces */
+  }
+
+  .navbar-brand img {
+    width: 100%;
+    max-width: 180px; /* Tamaño máximo para la imagen del logo en la barra */
+  }
+
+  #navegador .nav-link {
+    font-size: 16px; /* Tamaño de la fuente para los enlaces de la barra */
+    margin: 5px; /* Margen alrededor de los enlaces */
+    padding: 5px; /* Relleno dentro de los enlaces para hacer clic fácilmente */
+  }
+
+  .navbar-nav .nav-link h5 {
+    border-bottom: 7px solid transparent; /* Borde inferior transparente para una transición suave */
+    transition: border-color 0.3s ease; /* Transición suave del color del borde */
+    padding-bottom: 20px; /* Espaciado inferior para visualización y espacio de clic */
+  }
+
+  .navbar-nav .nav-link:hover h5,
+  .navbar-nav .nav-link.active h5 {
+    border-bottom: 7px solid #C779D0; /* Cambio de color en hover y en estado activo */
+  }
+
+
+/* Media Queries para mejorar la responsividad */
+@media (max-width: 1024px) {
+  #navegador .container-fluid {
+    width: 100%; /* Slight reduction */
   }
 
   .logo-container {
-    max-width: 400px;  /* Ajuste del tamaño del logo */
-    top: 28%;
+    max-width: 150px; /* Reduce the logo size for better fit */
   }
 }
 
 @media (max-width: 768px) {
-  #navegador a {
-    font-size: 14px;  /* Reducción del tamaño de fuente */
-  }
-
   .logo-container {
-    max-width: 260px;  /* Ajuste del tamaño del logo */
-    top: 8%;  /* Ajusta la posición vertical del logo */
-    transform: translate(-50%, -20%);
+    max-width: 80px; /* Further reduce the logo size */
   }
 
   .navbar-nav .nav-link h5 {
-    font-size: 14px;  /* Ajuste del tamaño de fuente dentro de los enlaces */
+    font-size: 14px; /* Reduce font size for better spacing */
+  }
+
+  #navegador a {
+    font-size: 16px; /* Adjust link font size */
   }
 }
 
 @media (max-width: 480px) {
   #navegador .navbar-toggler {
-    margin-right: 10px;  /* Ajuste del margen para el toggler */
+    margin-right: 10px; /* Adjust the margin for the toggler */
   }
 
   .logo-container {
-    max-width: 80px;  /* Ajuste del tamaño del logo */
-    top: 5%;
+    width: -50px; /* Significant reduction for small screens */
   }
 
   .navbar-nav .nav-link h5 {
-    padding-bottom: 5px;  /* Ajusta el espaciado */
-    font-size: 12px;  /* Reducción adicional del tamaño de fuente para legibilidad */
+    font-size: 12px; /* Further reduce the font size for legibility */
   }
 
   #navegador .nav-link {
-    padding: 2px;  /* Reduce el padding para maximizar el espacio disponible */
+    padding: 2px; /* Reduce padding to maximize available space */
+  }
+  #navegador {
+    height: -100%;
+  }
+}
+
+@media (max-width: 360px) {
+  
+  #navegador .navbar-toggler {
+    margin-right: 5px; /* Adjust the margin for the toggler */
+  }
+
+  .logo-container {
+    width: 10%; /* Significant reduction for small screens */
+  }
+
+  .navbar-nav .nav-link h5 {
+    font-size: 12px; /* Further reduce the font size for legibility */
+  }
+
+  #navegador .nav-link {
+    padding: 2px; /* Reduce padding to maximize available space */
+  }
+  #navegador {
+    height: -100%;
   }
 }

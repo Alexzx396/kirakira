@@ -32,23 +32,22 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/cards.css">
 
-
     </head>
-<body>
-<!-- Header -->
+    <body>
+    <!-- Header -->
         <header >
             <nav class="navbar navbar-expand-lg" id="navegador">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="index.html">
-                        <img src="/img-marca/blanco-v3.png" alt="logo" class="logo-principal">
+                        <img src="/img-marca/blanco-v3.png" alt="logo" class="logo-container">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <div class="collapse navbar-collapse justify-content-end textos" id="navbarNav">
                         <ul class="navbar-nav menuItems">
                             <li class="nav-item">
-                                <a class="nav-link animacion-nav" aria-current="page" href="index.html" data-item='HOME'><h5>HOME</h5></a>
+                                <a class="nav-link animacion-nav" aria-current="page" href="/index.html" data-item='Home'><h5>HOME</h5></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link animacion-nav" href="ourteams.html" data-item='ABOUT US'><h5>ABOUT US</h5></a>
@@ -62,47 +61,49 @@
             </nav>
         </header>
         <!-- Home -->
-        <section id="home" class="container-fluid">
-            <div>
-                <div class="row">
-                    <div class="col m-0 p-0 mb-5">
-                        <!-- Contenedor de imagen de fondo -->
-                        <div class="background-container" >
-                            <img src="/img/fondo.png" alt="imagen-portada" width="100%">
+        <section id="home">
+            <div class="container-fluid px-0">
+                <div class="row no-gutters">
+                    <div class="col-12">
+                        <!-- Contenedor de imagen de fondo con ajuste de imagen completo -->
+                        <div class="position-relative text-center">
+                            <!-- Imagen de fondo -->
+                            <img src="/img/fondo.png" alt="Imagen de fondo" class="img-fluid w-100">
                             <!-- Contenedor para centrar la imagen de logo -->
-                            <div class="logo-container">
-                                <img src="/img/kirakiraslime_logo.png" alt="Logo KiraKiraSlime" class="centered-logo " width="100%">
+                            <div class="position-absolute" style="top: 45%; left: 50%; transform: translate(-50%, -50%);">
+                                <img src="/img/kirakiraslime_logo.png" alt="Logo KiraKiraSlime" class="img-fluid" style="width: 100%;">
                             </div>
                             <!-- Icono de Steam agregado -->
-                            <div class="steam-icon-container">
-                                <i class="fa-brands fa-steam"></i>
+                            <div class="position-absolute" style="top: 77%; left: 50%; transform: translate(-50%, -50%);">
+                                <i class="fa-brands fa-steam fa-3x"></i>
                             </div>
-                            <div class="button-container">
-                                <a href="https://store.steampowered.com/app/2940660/Kirakira_Slimes/" class="btn btn-primary"><i class="fa-brands fa-steam "></i> <h6>WISHLIST NOW</h6> </a>
-                                <a href="/information.html" class="btn btn-primary"><i class="fa-solid fa-gamepad"></i> <h6>MORE INFO</h6></a>
-                                <a href="#" class="btn btn-primary"><i class="fa-solid fa-play"></i> <h6>TRAILER</h6></a>
+                            <!-- Botones de acción -->
+                            <div class="position-absolute w-100" style="bottom: 5%;">
+                                <div class="d-inline-block">
+                                    <a href="https://store.steampowered.com/app/2940660/Kirakira_Slimes/" class="btn btn-primary m-1"><i class="fa-brands fa-steam"></i> Wishlist Now</a>
+                                    <a href="/information.html" class="btn btn-primary m-1"><i class="fa-solid fa-gamepad"></i> More Info</a>
+                                    <a href="https://www.youtube.com/watch?v=9p_xAUF8hFQ" class="btn btn-primary m-1"><i class="fa-solid fa-play"></i> Trailer</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
         <!-- Main Content -->
-        
-        <main class="container-fluid" id="seccion-post-home">
+        <Br></Br><br>
+        <main class="container-fluid">
            <!-- Bienvenido -->
             <section id="acerca" class="contenedores p-4" >
-                <div class="container-fluid contenedor-interior">
-                    <div class="row">
-                        <!-- Columna de Imagen -->
+                <div class="contenedor-interior">
+                    <div class="custom-row">
                         <div class="col-md-6 text-center">
-                            <img src="/img-marca/Vector.png" alt="Logo de EtherDreams" class="mi-foto img-fluid pt-5" data-aos="fade-right">
-                        </div>
+                            <img src="/img-marca/Vector.png" alt="Logo de EtherDreams" class="vector img-fluid pt-5" data-aos="fade-right">
+                        </div><br><br>
                         <!-- Columna de Texto -->
                         <div class="col-md-6">
                             <h2 class=" titulos-secciones bold " data-aos="fade-left">WELCOME TO</h2>
-                            <h1 class="pt-2" data-aos="fade-down"><strong>ETHER DREAMS</strong></h1>
+                            <h1 class=" pt-2" data-aos="fade-down"><strong>ETHER DREAMS</strong></h1>
                             <p class="card-text2" data-aos="fade-top">We are an indie videogame development company based in Chile and exclusively dedicated to the exciting world of digital entertainment. Our main goal is to create unique, inspiring and entertaining gaming experiences for gamers of all ages.</p><br>
                             <p data-aos="fade-left">Our dreams are beyond this planet.</p>
                             <br>
@@ -111,31 +112,31 @@
                     </div>
                 </div>
             </section> 
-
+        </main><Br><br><br>
+        <main class="container-fluid">
            <!--  Tarjetas // red Social // unete a nosotros // -->
-           
-           <section id="proyectos" class="container-fluid mt-3 contenedores p-4">
+           <section id="proyectos" class="mt-3 contenedores p-4">
             <div class="p-5 contenedor-interior">
                 <div class="row pt-5">
                     <div class="col-md-6">
-                        <div class="card">
-                            <img src="/img/tigre-web.png" alt="Icon" class="card-icon"> 
-                            <div class="card-body">
-                                <h2 class="card-title proyects-title2 ">SOCIAL</h2>
-                                <h1 class="card-title2">FOLLOW US</h1> 
-                                <p class="card-text">Join us on our social media to keep up with the latest updates and news.</p><br><br>
-                                <a href="https://www.instagram.com/etherdreams_/" class="btn btn-primary btn-social" aria-label="Síguenos en Instagram">
-                                    <i class="fa-brands fa-instagram"></i>
-                                  </a>
-                                <a href="https://twitter.com/etherdreams" class="btn btn-primary btn-social" aria-label="Síguenos en X">
-                                    <i class="fa-brands fa-x-twitter"></i>
-                                </a>
+                        <div class="card bg-dark text-white">
+                                <img src="/img/tigre-web.png" alt="Icon" class="card-icon"> 
+                                <div class="card-body">
+                                    <h2 class="card-title proyects-title2 ">SOCIAL</h2>
+                                    <h1 class="card-title2">FOLLOW US</h1> 
+                                    <p class="card-text">Join us on our social media to keep up with the latest updates and news.</p><br><br>
+                                    <a href="https://www.instagram.com/etherdreams_/" class="btn btn-social" aria-label="Síguenos en Instagram">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                    <a href="https://twitter.com/etherdreams" class="btn btn-social" aria-label="Síguenos en X">
+                                        <i class="fa-brands fa-x-twitter"></i>
+                                    </a>
                             </div>
                         </div>
                     </div>
                     <!-- Tarjeta 2 -->
                     <div class="col-md-6">
-                        <div class="card">
+                        <div class="card bg-dark text-white">
                             <img src="/img/ZorroMorado.png" alt="Icon" class="card-icon"> 
                             <div class="card-body">
                                 <h2 class="card-title proyects-title ">PROYECTS</h2>
