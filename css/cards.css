@@ -151,10 +151,9 @@
 
 @media (max-width: 480px) {
   .contenedores .card {
-    padding: 6px 8px;
-    max-width: 100%; /* Reducción significativa para adaptarse a pantallas pequeñas */
-    width: 100%; /* Reducción significativa para adaptarse a pantallas pequeñas */
-    content: center;
+    padding: 6px 8px; /* Ajuste de padding para mantener contenido bien distribuido */
+    width: 100%; /* Aumenta el ancho para aprovechar más el espacio horizontal disponible */
+    margin: 30px auto; /* Centra la tarjeta horizontalmente con un margen automático */
   }
 
   .contenedores .card-icon {
@@ -181,8 +180,10 @@
 
 @media (max-width: 360px) {
   .contenedores .card {
-    padding: 4px 15px; /* Ajuste de padding para una visualización adecuada */
-    width: 200%; /* Aprovecha todo el ancho disponible */
+    padding: 6px 8px; /* Ajuste de padding para mantener contenido bien distribuido */
+    width: 100%; /* Aumenta el ancho para aprovechar más el espacio horizontal disponible */
+    margin: 40px auto; /* Aumenta el margen para asegurar más espacio entre las tarjetas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   }
 
   .contenedores .card-icon {

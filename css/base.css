@@ -54,6 +54,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
+
+
+.navbar-toggler {
+  background-color: #4bc0c8; /* Opcional: ajustar el color del borde si es necesario */
+}
+
 /* Media Queries para adaptar el diseño a diferentes tamaños de pantalla */
 @media (max-width: 1024px) {
   .contenedores .card-title {

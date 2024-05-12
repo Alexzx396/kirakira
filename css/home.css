@@ -96,6 +96,10 @@
   #navegador a {
     font-size: 16px; /* Adjust link font size */
   }
+  .logo-kirakira{
+    max-width: 150px; /* Further reduce the logo size */
+    padding-bottom: 70px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -104,7 +108,7 @@
   }
 
   .logo-container {
-    width: -50px; /* Significant reduction for small screens */
+    width: -50px; 
   }
 
   .navbar-nav .nav-link h5 {
@@ -116,6 +120,9 @@
   }
   #navegador {
     height: -100%;
+  }
+  .logo-kirakira{
+    display: none;
   }
 }
 
@@ -138,5 +145,8 @@
   }
   #navegador {
     height: -100%;
+  }
+  .logo-kirakira{
+    display: none;
   }
 }
