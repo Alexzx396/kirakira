@@ -19,15 +19,15 @@
     object-fit: cover; /* Asegura que la imagen cubra correctamente */
   }
   
-  #nuestro-equipo .card-title {
-    font-size: 24px; /* Ligeramente más pequeño para ajustar el espacio */
-    color: #C27CD0; /* Color único para el título */
-    margin-top: 10px; /* Espacio después de la imagen */
+  #nuestro-equipo .card-title{
+    color: #C27CD0; /* Mantiene el color personalizado */
+    font-size: 20px; /* Aumento del tamaño para mejor legibilidad */
   }
-  
+ 
   #nuestro-equipo .card-text {
-    font-size: 18px; /* Aumento del tamaño para mejor legibilidad */
+    font-size: 13px; /* Aumento del tamaño para mejor legibilidad */
     color: #fff; /* Color blanco para el texto para contraste */
+    margin: 10px;
   }
   
   /* Títulos de la sección */
@@ -35,6 +35,7 @@
     font-size: 36px; /* Más grande para mayor impacto visual */
     color: white; /* Mantiene el color personalizado */
     margin-bottom: 20px; /* Espacio antes de las tarjetas */
+    
   }
   
   #nuestro-equipo h1 {
@@ -83,9 +84,9 @@
   #home h2 {
     padding-top: 25%;
     font-size: 35px;
-    color: #87CEFA; /* Color para el subtítulo */
+    color: #C27CD0; /* Color para el subtítulo */
   }
-  
+
   #home h1 {
     font-size: 130px; /* Tamaño más grande para mayor impacto visual */
   }
@@ -96,15 +97,13 @@
 
 /* Media Queries para adaptar el tamaño de texto en la sección #home */
 @media (max-width: 1024px) {
-  #home .display-4 {
+  #home .display-7 {
       font-size: 2rem; /* Ajustado para tabletas */
       color: #C27CD0;
-      
+      margin-top: 10%;
   }
-
-  #home .display-3 {
-      font-size: 4rem; /* Ajustado para encabezados grandes en tabletas */
-      
+  #home .display-10 {
+      font-size: 3rem; /* Ajustado para encabezados grandes en tabletas */
   }
 
   #home .lead {
@@ -114,17 +113,18 @@
     font-size: 1.5rem; /* Tamaño más pequeño para tablets */
 }
 #nuestro-equipo h1 {
-    font-size: 3.5rem; /* Tamaño adecuado para un impacto visual en tablets */
+    font-size: 3rem; /* Tamaño adecuado para un impacto visual en tablets */
 }
 }
 
 @media (max-width: 768px) {
-  #home .display-4 {
+  #home .display-7 {
       font-size: 2rem; /* Reducido para dispositivos móviles medianos */
       color: #C27CD0;
+      margin-top: 15%;
   }
 
-  #home .display-3 {
+  #home .display-10 {
       font-size: 3rem; /* Adecuado para encabezados en dispositivos móviles medianos */
       width: 220%;
   }
@@ -159,7 +159,6 @@
 
     #home h2, #home h1 {
       font-size: 24px; /* Reducción del tamaño de los títulos para evitar el desbordamiento */
-
     }
 
     #home p {
@@ -168,7 +167,7 @@
 
     /* Ajustar el logo y otros elementos centrados para evitar la superposición */
     .logo-container {
-      width: 50%; /* Ajustar el tamaño del logo */
+      width: 30%; /* Ajustar el tamaño del logo */
       top: 25%; /* Ajustar la posición vertical del logo */
       transform: translate(-50%, -25%);
     }
@@ -183,19 +182,20 @@
 }
 
 @media (max-width: 480px) {
-  #home .display-4 {
-      font-size: 0.8rem; /* Reducido para dispositivos muy pequeños */
+  #home .display-7 {
+      font-size: 0.7rem; /* Reducido para dispositivos móviles medianos */
       color: #C27CD0;
+      margin-top: 40%;
   }
 
-  #home .display-3 {
-      font-size: 1.5rem; /* Ajustado para encabezados en dispositivos muy pequeños */
+  #home .display-10 {
+      font-size: 1rem; /* Ajustado para encabezados en dispositivos muy pequeños */
       width: 200%;
   }
 
   #home .lead {
-      font-size: 0.55rem; /* Tamaño de fuente muy pequeño para texto descriptivo en dispositivos muy pequeños */
-      width: 220%;
+      font-size: 0.40rem; /* Tamaño de fuente muy pequeño para texto descriptivo en dispositivos muy pequeños */
+      width: 180%;
   }
 
   #home .container {
@@ -203,6 +203,35 @@
   }
   #nuestro-equipo h2 {
     font-size: 1rem; /* Adecuado para dispositivos muy pequeños */
+}
+#nuestro-equipo h1 {
+    font-size: 2.2rem; /* Impactante aún en pantallas pequeñas */
+}
+}
+
+@media (max-width: 360px) {
+  #home .display-7 {
+      font-size: 0.7rem; /* Reducido para dispositivos móviles medianos */
+      color: #C27CD0;
+      margin-top: 45%;
+  }
+
+  #home .display-10 {
+      font-size: 0.8rem; /* Ajustado para encabezados en dispositivos muy pequeños */
+      width: 200%;
+  }
+
+  #home .lead {
+      font-size: 0.3rem; /* Tamaño de fuente muy pequeño para texto descriptivo en dispositivos muy pequeños */
+      width: 180%;
+  }
+
+  #home .container {
+      padding: 0 15px; /* Añade padding para mantener el texto alejado de los bordes en pantallas pequeñas */
+  }
+  #nuestro-equipo h2 {
+    font-size: 1rem; /* Adecuado para dispositivos muy pequeños */
+
 }
 #nuestro-equipo h1 {
     font-size: 2.2rem; /* Impactante aún en pantallas pequeñas */
