@@ -1,0 +1,268 @@
+/* 1. Custom 1 primera fase */
+.custom-section {
+    padding-top: 300px;
+    padding-bottom: 300px;
+    background-image: linear-gradient(to right, #000000, #1d1911, #353023);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+    position: relative;
+}
+
+.screenshot-container {
+    position: absolute;
+    width: 700px;
+    height: 400px;
+    left: 70%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.screenshot-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rabbit-screenshot {
+    width: 250px;
+    height: 240px;
+    left: 38%;
+    top: 55%;
+    transform: rotate(6.27deg);
+}
+
+.text-container {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    max-width: 22%;
+}
+
+.text-container h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.text-container p {
+    font-size: 1rem;
+}
+
+/* 2. Custom 2 Cards */
+.custom-section2 {
+    padding-top: 150px;
+    background-image: linear-gradient(to right, #000000, #1d1911, #353023);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+}
+
+.custom-section2 .card-1,
+.custom-section2 .card-2,
+.custom-section2 .card-3 {
+    width: 25%;
+    padding-bottom: 200px;
+}
+
+.custom-section2 img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* 3.1 Estilos personalizados para la sección de imágenes JS*/
+.custom-section3 {
+    padding-bottom: 100px;
+    background-image: linear-gradient(to right, #000000, #1d1911, #353023);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.custom-section3 h1 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+    color: white;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-image {
+    margin-right: 20px;
+}
+
+.side-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.main-image img {
+    width: 900px;
+    height: auto;
+}
+
+.side-images img {
+    width: 150px;
+    height: auto;
+}
+
+/* Media Queries para adaptación */
+/* Custom 1 */
+@media (max-width: 1024px) {
+    .custom-section {
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+
+    .screenshot-container {
+        width: 600px;
+        height: 350px;
+    }
+
+    .text-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .text-container p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-section {
+        flex-direction: column;
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+
+    .screenshot-container {
+        position: static;
+        width: 80%;
+        height: auto;
+        transform: none;
+    }
+
+    .rabbit-screenshot {
+        position: static;
+        width: 200px;
+        height: auto;
+        transform: rotate(6.27deg);
+    }
+
+    .text-container {
+        position: static;
+        transform: none;
+        max-width: 80%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-section {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .text-container h1 {
+        font-size: 2rem;
+    }
+
+    .text-container p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Custom 2 */
+@media (max-width: 1024px) {
+    .custom-section2 .card-1,
+    .custom-section2 .card-2,
+    .custom-section2 .card-3 {
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-section2 {
+        flex-direction: column;
+        padding-top: 100px;
+    }
+
+    .custom-section2 .card-1,
+    .custom-section2 .card-2,
+    .custom-section2 .card-3 {
+        width: 80%;
+        padding-bottom: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-section2 {
+        padding-top: 50px;
+    }
+
+    .custom-section2 .card-1,
+    .custom-section2 .card-2,
+    .custom-section2 .card-3 {
+        width: 100%;
+        padding-bottom: 100px;
+    }
+}
+
+/* Custom 3 */
+@media (max-width: 1024px) {
+    .custom-section3 h1 {
+        font-size: 2.5rem;
+    }
+
+    .main-image img {
+        width: 700px;
+    }
+
+    .side-images img {
+        width: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .main-image img {
+        width: 80%;
+    }
+
+    .side-images {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .side-images img {
+        width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-section3 h1 {
+        font-size: 2rem;
+    }
+
+    .main-image img {
+        width: 100%;
+    }
+
+    .side-images img {
+        width: 80px;
+    }
+}

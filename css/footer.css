@@ -1,3 +1,5 @@
+
+
 /* Estilos básicos para el footer */
 #footer {
   color: white;  /* Texto en blanco para alto contraste */
@@ -19,17 +21,16 @@
   height: auto;  /* Altura automática para mantener la proporción */
 }
 
-#footer h4 {
-  font-size: 1rem;  /* Tamaño de fuente uniforme */
-  line-height: 1.4;  /* Espaciado de línea para mejorar la legibilidad */
-  margin-top: 10px;  /* Espaciado superior */
-  margin-bottom: 10px;  /* Espaciado inferior */
-}
 
 #footer .footer-link {
   color: white;  /* Color del enlace en blanco para mantener el contraste */
   text-decoration: none;  /* No subrayado para mantener el estilo limpio */
   transition: color 0.3s ease;  /* Transición suave para los cambios de color */
+}
+
+.text-center {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 12px;
 }
 
 #footer .footer-link:hover {
