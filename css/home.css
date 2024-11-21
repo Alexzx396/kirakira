@@ -31,122 +31,149 @@
 
   .logo-container {
     position: absolute;
-    transform: translate(-10%, -50%); /* Ajuste fino para centrar exactamente el logo */
-    z-index: 10; /* Asegura que el logo esté sobre otros elementos */
-    width: auto; /* Ancho automático basado en el contenido del logo */
-    display: block; /* Asegura que el logo se muestre por defecto */
+    transform: translate(-10%, -50%); 
+    z-index: 10; 
+    width: auto; 
+    display: block; 
   }
 
   #navegador a {
-    color: white; /* Color de texto para los enlaces */
-    font-size: 20px; /* Tamaño de texto grande para mejor legibilidad */
-    font-weight: 900; /* Negrita para destacar */
-    margin: 10px; /* Espacio alrededor de los enlaces */
-    text-decoration: none; /* No subrayado */
-    transition: color 0.3s ease-in-out; /* Transición suave al cambiar de color */
+    color: white; 
+    font-size: 20px; 
+    font-weight: 900; 
+    margin: 10px; 
+    text-decoration: none; 
+    transition: color 0.3s ease-in-out; 
   }
 
   #navegador a:hover {
-    color: #87CEFA; /* Color de hover para enlaces */
+    color: #C779D0 
   }
 
   .navbar-brand img {
     width: 100%;
-    max-width: 180px; /* Tamaño máximo para la imagen del logo en la barra */
+    max-width: 180px; 
   }
 
   #navegador .nav-link {
-    font-size: 16px; /* Tamaño de la fuente para los enlaces de la barra */
-    margin: 5px; /* Margen alrededor de los enlaces */
-    padding: 5px; /* Relleno dentro de los enlaces para hacer clic fácilmente */
+    font-size: 16px; 
+    margin: 5px; 
+    padding: 5px; 
   }
 
   .navbar-nav .nav-link h5 {
-    border-bottom: 7px solid transparent; /* Borde inferior transparente para una transición suave */
-    transition: border-color 0.3s ease; /* Transición suave del color del borde */
-    padding-bottom: 20px; /* Espaciado inferior para visualización y espacio de clic */
+    border-bottom: 7px solid transparent; 
+    transition: border-color 0.3s ease; 
+    padding-bottom: 20px; 
   }
 
   .navbar-nav .nav-link:hover h5,
   .navbar-nav .nav-link.active h5 {
-    border-bottom: 7px solid #C779D0; /* Cambio de color en hover y en estado activo */
+    border-bottom: 2px solid #C779D0; 
   }
 
 
 /* Media Queries para mejorar la responsividad */
 @media (max-width: 1024px) {
-  #navegador .container-fluid {
-    width: 100%; /* Slight reduction */
-  }
 
   .logo-container {
-    max-width: 150px; /* Reduce the logo size for better fit */
+    max-width: 150px; 
   }
 }
 
 @media (max-width: 768px) {
   .logo-container {
-    max-width: 80px; /* Further reduce the logo size */
+    max-width: 80px; /
+  }
+  #navegador{
+    background-color: black !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
   }
 
+
+
   .navbar-nav .nav-link h5 {
-    font-size: 14px; /* Reduce font size for better spacing */
+    font-size: 14px; 
   }
 
   #navegador a {
-    font-size: 16px; /* Adjust link font size */
+    font-size: 16px; 
   }
+
   .logo-kirakira{
-    max-width: 150px; /* Further reduce the logo size */
-    padding-bottom: 70px;
+    max-width: 200px; 
+    margin-bottom: 60px;
+  }
+
+  .logo-kirakira-information{
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
+  #navegador{
+    background-color: black !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  }
+
   #navegador .navbar-toggler {
-    margin-right: 10px; /* Adjust the margin for the toggler */
+    margin-right: 10px; 
   }
 
   .logo-container {
     width: -50px; 
   }
 
+
   .navbar-nav .nav-link h5 {
-    font-size: 12px; /* Further reduce the font size for legibility */
+    font-size: 12px;
   }
 
   #navegador .nav-link {
-    padding: 2px; /* Reduce padding to maximize available space */
+    padding: 2px; 
   }
   #navegador {
     height: -100%;
   }
+  .logo-kirakira-information{
+    display: none;
+  }
   .logo-kirakira{
     display: none;
   }
+  
 }
 
 @media (max-width: 360px) {
+  #navegador {
+    background-color: black !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  }
+
   
   #navegador .navbar-toggler {
-    margin-right: 5px; /* Adjust the margin for the toggler */
+    margin-right: 5px; 
   }
 
   .logo-container {
-    width: 10%; /* Significant reduction for small screens */
+    width: 10%; 
   }
 
   .navbar-nav .nav-link h5 {
-    font-size: 12px; /* Further reduce the font size for legibility */
+    font-size: 12px; 
   }
 
   #navegador .nav-link {
-    padding: 2px; /* Reduce padding to maximize available space */
+    padding: 2px; 
   }
   #navegador {
     height: -100%;
   }
+  .logo-kirakira-information{
+    display: none;
+  }
   .logo-kirakira{
     display: none;
   }
+  
 }

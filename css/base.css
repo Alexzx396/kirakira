@@ -7,7 +7,7 @@
 
 /* Estilos básicos y color de fondo */
 body {
-  background: linear-gradient(to right, #000000, #1d1911, #353023);
+  background: linear-gradient(to right, #000000, #1d1911, #353023) !important;
   color: #fff;
   font-family: 'Monrope', sans-serif;
   background-size: cover;
@@ -55,9 +55,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
 .navbar-toggler {
-  background-color: #4bc0c8; /* Opcional: ajustar el color del borde si es necesario */
+  background-color: black;
+  border: white;
+  box-shadow: linear-gradient(to right, #000000, #1d1911, #353023);
+  color: white;
+}
+
+.navbar-toggler-icon {
+  color: white; 
+  font-size: 1.2rem; 
+  padding: 4px;
 }
 
 /* Media Queries para adaptar el diseño a diferentes tamaños de pantalla */
@@ -68,6 +76,11 @@ h1, h2, h3, h4, h5, h6 {
 
   .contenedores .card-title2 {
     font-size: 3.5rem;
+  }
+
+  .h1, h2, h3, h4, h5, h6 {
+    font-family: 'dietherRound', serif;
+    font-weight: bold;
   }
 
   .contenedores .card-text, .contenedores .btn-primary, .card-title.h2 {

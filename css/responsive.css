@@ -9,7 +9,7 @@
     }
     
     .steam-icon-container, .logo-container {
-        display: none; /* Oculta iconos no necesarios en pantallas pequeñas */
+        display: none; 
     }
 
     .button-container {

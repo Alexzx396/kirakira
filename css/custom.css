@@ -117,6 +117,7 @@
 }
 
 /* Media Queries para adaptación */
+
 /* Custom 1 */
 @media (max-width: 1024px) {
     .custom-section {
@@ -136,90 +137,13 @@
     .text-container p {
         font-size: 0.9rem;
     }
-}
 
-@media (max-width: 768px) {
-    .custom-section {
-        flex-direction: column;
-        padding-top: 150px;
-        padding-bottom: 150px;
-    }
-
-    .screenshot-container {
-        position: static;
-        width: 80%;
-        height: auto;
-        transform: none;
-    }
-
-    .rabbit-screenshot {
-        position: static;
-        width: 200px;
-        height: auto;
-        transform: rotate(6.27deg);
-    }
-
-    .text-container {
-        position: static;
-        transform: none;
-        max-width: 80%;
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .custom-section {
-        padding-top: 100px;
-        padding-bottom: 100px;
-    }
-
-    .text-container h1 {
-        font-size: 2rem;
-    }
-
-    .text-container p {
-        font-size: 0.8rem;
-    }
-}
-
-/* Custom 2 */
-@media (max-width: 1024px) {
     .custom-section2 .card-1,
     .custom-section2 .card-2,
     .custom-section2 .card-3 {
         width: 30%;
     }
-}
 
-@media (max-width: 768px) {
-    .custom-section2 {
-        flex-direction: column;
-        padding-top: 100px;
-    }
-
-    .custom-section2 .card-1,
-    .custom-section2 .card-2,
-    .custom-section2 .card-3 {
-        width: 80%;
-        padding-bottom: 150px;
-    }
-}
-
-@media (max-width: 480px) {
-    .custom-section2 {
-        padding-top: 50px;
-    }
-
-    .custom-section2 .card-1,
-    .custom-section2 .card-2,
-    .custom-section2 .card-3 {
-        width: 100%;
-        padding-bottom: 100px;
-    }
-}
-
-/* Custom 3 */
-@media (max-width: 1024px) {
     .custom-section3 h1 {
         font-size: 2.5rem;
     }
@@ -231,38 +155,118 @@
     .side-images img {
         width: 120px;
     }
+
+    .rabbit-screenshot {
+        width: 115px;
+        height: auto;
+        padding-top: 70px;
+        
+    }
 }
 
 @media (max-width: 768px) {
+    .custom-section {
+        flex-direction: column;
+        padding-top: 90px;
+        padding-bottom: 150px;
+    }
+
+    .screenshot-container {
+        position: static;
+        width: 100%;
+        height: 100%;
+        transform: none;
+        margin: 0 auto; 
+    }
+
+    .rabbit-screenshot {
+        display: none;
+    }
+
+    .text-container {
+        position: static;
+        transform: none;
+        max-width: 80%;
+        text-align: center;
+        margin: 0 auto; /* Centrar el contenedor de texto */
+    }
+
+    .custom-section2 {
+        flex-direction: column;
+        padding-top: 100px;
+    }
+
+    .custom-section2 .card-1,
+    .custom-section2 .card-2,
+    .custom-section2 .card-3 {
+        width: 80%;
+        padding-bottom: 150px;
+        margin: 0 auto; /* Centrar las tarjetas */
+    }
+
     .main-image {
         margin-right: 0;
         margin-bottom: 20px;
+        text-align: center; /* Centrar la imagen principal */
     }
 
     .main-image img {
-        width: 80%;
+        width: auto !important;
+        height: 200px; 
+        margin-top: 40px; 
+        padding: 10px;
     }
 
     .side-images {
-        flex-direction: row;
+        display: flex;
+        flex-direction: column; /* Colocar las imágenes laterales debajo de la principal */
         gap: 10px;
+        justify-content: center; /* Centrar las imágenes laterales */
+        margin-top: 20px; /* Añadir margen superior */
     }
 
     .side-images img {
         width: 100px;
+        height: auto; /* Mantener la proporción de la imagen */
     }
 }
 
 @media (max-width: 480px) {
+
+    .screenshot-container {
+        width: 100%;
+        height: 100%;
+        transform: none;
+        margin: 0 auto; 
+    }
+    
+    .rabbit-screenshot {
+        display: none;
+    }
+
+    .text-container h1 {
+        font-size: 2rem;
+    }
+
+    .text-container p {
+        font-size: 0.8rem;
+    }
+
+    .custom-section2 .card-1,
+    .custom-section2 .card-2,
+    .custom-section2 .card-3 {
+        width: 100%;
+        padding-bottom: 100px;
+    }
+
     .custom-section3 h1 {
         font-size: 2rem;
     }
 
     .main-image img {
         width: 100%;
+        height: 200px; 
+        margin-top: 40px; 
     }
 
-    .side-images img {
-        width: 80px;
-    }
 }
