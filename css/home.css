@@ -61,16 +61,6 @@
     padding: 5px; 
   }
 
-  .navbar-nav .nav-link h5 {
-    border-bottom: 7px solid transparent; 
-    transition: border-color 0.3s ease; 
-    padding-bottom: 20px; 
-  }
-
-  .navbar-nav .nav-link:hover h5,
-  .navbar-nav .nav-link.active h5 {
-    border-bottom: 2px solid #C779D0; 
-  }
 
 
 /* Media Queries para mejorar la responsividad */
@@ -83,13 +73,17 @@
 
 @media (max-width: 768px) {
   .logo-container {
-    max-width: 80px; /
+    max-width: 80px; 
   }
   #navegador{
     background-color: black !important;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    
   }
 
+  .img-fondo {
+    margin-top: 8%; 
+  }
 
 
   .navbar-nav .nav-link h5 {
@@ -101,12 +95,13 @@
   }
 
   .logo-kirakira{
-    max-width: 200px; 
+    max-width: 170px; 
     margin-bottom: 60px;
   }
 
   .logo-kirakira-information{
-    display: none;
+    max-width: 170px; 
+    margin-bottom: 10px;
   }
 }
 
@@ -120,10 +115,10 @@
     margin-right: 10px; 
   }
 
-  .logo-container {
-    width: -50px; 
-  }
 
+  .logo-container {
+    width: 10%; 
+  }
 
   .navbar-nav .nav-link h5 {
     font-size: 12px;
@@ -136,12 +131,13 @@
     height: -100%;
   }
   .logo-kirakira-information{
-    display: none;
+    max-width: 90px; 
+    margin-bottom: -5px;
   }
   .logo-kirakira{
-    display: none;
+    max-width: 100px; 
+    margin-bottom: 50px;
   }
-  
 }
 
 @media (max-width: 360px) {
@@ -170,10 +166,12 @@
     height: -100%;
   }
   .logo-kirakira-information{
-    display: none;
+    max-width: 60px; 
+    margin-bottom: -20px;
   }
   .logo-kirakira{
-    display: none;
+    max-width: 65px; 
+    margin-bottom: 35px;
   }
   
 }

@@ -179,6 +179,10 @@
       left: 50%;
       transform: translateX(-50%);
     }
+
+    .img-fondo-ourteams{
+      height: 1000%; /* Ajustar el tamaño de la imagen de fondo para evitar desbordamientos */
+    }
 }
 
 @media (max-width: 480px) {
@@ -187,6 +191,11 @@
       color: #C27CD0;
       margin-top: 40%;
   }
+
+  .img-fondo-ourteams{
+    height: 1000%; /* Ajustar el tamaño de la imagen de fondo para evitar desbordamientos */
+  }
+
 
   #home .display-10 {
       font-size: 1rem; /* Ajustado para encabezados en dispositivos muy pequeños */

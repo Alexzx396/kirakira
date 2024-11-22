@@ -45,8 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #acerca .vector {
-  width: 50%;
-  max-width: 600px;
+  width: 20%;
   margin-right: auto;
 }
 
@@ -80,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   #acerca .vector {
-    width: 70%; /* Ajustar el ancho para mejor visualización */
+    width: 70%; 
   }
 }
 
