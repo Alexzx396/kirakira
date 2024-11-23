@@ -14,57 +14,57 @@
   }
   
   #nuestro-equipo .card-img-top {
-    width: 100%; /* Completa el ancho de la tarjeta */
-    height: 300px; /* Reducido de 350px para un ajuste más uniforme */
-    object-fit: cover; /* Asegura que la imagen cubra correctamente */
+    width: 100%; 
+    height: 300px; 
+    object-fit: cover; 
   }
   
   #nuestro-equipo .card-title{
-    color: #C27CD0; /* Mantiene el color personalizado */
-    font-size: 20px; /* Aumento del tamaño para mejor legibilidad */
+    color: #C27CD0; 
+    font-size: 20px;
   }
  
   #nuestro-equipo .card-text {
-    font-size: 13px; /* Aumento del tamaño para mejor legibilidad */
-    color: #fff; /* Color blanco para el texto para contraste */
+    font-size: 13px; 
+    color: #fff; 
     margin: 10px;
   }
   
   /* Títulos de la sección */
   #nuestro-equipo h2 {
-    font-size: 36px; /* Más grande para mayor impacto visual */
-    color: white; /* Mantiene el color personalizado */
-    margin-bottom: 20px; /* Espacio antes de las tarjetas */
+    font-size: 36px; 
+    color: white; 
+    margin-bottom: 20px; 
     
   }
   
   #nuestro-equipo h1 {
-    font-size: 100px; /* Reducido para una mejor proporción */
-    color: #C27CD0; /* Mantiene el color personalizado */
-    margin-bottom: 40px; /* Espacio antes de las tarjetas */
+    font-size: 100px;
+    color: #C27CD0;
+    margin-bottom: 40px; 
   }
   
   #home .text-container {
-    text-align: left; /* Alinea el texto a la izquierda dentro de su contenedor */
-    width: 100%; /* Asegúrate de que el contenedor ocupe todo el ancho disponible */
-    margin: 0 auto; /* Centra el contenedor en la página */
-    padding: 20px; /* Opcional: añade algo de padding para evitar que el texto toque los bordes */
+    text-align: left; 
+    width: 100%; 
+    margin: 0 auto; 
+    padding: 20px; 
   }
   
   /* Estilos específicos para los títulos */
   #home h2, #home h1 {
-    text-align: left; /* Asegura que los títulos también estén alineados a la izquierda */
+    text-align: left; 
   }
   
   #home-nosotros .text-container {
-    text-align: left; /* Alinea el texto a la izquierda dentro del contenedor */
-    width: 80%; /* Establece el ancho del contenedor a un porcentaje del ancho total para centrar el contenido */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
-    padding: 20px; /* Opcional: añade algo de espacio interno alrededor del contenido */
+    text-align: left; 
+    width: 80%; 
+    margin: 0 auto; 
+    padding: 20px; 
   }
   
   #home-nosotros h2, #home-nosotros h1 {
-    text-align: left; /* Asegura que los títulos también estén alineados a la izquierda */
+    text-align: left; 
   }
   
   #home .text-container {
@@ -72,138 +72,138 @@
     margin-top: -20%;
     left: 5%;
     transform: translateY(-50%);
-    width: 40%; /* Ajusta según el ancho deseado para el texto */
-    color: white; /* Asegúrate de que el texto sea legible sobre la imagen de fondo */
+    width: 40%; 
+    color: white; 
   }
   
   #home h2, #home h1, #home p {
-    margin: 10px 0; /* Espaciado uniforme entre elementos de texto */
-    text-align: left; /* Alineación del texto a la izquierda */
+    margin: 10px 0; 
+    text-align: left; 
   }
   
   #home h2 {
     padding-top: 25%;
     font-size: 35px;
-    color: #C27CD0; /* Color para el subtítulo */
+    color: #C27CD0; 
   }
 
   #home h1 {
-    font-size: 130px; /* Tamaño más grande para mayor impacto visual */
+    font-size: 130px; 
   }
   
   #home p {
-    font-size: 19px; /* Tamaño adecuado para el texto descriptivo */
+    font-size: 19px; 
   }
 
 /* Media Queries para adaptar el tamaño de texto en la sección #home */
 @media (max-width: 1024px) {
   #home .display-7 {
-      font-size: 2rem; /* Ajustado para tabletas */
+      font-size: 2rem; 
       color: #C27CD0;
       margin-top: 10%;
   }
   #home .display-10 {
-      font-size: 3rem; /* Ajustado para encabezados grandes en tabletas */
+      font-size: 3rem; 
   }
 
   #home .lead {
-      font-size: 1rem; /* Ajustado para texto descriptivo en tabletas */
+      font-size: 1rem; 
   }
   #nuestro-equipo h2 {
-    font-size: 1.5rem; /* Tamaño más pequeño para tablets */
+    font-size: 1.5rem;
 }
 #nuestro-equipo h1 {
-    font-size: 3rem; /* Tamaño adecuado para un impacto visual en tablets */
+    font-size: 3rem; 
 }
 }
 
 @media (max-width: 768px) {
   #home .display-7 {
-      font-size: 2rem; /* Reducido para dispositivos móviles medianos */
+      font-size: 2rem; 
       color: #C27CD0;
       margin-top: 15%;
   }
 
   #home .display-10 {
-      font-size: 3rem; /* Adecuado para encabezados en dispositivos móviles medianos */
+      font-size: 3rem; 
       width: 220%;
   }
 
   #home .lead {
-      font-size: 0.7rem; /* Tamaño de fuente adecuado para texto descriptivo en dispositivos móviles */
+      font-size: 0.7rem; 
       width: 180%;
   }
   #nuestro-equipo h2 {
-        font-size: 1.5rem; /* Tamaño reducido para dispositivos móviles */
+        font-size: 1.5rem; 
     }
     #nuestro-equipo h1 {
-        font-size: 3rem; /* Sigue siendo prominente pero adecuado para pantallas más pequeñas */
+        font-size: 3rem; 
     }
     #nuestro-equipo .card {
-      width: 100%; /* Ampliar las tarjetas para usar el ancho completo en modo vertical */
-      margin: 20px 0; /* Espaciado vertical sin margen lateral */
+      width: 100%; 
+      margin: 20px 0; 
     }
 
     #nuestro-equipo .card-img-top {
-      height: auto; /* Altura auto para mantener la proporción de la imagen sin recortar */
+      height: auto; 
     }
 
     #nuestro-equipo .card-title,
     #nuestro-equipo .card-text {
-      font-size: 16px; /* Tamaño de fuente reducido para mantener la proporción y legibilidad */
+      font-size: 16px; 
     }
 
     #home .text-container, #home-nosotros .text-container {
-      width: 90%; /* Reducción del ancho del contenedor para mejorar la legibilidad */
+      width: 90%; 
     }
 
     #home h2, #home h1 {
-      font-size: 24px; /* Reducción del tamaño de los títulos para evitar el desbordamiento */
+      font-size: 24px; 
     }
 
     #home p {
-      font-size: 14px; /* Reducir el tamaño de la fuente del texto descriptivo */
+      font-size: 14px; 
     }
 
     /* Ajustar el logo y otros elementos centrados para evitar la superposición */
     .logo-container {
-      width: 30%; /* Ajustar el tamaño del logo */
-      top: 25%; /* Ajustar la posición vertical del logo */
+      width: 30%; 
+      top: 25%; 
       transform: translate(-50%, -25%);
     }
 
     /* Ajustar contenedores y botones para mejorar la interfaz de usuario */
     .button-container {
       position: absolute;
-      top: 85%; /* Mover hacia arriba para evitar solapamientos */
+      top: 85%; 
       left: 50%;
       transform: translateX(-50%);
     }
 
     .img-fondo-ourteams{
-      height: 1000%; /* Ajustar el tamaño de la imagen de fondo para evitar desbordamientos */
+      height: 1000%; 
     }
 }
 
 @media (max-width: 480px) {
   #home .display-7 {
-      font-size: 0.7rem; /* Reducido para dispositivos móviles medianos */
+      font-size: 0.7rem; 
       color: #C27CD0;
       margin-top: 40%;
   }
 
   .img-fondo-ourteams{
-    height: 1000%; /* Ajustar el tamaño de la imagen de fondo para evitar desbordamientos */
+    height: 1000%; 
   }
 
 
   #home .display-10 {
-      font-size: 1rem; /* Ajustado para encabezados en dispositivos muy pequeños */
+      font-size: 1rem; 
       width: 200%;
   }
 
   #home .lead {
-      font-size: 0.40rem; /* Tamaño de fuente muy pequeño para texto descriptivo en dispositivos muy pequeños */
+      font-size: 0.40rem; 
       width: 180%;
   }
 
