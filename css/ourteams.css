@@ -226,23 +226,23 @@
   }
 
   #home .display-10 {
-      font-size: 0.8rem; /* Ajustado para encabezados en dispositivos muy pequeños */
+      font-size: 0.8rem; 
       width: 200%;
   }
 
   #home .lead {
-      font-size: 0.3rem; /* Tamaño de fuente muy pequeño para texto descriptivo en dispositivos muy pequeños */
+      font-size: 0.3rem;
       width: 180%;
   }
 
   #home .container {
-      padding: 0 15px; /* Añade padding para mantener el texto alejado de los bordes en pantallas pequeñas */
+      padding: 0 15px; 
   }
   #nuestro-equipo h2 {
-    font-size: 1rem; /* Adecuado para dispositivos muy pequeños */
+    font-size: 1rem; 
 
 }
 #nuestro-equipo h1 {
-    font-size: 2.2rem; /* Impactante aún en pantallas pequeñas */
+    font-size: 2.2rem; 
 }
 }

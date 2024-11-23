@@ -13,43 +13,43 @@
     }
 
     .button-container {
-        padding: 10px; /* Padding uniforme */
-        width: 100%; /* Ajuste de ancho para mejor accesibilidad */
-        bottom: 10%; /* Ajuste de posición para accesibilidad */
-        position: absolute; /* Posicionamiento absoluto para sobreponerse correctamente */
-        left: 50%; /* Centralización */
-        transform: translateX(-50%); /* Alineación precisa */
-        font-size: 14px; /* Ajuste del tamaño de fuente para legibilidad */
+        padding: 10px; 
+        width: 100%; 
+        bottom: 10%; 
+        position: absolute;
+        left: 50%; 
+        transform: translateX(-50%); 
+        font-size: 14px; 
     }
 }
 
 /* Estilos para dispositivos con pantalla menor a 768px */
 @media (max-width: 768px) {
     .contenedores .card {
-        margin: 20px; /* Margen reducido para más espacio */
-        padding: 10px; /* Padding reducido para más espacio de contenido */
-        max-height: 75vh; /* Ajuste de altura máxima para evitar desbordamiento */
+        margin: 20px; 
+        padding: 10px; 
+        max-height: 75vh; 
     }
     .steam-icon-container, .logo-container {
-        display: none; /* Oculta iconos no necesarios en pantallas muy pequeñas */
+        display: none; 
     }
 }
 
 /* Estilos para dispositivos con pantalla menor a 480px */
 @media (max-width: 480px) {
     .contenedores .card {
-        margin: 10px; /* Margen aún más reducido para maximizar el espacio */
+        margin: 10px; 
     }
     .steam-icon-container, .logo-container {
-        display: none; /* Continúa ocultando iconos en las menores resoluciones */
+        display: none; 
     }
 }
 
 @-moz-document url-prefix() {
     .vector {
-        width: auto; /* Ajuste específico para Firefox */
+        width: auto; 
     }
     #acerca .contenedor-interior {
-        padding: auto; /* Ajustes adicionales si es necesario */
+        padding: auto; 
     }
 }
