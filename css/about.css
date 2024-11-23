@@ -6,11 +6,14 @@ body {
   background-image: linear-gradient(to right, #000000, #1d1911, #353023);
   background-size: cover;
   background-position: center center;
+
+  
 }
 
 #acerca .custom-row {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 #acerca .contenedor-interior .custom-row h1{
@@ -23,9 +26,16 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
-
 #acerca .contenedor-interior {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 90px;
+  padding-bottom: 90px;
   text-align: right;
+  margin: 20px;
+  
 }
 
 #acerca .contenedor-interior h1 {
@@ -45,8 +55,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #acerca .vector {
-  width: 20%;
-  margin-right: auto;
+  width: 60%;
+  
 }
 
 /* Media Queries para adaptar estilos en dispositivos más pequeños *//* Media Queries para adaptar estilos en dispositivos más pequeños */
