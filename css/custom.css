@@ -219,15 +219,15 @@
 
     .side-images {
         display: flex;
-        flex-direction: column; /* Colocar las imágenes laterales debajo de la principal */
+        flex-direction: column; 
         gap: 10px;
-        justify-content: center; /* Centrar las imágenes laterales */
-        margin-top: 20px; /* Añadir margen superior */
+        justify-content: center; 
+        margin-top: 20px; 
     }
 
     .side-images img {
         width: 100px;
-        height: auto; /* Mantener la proporción de la imagen */
+        height: auto; 
     }
 }
 

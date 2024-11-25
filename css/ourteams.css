@@ -1,16 +1,16 @@
 /* Estilo general de la sección del equipo */
 #nuestro-equipo {
     text-align: center; /* Asegura que todo el contenido esté centrado */
-    padding: 50px 0; /* Agrega un poco de espacio alrededor de toda la sección */
+    padding: 50px 0; 
   }
   
   /* Estilo de las tarjetas del equipo */
   #nuestro-equipo .card {
-    width: 300px; /* Reducido de 350px para un mejor ajuste */
-    margin: 20px auto; /* Menor espacio para más tarjetas en pantalla */
-    border-radius: 50%; /* Mantiene la forma redonda */
-    overflow: hidden; /* Mantiene la imagen dentro de los límites de la tarjeta */
-    background-color: #282828; /* Fondo oscuro para las tarjetas para mejor contraste */
+    width: 300px; 
+    margin: 20px auto; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    background-color: #282828; 
   }
   
   #nuestro-equipo .card-img-top {
