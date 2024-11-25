@@ -62,23 +62,17 @@ h1, h2, h3, h4, h5, h6 {
 /* Media Queries para adaptar estilos en dispositivos más pequeños *//* Media Queries para adaptar estilos en dispositivos más pequeños */
 @media (max-width: 1024px) {
   #acerca {
+    padding-top: 10px;  
+    padding-bottom: 50px;
     display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
-    padding-top: 10px;  /* Añade padding superior para subir todo el contenido */
-    padding-bottom: 120px;
-  }
-
-  #acerca .contenedor-interior {
-    display: flex;
-    flex-direction: row; /* Coloca el logo y el contenido en una fila */
-    align-items: center; /* Alinea el contenido al centro verticalmente */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    width: 100%;
+    justify-content: center; 
   }
 
   #acerca .contenedor-interior .custom-row h1 {
     font-size: 4.6875rem;
+    
   }
+
 
   #acerca .contenedor-interior h2 {
     font-size: 1.875rem;
@@ -94,19 +88,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
-  #acerca {
-    padding-top: 10px;  
-    padding-bottom: 120px;
-    display: flex;
-    justify-content: center; 
-  }
-
   #acerca .contenedor-interior {
-    display: flex;
-    flex-direction: row; 
-    align-items: center; 
-    justify-content: center; 
-    width: 100%;
+    padding: 25px;
   }
 
   #acerca .contenedor-interior .custom-row h1 {
@@ -132,6 +115,14 @@ h1, h2, h3, h4, h5, h6 {
 
   #acerca .contenedor-interior h2 {
     font-size: 1.125rem;
+  }
+  #acerca .contenedor-interior {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center; 
+    width: 100%;
+    padding: 20px;
   }
 
   #acerca .contenedor-interior p {
