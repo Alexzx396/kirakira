@@ -61,10 +61,10 @@
 
 @media (max-width: 360px) {
   .button-container {
-    top: 70%; /* Ajuste adicional para pantallas muy pequeñas */
+    top: 70%; 
   }
   .btn-primary {
-    padding: 3px 10px; /* Padding aún más reducido */
-    width: 90%; /* Uso del ancho completo */
+    padding: 3px 10px; 
+    width: 90%; 
   }
 }

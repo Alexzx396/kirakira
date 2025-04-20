@@ -1,178 +1,300 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- SEO -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="es_ES" />
-    <link rel="shortcut icon" href="./img-marca/Vector.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./img-marca/Vector.png"
+      type="image/x-icon"
+    />
     <title>Ether Dreams</title>
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo&display=swap"
+      rel="stylesheet"
+    />
     <!-- Boostrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css"
+    />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/ourteams.css"> 
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/ourteams.css" />
 
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/cards.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top" id="navegador">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="/img-marca/blanco-v3.png"
+              width="180"
+              alt="logo"
+              class="logo-principal"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end textos"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav menuItems">
+              <li class="nav-item">
+                <a
+                  class="nav-link animacion-nav"
+                  aria-current="page"
+                  href="index.html"
+                  data-item="Home"
+                  ><h5>HOME</h5></a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link animacion-nav"
+                  href="ourteams.html"
+                  data-item="ABOUT US"
+                  ><h5>ABOUT US</h5></a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link animacion-nav"
+                  href="information.html"
+                  data-item="KIRAKIRA"
+                  ><h5>KIRAKIRA</h5></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Home -->
+    <section id="home">
+      <div class="container-fluid px-0">
+        <div class="row no-gutters">
+          <div class="col-12">
+            <!-- Contenedor de imagen de fondo -->
+            <div class="position-relative text-center">
+              <img
+                src="/img/FondoNosotros.png"
+                alt="Imagen de fondo"
+                class="img-fondo img-fluid w-100"
+              />
 
+              <!-- Contenedor para centrar la imagen de logo -->
+              <div
+                class="position-absolute"
+                style="top: 55%; left: 30%; transform: translate(-50%, -50%)"
+              >
+                <img
+                  src="/img/EtherTrasparente.png"
+                  class="img-fluid"
+                  style="width: 45%"
+                />
+              </div>
 
-    </head>
-<body>
-        <!-- Header -->
-        <header >
-            <nav  class="navbar navbar-expand-lg fixed-top" id="navegador">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="/img-marca/blanco-v3.png" width="180" alt="logo" class="logo-principal">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end textos" id="navbarNav">
-                        <ul class="navbar-nav menuItems">
-                            <li class="nav-item">
-                                <a class="nav-link animacion-nav" aria-current="page" href="index.html" data-item='Home'><h5>HOME</h5></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link animacion-nav" href="ourteams.html" data-item='ABOUT US'><h5>ABOUT US</h5></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link animacion-nav" href="information.html" data-item='KIRAKIRA'><h5>KIRAKIRA</h5></a>
-                            </li>
-                        </ul>
-                    </div>
+              <div class="position-absolute w-50" style="top: -7%; left: 2%">
+                <div class="container">
+                  <h2 class="display-7 custom-color" id="card-title">WE ARE</h2>
+                  <h1 class="display-10">ETHER DREAMS</h1>
+                  <div class="about-description">
+                    Ether dreams was founded in 2024 by a group of friends after
+                    a horrible experience in the game industry. We all have a
+                    shared passion for indie video games and are inspired by the
+                    possibility of positively impacting the digital
+                    entertainment industry and making our mark in the world of
+                    video game development.
+                    <br /><br />
+                    <span class="highlighted-phrase"
+                      >Our dreams are beyond this planet.</span
+                    >
+                  </div>
                 </div>
-            </nav>
-        </header>
-       <!-- Home -->
-       <section id="home">
-        <div class="container-fluid px-0">
-            <div class="row no-gutters">
-                <div class="col-12">
-                    <!-- Contenedor de imagen de fondo -->
-                        <div class="position-relative text-center">
-                            <img src="/img/FondoNosotros.png" alt="Imagen de fondo" class="img-fondo img-fluid w-100">
-                            <!-- Contenedor para centrar la imagen de logo -->
-                            <div class="position-absolute" style="top: 55%; left: 30%; transform: translate(-50%, -50%);">
-                                <img src="/img/EtherTrasparente.png" class="img-fluid" style="width: 45%;">
-                            </div>
-                            <!-- Texto sobre la imagen -->
-                            <div class="position-absolute w-50" style="top: -7%; left: 2%;">
-                                <div class="container">
-                                    <h2 class="display-7 custom-color" id="card-title">WE ARE</h2> 
-                                    <h1 class="display-10">ETHER DREAMS</h1>  
-                                    <p class="lead">Ether dreams was founded in 2024 by a group of friends after a horrible experience in the game industry. We all have a shared passion for indie video games and are inspired by the possibility of positively impacting the digital entertainment industry and making our mark in the world of video game development.
-                                    <br><br><strong>Our dreams are beyond this</strong></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Sección Equipo -->
+    <section id="nuestro-equipo" class="container">
+      <h2>SAY HELLO TO A</h2>
+      <h1>DREAM TEAM</h1>
+      <br />
 
-        <!-- Sección Equipo -->
-        <section id="nuestro-equipo" class="container">
-            <h2 data-aos="fade-left">SAY HELLO TO A</h2>
-            <h1 data-aos="fade-drown">DREAM TEAM</h1><br/><br/><br/><br/>
-            <div class="row justify-content-center">
-                <!-- Ejemplo de tarjeta de miembro del equipo -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="/img/ZorroMorado.png" class="card-img-top">
-                    </div>
-                    <div class="text-center mt-3"> 
-                        <h5 data-aos="fade-left" class="card-title">JIMMY CABRERA</h5>
-                        <p data-aos="fade-drown" class="card-text">CREATIVE DIRECTOR </p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="/img/ZorroMorado.png" class="card-img-top">
-                    </div>
-                    <div class="text-center mt-3"> 
-                        <h5 data-aos="fade-left" class="card-title">ALBA LEIGHTON</h5>
-                        <p data-aos="fade-drown" class="card-text">UX & GRAPHIC DESIGNER</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="/img/img-equipo/image-alex.png" class="card-img-top">
-                    </div>
-                    <div class="text-center mt-3"> 
-                        <h5 data-aos="fade-left" class="card-title">ALEX ARCE</h5>
-                        <p data-aos="fade-drown" class="card-text">WEB DEVELOPER</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="/img/ZorroMorado.png" class="card-img-top">
-                    </div>
-                    <div class="text-center mt-3"> 
-                        <h5 data-aos="fade-left" class="card-title">LEONARDO MARTINEZ</h5>
-                        <p data-aos="fade-drown" class="card-text">GAMEPLAY PROGRAMMER</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="/img/ZorroMorado.png" class="card-img-top">
-                    </div>
-                    <div class="text-center mt-3"> 
-                        <h5 data-aos="fade-left" class="card-title">BASTIAN CASTRO</h5>
-                        <p data-aos="fade-drown" class="card-text">GAMEPLAY PROGRAMMER</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="/img/ZorroMorado.png" class="card-img-top">
-                    </div>
-                    <div class="text-center mt-3"> 
-                        <h5 data-aos="fade-left" class="card-title">VALENTINA SALAS</h5>
-                        <p data-aos="fade-drown" class="card-text">ILLUSTRATOR & CONCEPT ARTIST</p>
-                    </div>
-                </div>
-                
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="/img/ZorroMorado.png" class="card-img-top">
-                    </div>
-                    <div class="text-center mt-3"> 
-                        <h5 data-aos="fade-left" class="card-title">SEBASTIAN MILLACARIS</h5>
-                        <p data-aos="fade-drown" class="card-text">COMPOSER & AUDIO DESIGNER</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <!-- Iconos pequeños en fila superior -->
+      <div class="iconos-mini">
+        <!-- <img src="/img/iconos/" alt="Alba" /> -->
+        <img src="/img/iconos/alex slime.png" alt="Alex" />
+        <img src="/img/iconos/Babu slime.png" alt="Babu" />
+        <img src="/img/iconos/Basti Slime.png" alt="Bastian" />
+        <img src="/img/iconos/Jimmy slime.png" alt="Jim" />
+        <img src="/img/iconos/Leo slime.png" alt="Leo" />
+        <img src="/img/iconos/Seba Slime.png" alt="Seba" />
+      </div>
 
-        <div id="contacto-placeholder"></div>
-        <!-- Footer -->
-        <div id="footer-placeholder"></div>
-        <!-- Bootstrap JS Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-        <!-- AOS JS -->
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <!-- Custom JavaScript File -->
-        <script src="/js/javascriptfile.js"></script>
-        <!-- font Awesome-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    </body>
+      <!-- Tarjetas grandes -->
+      <div class="equipo-grid">
+        <div class="miembro-container">
+          <img
+            
+          />
+          <div
+            class="miembro-card"
+            style="--color1: #a0e3fd; --color2: #1e7598"
+          >
+            <h5>ALBA</h5>
+            <p>UX & GRAPHIC DESIGNER</p>
+          </div>
+        </div>
+
+        <div class="miembro-container">
+          <img
+            class="slime-img"
+            src="/img/iconos/alex slime.png"
+            alt="Alex Arce"
+          />
+          <div
+            class="miembro-card"
+            style="--color1: #3a796d; --color2: #245458"
+          >
+            <h5>ALEX</h5>
+            <p>WEB DEVELOPER</p>
+          </div>
+        </div>
+
+        <div class="miembro-container">
+          <img
+            class="slime-img"
+            src="/img/iconos/Babu slime.png"
+            alt="Valentina Salas"
+          />
+          <div
+            class="miembro-card"
+            style="--color1: #6367b3; --color2: #452a92"
+          >
+            <h5>BABU</h5>
+            <p>ILLUSTRATOR & CONCEPT ARTIST</p>
+          </div>
+        </div>
+
+        <div class="miembro-container">
+          <img
+            class="slime-img"
+            src="/img/iconos/Basti Slime.png"
+            alt="Bastian"
+          />
+          <div
+            class="miembro-card"
+            style="--color1: #fcdd7e; --color2: #f8be75"
+          >
+            <h5>BASTIAN</h5>
+            <p>GAMEPLAY PROGRAMMER</p>
+          </div>
+        </div>
+
+        <div class="miembro-container">
+          <img
+            class="slime-img"
+            src="/img/iconos/Jimmy slime.png"
+            alt="Jim"
+          />
+          <div
+            class="miembro-card"
+            style="--color1: #513b59; --color2: #2f1c36"
+          >
+            <h5>JIM</h5>
+            <p>DIRECTOR, PROGRAMMER & ANIMATOR</p>
+          </div>
+        </div>
+
+        <div class="miembro-container">
+          <img class="slime-img" src="/img/iconos/Leo slime.png" alt="Leo" />
+          <div
+            class="miembro-card"
+            style="--color1: #7E63B3; --color2: #CE0CFF"
+          >
+            <h5>LEO</h5>
+            <p>GAMEPLAY PROGRAMMER</p>
+          </div>
+        </div>
+
+        <div class="miembro-container">
+          <img
+            class="slime-img"
+            src="/img/iconos/Seba Slime.png"
+            alt="Seba"
+          />
+          <div
+            class="miembro-card"
+            style="--color1: #9d3b3c; --color2: #551517"
+          >
+            <h5>SEBA</h5>
+            <p>COMPOSER & AUDIO DESIGNER</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="contacto-placeholder"></div>
+    <!-- Footer -->
+    <div id="footer-placeholder"></div>
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JavaScript File -->
+    <script src="/js/javascriptfile.js"></script>
+    <!-- font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </body>
 </html>
-

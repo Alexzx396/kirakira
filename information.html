@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="css/cards.css">
     <link rel="stylesheet" href="css/custom.css"> 
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/information.css">
 
 </head>
 <body>
@@ -75,8 +76,8 @@
                     <!-- Imagen de fondo -->
                     <img src="/img/fondo.png" alt="Imagen de fondo" class="img-fondo img-fluid w-100">
                     <!-- Contenedor para centrar la imagen de logo -->
-                    <div class="position-absolute" style="top: 45%; left: 50%; transform: translate(-50%, -50%);">
-                        <img src="/img/kirakiraslime_logo.png" alt="Logo KiraKiraSlime" class="logo-kirakira-information img-fluid" style="width: 100%;">
+                    <div class="position-absolute " style="top: 45%; left: 50%; transform: translate(-50%, -50%);">
+                        <img src="/img/kirakiraslime_logo.png" alt="Logo KiraKiraSlime" class="logo-kirakira img-fluid logo-float" style="width: 100%;">
                     </div>
                     <!-- Icono de Steam agregado -->
                     <div class="position-absolute" style="top: 80%; left: 50%; transform: translate(-50%, -50%);">
@@ -99,50 +100,46 @@
         </div>
     </div>
 </section>
-<!-- Secciones trabajadas -->
- 
-<section class="about-game custom-section">
-    <div class="text-container">
-        <h1>ABOUT THE GAME</h1><br>
+
+<section class="about-unified-section">
+    <div class="about-unified-section-content">
+      <div class="text-content">
+        <h1>ABOUT THE GAME</h1>
         <p>Kirakira Slimes is a fun indie puzzle game in which you have to combine slimes strategically in an ever smaller space. Merge from the smallest to the Slime King, in order to get many points and top the highest score.</p>
+      </div>
+      <div class="image-wrapper">
+        <img src="/img/custon/screenshot_kirakira2 1 (1).png" alt="Screenshot" class="main-game-image">
+        <img src="/img/custon/conejo copia 1.png" alt="Conejo" class="bunny">
+      </div>
+    </div> <br><br>
+  
+    <div class="gameplay-cards">
+      <img src="/img/custon/Group 10.png" alt="Card 1">
+      <img src="/img/custon/Group 11.png" alt="Card 2">
+      <img src="/img/custon/Group 12.png" alt="Card 3">
+    </div> <br><br><br><br>
+    <div class="gameplay-cards">
+        <h1>ART</h1>
     </div>
-    <div class="screenshot-container main-screenshot">
-        <img src="/img/custon/screenshot_kirakira2 1 (1).png" alt="Screenshot Kirakira">
-    </div>
-    <div class="screenshot-container rabbit-screenshot">
-        <img src="/img/custon/conejo copia 1.png" alt="Conejo">
-    </div>
+  </section>
 
-</section>
-
-
-<!-- Sección trabajada -->
-<section class="card custom-section2">
-    <div class="card-1">
-        <img src="/img/custon/Group 10.png" alt="Group 10">
-    </div>
-    <div class="card-2">
-        <img src="/img/custon/Group 11.png" alt="Group 11">
-    </div>
-    <div class="card-3">
-        <img src="/img/custon/Group 12.png" alt="Group 12">
-    </div>
-</section>
 
 <!-- Sección trabajada -->
-<section class="art custom-section3">
-    <h1> ART </h1>
-    <div class="image-container">
-        <div class="main-image">
-            <img src="/img/custon/fondo 1.jpeg" alt="Fondo" id="mainImage">
-        </div>
-        <div class="side-images">
-            <img src="/img/custon/fondo 2.jpeg" alt="Fondo 2 dia" class="small-image">
-            <img src="/img/custon/fondo 3.jpeg" alt="Fondo 1 noche" class="small-image">
-            <img src="/img/custon/fondo 4.jpeg" alt="Fondo" class="small-image">
-        </div>
+<section class="art-carousel">
+
+      <button id="prevBtn" class="carousel-btn left">‹</button>
+      
+      <div class="carousel-wrapper" id="carouselWrapper">
+        <div class="carousel-slide"><img src="/img/custon/fondo 1.jpeg" alt="Fondo 1"></div>
+        <div class="carousel-slide"><img src="/img/custon/fondo 2.jpeg" alt="Fondo 2"></div>
+        <div class="carousel-slide"><img src="/img/custon/fondo 3.jpeg" alt="Fondo 3"></div>
+      </div>
+  
+      <button id="nextBtn" class="carousel-btn right">›</button>
     </div>
-</section>
+  </section>
+  
+  
 
 <!-- Main Content -->
 <main class="container-fluid" id="seccion-post-home">

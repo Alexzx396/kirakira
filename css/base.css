@@ -15,6 +15,7 @@ body {
   overflow-x: hidden; 
 }
 
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'dietherRound', serif;
   font-weight: bold;
@@ -50,6 +51,23 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 10;
 }
 
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.logo-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+
 #navegador a, #footer p {
   color: #fff;
 }
@@ -67,6 +85,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.2rem; 
   padding: 4px;
 }
+
 
 /* Media Queries para adaptar el diseño a diferentes tamaños de pantalla */
 @media (max-width: 1024px) {
@@ -89,6 +108,10 @@ h1, h2, h3, h4, h5, h6 {
 
   .steam-icon-container {
     font-size: 40px;
+  }
+  .body {
+    background-image: url('/img/fondo-movil.png');
+    background-position: top center;
   }
 }
 
@@ -121,8 +144,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .contenedores .btn-primary {
-    width: 100%;
-    padding: 12px 0;
+    width: 650px;
+    text-align: right;
   }
 
   .card-title.h2 {

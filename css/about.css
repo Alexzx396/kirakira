@@ -1,157 +1,180 @@
-/* Estilos para la sección 'Acerca' */
+/* Estilos base */
 body {
-  background: #151515;
-  color: #fff;
-  font-family: 'Monrope', sans-serif;
-  background-image: linear-gradient(to right, #000000, #1d1911, #353023);
+  background: linear-gradient(to right, #000000, #1d1911, #353023);
   background-size: cover;
   background-position: center center;
-
-  
+  font-family: 'Monrope', sans-serif;
+  color: white;
+  overflow-x: hidden;
 }
-
-#acerca .custom-row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-
-#acerca .contenedor-interior .custom-row h1{
-  font-size: 8.4375rem;
-}
-
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'dietherRound', serif;
   font-weight: bold;
 }
 
+/* Sección Acerca */
+#acerca {
+  padding: 60px 20px;
+}
+
 #acerca .contenedor-interior {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-right: 90px;
-  padding-bottom: 90px;
-  text-align: right;
-  margin: 20px;
-  
-}
-
-#acerca .contenedor-interior h1 {
-  color: white;
-  font-size: 8.4375rem;
-}
-
-#acerca .contenedor-interior h2 {
-  color: #4bc0c8;
-  font-size: 2.1875rem;
-}
-
-#acerca .contenedor-interior p {
-  font-size: 1.25rem;
-  color: #FFFFFF;
-  line-height: 1.5;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 #acerca .vector {
-  width: 60%;
-  
+  width: 100%;
+  max-width: 400px;
 }
 
-/* Media Queries para adaptar estilos en dispositivos más pequeños *//* Media Queries para adaptar estilos en dispositivos más pequeños */
+/* Tipografía y estilos */
+#acerca h2 {
+  font-size: 2rem;
+  color: #4bc0c8;
+  text-align: right;
+  padding-right: 10px;
+}
+
+#acerca h1 {
+  font-size: 7rem;
+  line-height: 1.1;
+  text-align: right;
+  color: white;
+  max-width: 600px;
+  overflow-wrap: break-word;
+}
+
+#acerca p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  font-family: 'Manrope', sans-serif;
+  text-align: right;
+  padding-right: 10px;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#acerca .p-2{
+  color: white;
+}
+
+#acerca .btn-index {
+  display: flex;
+  margin-left: auto;
+  padding-right: 10px;
+}
+
+
+
 @media (max-width: 1024px) {
-  #acerca {
-    padding-top: 10px;  
-    padding-bottom: 50px;
-    display: flex;
-    justify-content: center; 
-  }
-
-  #acerca .contenedor-interior .custom-row h1 {
+  #acerca h1 {
     font-size: 4.6875rem;
-    
   }
-
-
-  #acerca .contenedor-interior h2 {
+  #acerca h2 {
     font-size: 1.875rem;
+    margin-top: 20px; /
   }
-
-  #acerca .contenedor-interior p {
+  #acerca p {
     font-size: 1rem;
   }
-
   #acerca .vector {
-    width: 70%; 
+    max-width: 300px;
+  }
+
+  #acerca .btn-index {
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  #proyectos2 .btn-index {
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
   }
 }
 
 @media (max-width: 768px) {
-  #acerca .contenedor-interior {
-    padding: 25px;
+  #acerca h1 {
+    font-size: 3.5rem;
   }
-
-  #acerca .contenedor-interior .custom-row h1 {
-    font-size: 4.125rem;
-  }
-
-  #acerca .contenedor-interior h2 {
+  #acerca h2 {
     font-size: 1.5rem;
+    margin-top: 35px;
   }
-
-  #acerca .contenedor-interior p {
-    font-size: 0.9rem;
+  #acerca p {
+    font-size: 0.95rem;
   }
-
   #acerca .vector {
-    width: 60%; 
-    margin-top: -5%;
-    margin-left: 40px;
+    margin: 20px auto;
+    max-width: 70%;
+  }
+
+  #acerca .btn-index {
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  #proyectos2 .btn-index {
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: center;
   }
 }
 
 @media (max-width: 480px) {
-
-  #acerca .contenedor-interior h2 {
-    font-size: 1.125rem;
+  #acerca h1 {
+    font-size: 2.7rem;
   }
-  #acerca .contenedor-interior {
-    display: flex;
-    flex-direction: row; 
-    align-items: center; 
-    justify-content: center; 
-    width: 100%;
-    padding: 20px;
+  #acerca h2 {
+    font-size: 1.2rem;
+    margin-top: 30px;
   }
-
-  #acerca .contenedor-interior p {
-    font-size: 0.75rem;
+  #acerca p {
+    font-size: 0.85rem;
   }
-
   #acerca .vector {
-    width: 50%; /* Ajustar el ancho para mejor visualización */
-    margin-top: -20%;
+    margin: 0 auto;
+    max-width: 70%;
+    padding-bottom: 15%;
+  }
+
+  #acerca .btn-index {
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  #proyectos2 .btn-index {
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: center;
   }
 }
 
 @media (max-width: 360px) {
-
-  #acerca .contenedor-interior .custom-row h1 {
-    font-size: 3.5rem;
+  #acerca h1 {
+    font-size: 2.2rem;
+  }
+  #acerca h2 {
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+  #acerca p {
+    font-size: 0.75rem;
+  }
+  #acerca .btn-index {
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: center;
   }
 
-  #acerca .contenedor-interior h2 {
-    font-size: 1.125rem;
-  }
-
-  #acerca .contenedor-interior p {
-    font-size: 0.7rem;
-  }
-
-  #acerca .vector {
-    width: 50%; 
-    margin-top: -20%;
-    
+  #proyectos2 .btn-index {
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: center;
   }
 }
