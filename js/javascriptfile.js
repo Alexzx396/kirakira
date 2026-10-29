@@ -2,7 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
   // Cargar el footer compartido
-  fetch("/footer")
+  // ?v= para que ningún navegador use un footer viejo guardado en caché
+  fetch("/footer?v=20261029f")
     .then(response => {
       if (!response.ok) throw new Error(response.status);
       return response.text();
