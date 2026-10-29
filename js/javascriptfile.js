@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .then(data => {
       const footer = document.getElementById("footer-placeholder");
       footer.innerHTML = data;
+      footer.querySelectorAll(".footer-year").forEach(el => el.textContent = new Date().getFullYear());
       if (window.I18n) I18n.apply(footer);
     })
     .catch(error => console.error("Error loading footer:", error));

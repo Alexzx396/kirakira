@@ -4,6 +4,7 @@ Imita las reglas del .htaccess de Hostinger:
   - /information sirve information.html
   - /information.html redirige a /information
   - /index y /index.html redirigen a /
+  - Las direcciones que no existen muestran 404.html
 
 Uso (desde la carpeta del proyecto):
     python dev/servidor-local.py          -> http://localhost:8765
@@ -14,7 +15,7 @@ import http.server
 import os
 import socket
 import sys
-from urllib.parse import urlsplit
+from urllib.parse import unquote, urlsplit
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 8765
@@ -45,13 +46,27 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             self._redirect(path[:-5] + query)
             return False
         if path.startswith("/dev"):
-            self.send_error(404)
+            self._not_found()
             return False
 
-        local = os.path.join(ROOT, path.lstrip("/"))
+        local = os.path.join(ROOT, unquote(path).lstrip("/"))
         if path != "/" and not os.path.exists(local) and os.path.isfile(local + ".html"):
             self.path = path + ".html" + query
+        elif not os.path.exists(local):
+            self._not_found()
+            return False
         return True
+
+    def _not_found(self):
+        # Como ErrorDocument 404 /404.html en el .htaccess
+        with open(os.path.join(ROOT, "404.html"), "rb") as f:
+            body = f.read()
+        self.send_response(404)
+        self.send_header("Content-Type", "text/html; charset=utf-8")
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        if self.command != "HEAD":
+            self.wfile.write(body)
 
     def do_GET(self):
         if self._route():

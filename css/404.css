@@ -1,0 +1,63 @@
+/* Página 404 */
+.not-found {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 140px 20px 80px;
+}
+
+.not-found-slime {
+  width: 220px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.not-found-code {
+  font-size: 140px;
+  line-height: 1;
+  margin: 0;
+  /* mismo degradado que el footer */
+  background-image: linear-gradient(to right, #4bc0c8, #c779d0, #feac5e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.not-found h2 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.not-found p {
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  max-width: 480px;
+  margin-bottom: 30px;
+  opacity: 0.85;
+}
+
+@media (max-width: 576px) {
+  .not-found {
+    padding-top: 110px;
+  }
+
+  .not-found-slime {
+    width: 150px;
+  }
+
+  .not-found-code {
+    font-size: 96px;
+  }
+
+  .not-found h2 {
+    font-size: 24px;
+  }
+
+  .not-found p {
+    font-size: 16px;
+  }
+}

@@ -1,6 +1,7 @@
 // Idioma del sitio (español / inglés).
 // Se carga en el <head> para fijar el idioma antes de que se pinte la página.
-// - Textos cortos: elementos con data-i18n="clave" (y data-i18n-aria para aria-label).
+// - Textos cortos: elementos con data-i18n="clave" (data-i18n-aria para aria-label,
+//   data-i18n-alt para el texto alternativo de imágenes).
 // - Textos largos (Privacidad, Términos): bloques con data-lang="es" / data-lang="en",
 //   el CSS muestra solo el del idioma activo.
 (function () {
@@ -44,9 +45,30 @@
       "role.jim": "DIRECCIÓN, PROGRAMACIÓN Y ANIMACIÓN",
       "role.seba": "COMPOSICIÓN Y DISEÑO DE AUDIO",
 
-      "footer.rights": "© 2024 Ether Dreams. Todos los derechos reservados",
+      "footer.rights": "Todos los derechos reservados",
       "footer.privacy": "Privacidad",
-      "footer.terms": "Términos y Condiciones"
+      "footer.terms": "Términos y Condiciones",
+      "footer.madeBy": "Sitio web creado por",
+
+      "title.home": "Ether Dreams | Estudio indie de videojuegos de Chile",
+      "title.game": "Kirakira Slimes | Ether Dreams",
+      "title.team": "Nosotros | Ether Dreams",
+      "title.privacy": "Política de privacidad | Ether Dreams",
+      "title.terms": "Términos y condiciones | Ether Dreams",
+      "title.notFound": "Página no encontrada | Ether Dreams",
+
+      "notFound.title": "¡Ups! Este slime se perdió",
+      "notFound.text": "La página que buscas no existe o cambió de lugar.",
+      "notFound.home": "VOLVER AL INICIO",
+      "notFound.game": "VER KIRAKIRA SLIMES",
+
+      "alt.screenshot": "Captura de pantalla de Kirakira Slimes",
+      "alt.card1": "Combina dos slimes del mismo tipo para crear uno más grande y aumentar tu puntaje. Pero ten cuidado: mientras más slimes haya en la caja, más posibilidades tienes de perder.",
+      "alt.card2": "Al combinar slimes y sumar puntos llenas la barra de poder, que te da una habilidad extra. Tú decides cuándo y cómo usarla mejor.",
+      "alt.card3": "Hay 11 tipos de slimes jugables: combínalos, fusiónalos y potencia tus slimes en este puzle indie, solo o con amigos en el modo versus local.",
+      "alt.art1": "Arte de Kirakira Slimes 1",
+      "alt.art2": "Arte de Kirakira Slimes 2",
+      "alt.art3": "Arte de Kirakira Slimes 3"
     },
     en: {
       "nav.home": "HOME",
@@ -87,9 +109,30 @@
       "role.jim": "DIRECTOR, PROGRAMMER & ANIMATOR",
       "role.seba": "COMPOSER & AUDIO DESIGNER",
 
-      "footer.rights": "© 2024 Ether Dreams. All Rights Reserved",
+      "footer.rights": "All Rights Reserved",
       "footer.privacy": "Privacy",
-      "footer.terms": "Terms and Conditions"
+      "footer.terms": "Terms and Conditions",
+      "footer.madeBy": "Website made by",
+
+      "title.home": "Ether Dreams | Indie game studio from Chile",
+      "title.game": "Kirakira Slimes | Ether Dreams",
+      "title.team": "About us | Ether Dreams",
+      "title.privacy": "Privacy Policy | Ether Dreams",
+      "title.terms": "Terms and Conditions | Ether Dreams",
+      "title.notFound": "Page not found | Ether Dreams",
+
+      "notFound.title": "Oops! This slime got lost",
+      "notFound.text": "The page you're looking for doesn't exist or has moved.",
+      "notFound.home": "BACK TO HOME",
+      "notFound.game": "SEE KIRAKIRA SLIMES",
+
+      "alt.screenshot": "Kirakira Slimes screenshot",
+      "alt.card1": "Combine two slimes of the same type to create a bigger one and increase your score. But be careful, the more slimes you have inside the box, the more chances you have to lose.",
+      "alt.card2": "By combining slimes and scoring points, you will fill the power up bar. This gives you an additional ability. You decide when and how to use it most effectively.",
+      "alt.card3": "There are 11 types of playable slimes in total - combine, merge and power up your slimes in this indie puzzle, either playing alone or with friends in local versus mode!",
+      "alt.art1": "Kirakira Slimes artwork 1",
+      "alt.art2": "Kirakira Slimes artwork 2",
+      "alt.art3": "Kirakira Slimes artwork 3"
     }
   };
 
@@ -114,6 +157,10 @@
     scope.querySelectorAll("[data-i18n-aria]").forEach(el => {
       const text = dict[el.dataset.i18nAria];
       if (text !== undefined) el.setAttribute("aria-label", text);
+    });
+    scope.querySelectorAll("[data-i18n-alt]").forEach(el => {
+      const text = dict[el.dataset.i18nAlt];
+      if (text !== undefined) el.setAttribute("alt", text);
     });
     document.querySelectorAll("[data-set-lang]").forEach(btn => {
       const active = btn.dataset.setLang === lang;

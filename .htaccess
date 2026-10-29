@@ -1,5 +1,8 @@
 RewriteEngine On
 
+# Página propia para las direcciones que no existen
+ErrorDocument 404 /404.html
+
 # Establecer index.html como la página de inicio predeterminada
 DirectoryIndex index.html
 

@@ -205,7 +205,7 @@
     min-height: 100vh;
     min-height: 100svh;
     padding: 90px 20px 40px;
-    background: url('/img/fondo-movil.png') center bottom / cover no-repeat;
+    background: url('/img/fondo-movil.webp') center bottom / cover no-repeat;
   }
 
   .hero .img-fondo {

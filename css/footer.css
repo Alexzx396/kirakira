@@ -34,7 +34,16 @@
 }
 
 #footer .footer-link:hover {
-  color: #4bc0c8;  
+  color: #4bc0c8;
+}
+
+#footer .footer-credit {
+  font-size: 11px;
+  opacity: 0.85;
+}
+
+#footer .footer-credit .footer-link {
+  font-weight: 700;
 }
 
 /* Media Queries para adaptación a diferentes tamaños de pantalla */
