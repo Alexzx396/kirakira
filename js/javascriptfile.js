@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // url.js deja la barra en "/", así que la página real viene de window.currentPage
   const currentPath = normalizePath(window.currentPage || window.location.pathname);
   navLinks.forEach(link => {
-    const linkPath = normalizePath(new URL(link.href).pathname);
+    const linkPath = normalizePath(link.dataset.page || new URL(link.href).pathname);
     link.classList.toggle('active', linkPath === currentPath);
   });
 });

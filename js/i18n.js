@@ -131,11 +131,30 @@
 
   window.I18n = { apply, setLang };
 
+  // Volver a leer el idioma guardado (puede haber cambiado en otra página o pestaña)
+  function sync() {
+    const saved = initialLang();
+    if (saved !== lang) {
+      lang = saved;
+      document.documentElement.lang = lang;
+      apply();
+    }
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     apply();
     document.addEventListener("click", event => {
       const btn = event.target.closest("[data-set-lang]");
       if (btn) setLang(btn.dataset.setLang);
     });
+  });
+
+  // Al volver con "atrás"/"adelante" el navegador restaura la página tal como quedó
+  window.addEventListener("pageshow", event => {
+    if (event.persisted) sync();
+  });
+  // Privacidad y Términos se abren en otra pestaña: mantenerlas todas en el mismo idioma
+  window.addEventListener("storage", event => {
+    if (event.key === "lang") sync();
   });
 })();

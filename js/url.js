@@ -26,7 +26,22 @@
   // Links a la portada: como la barra ya muestra "/", ir a "/" sería ir a la misma
   // URL y el navegador reutilizaría la entrada del historial (con la página anterior).
   // Con "/?inicio" es una navegación nueva; la barra se limpia al cargar.
+  // Links a otras páginas: href="/" data-page="/ourteams". Así, al pasar el mouse o al
+  // copiar el link, se ve solo el dominio; al hacer clic se abre la página real.
+  function openPage(event) {
+    const link = event.target.closest("a[data-page]");
+    if (!link || event.button > 1) return false;
+    event.preventDefault();
+    const newTab = link.target === "_blank" || event.button === 1 ||
+      event.ctrlKey || event.metaKey || event.shiftKey;
+    if (newTab) window.open(link.dataset.page, "_blank");
+    else location.assign(link.dataset.page);
+    return true;
+  }
+  document.addEventListener("auxclick", openPage);
+
   document.addEventListener("click", function (event) {
+    if (openPage(event)) return;
     const link = event.target.closest("a[href]");
     if (!link || link.target === "_blank" || event.button !== 0 ||
         event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;

@@ -21,5 +21,13 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.+)$ $1.html [L,QSA]
 
+# Las páginas se revalidan siempre: así nadie ve una versión vieja guardada en caché
+# (CSS y JS ya se versionan con ?v=)
+<IfModule mod_headers.c>
+    <FilesMatch "\.html$">
+        Header set Cache-Control "no-cache"
+    </FilesMatch>
+</IfModule>
+
 # El servidor de pruebas local no se publica
 RedirectMatch 404 ^/dev(/|$)
