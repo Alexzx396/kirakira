@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Páginas del sitio para los buscadores. Los links del menú apuntan a "/" (ver js/url.js),
+     así que los buscadores encuentran las demás páginas por aquí. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://etherdreams.cl/</loc>
+    <lastmod>2026-10-29</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://etherdreams.cl/information</loc>
+    <lastmod>2026-10-29</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://etherdreams.cl/ourteams</loc>
+    <lastmod>2026-10-29</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://etherdreams.cl/privacy</loc>
+    <lastmod>2026-10-29</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://etherdreams.cl/TermsandConditions</loc>
+    <lastmod>2026-10-29</lastmod>
+    <priority>0.3</priority>
+  </url>
+</urlset>
