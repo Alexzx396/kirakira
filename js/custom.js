@@ -37,5 +37,17 @@ document.addEventListener("DOMContentLoaded", () => {
       if (Math.abs(deltaX) < 40) return;
       if (deltaX < 0) next(); else prev();
     });
+
+    // Tráiler: el video de YouTube se carga solo al apretar play
+    document.querySelectorAll(".video-play").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const iframe = document.createElement("iframe");
+        iframe.src = `https://www.youtube-nocookie.com/embed/${btn.dataset.video}?autoplay=1&rel=0`;
+        iframe.title = btn.getAttribute("aria-label");
+        iframe.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+        iframe.allowFullscreen = true;
+        btn.replaceWith(iframe);
+      });
+    });
   });
   

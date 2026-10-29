@@ -90,7 +90,7 @@
   margin-bottom: 10px;
 }
 
-.btn-social i {
+.btn-social .icon {
   border-radius: 80px;
   font-size: 40px;
   color: white;
@@ -102,7 +102,7 @@
   color: black;
 }
 
-.contenedores .btn-social i:hover {
+.contenedores .btn-social .icon:hover {
   transform: scale(1.05);
   color: black;
 }

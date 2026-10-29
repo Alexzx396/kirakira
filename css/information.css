@@ -39,7 +39,7 @@
   flex: 1 1 400px;
 }
 
-.text-content h1 {
+.text-content h2 {
   color: white;
   font-size: 56px;
   font-family: 'dietherRound', 'Manrope', sans-serif;
@@ -100,17 +100,130 @@
   padding: 0 20px;
 }
 
-.gameplay-cards img {
+/* Tarjeta: ilustración arriba y texto real abajo (antes era una sola imagen) */
+.gameplay-card {
   width: 400px;
   max-width: 100%;
-  height: auto;
-  object-fit: cover;
+  padding: 25px 33px 34px;
+  background: rgba(224, 224, 224, 0.1);
   border-radius: 50px;
   transition: transform 0.3s ease;
 }
 
-.gameplay-cards img:hover {
+.gameplay-card:hover {
   transform: scale(1.03);
+}
+
+.gameplay-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.gameplay-card p {
+  margin: 22px 4px 0;
+  color: white;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Tráiler y widget de Steam */
+html {
+  scroll-behavior: smooth;
+}
+
+.trailer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  scroll-margin-top: 100px;
+}
+
+.trailer h2 {
+  margin: 0;
+}
+
+.video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 25px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.video iframe,
+.video-play {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-play {
+  position: relative;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.video-play img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90px;
+  height: 90px;
+  padding-left: 6px;
+  font-size: 36px;
+  color: white;
+  border-radius: 50%;
+  background-image: linear-gradient(to right, #4bc0c8, #c779d0, #feac5e);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease;
+}
+
+.video-play:hover .video-play-icon,
+.video-play:focus-visible .video-play-icon {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.steam-widget {
+  width: 100%;
+  max-width: 646px;
+  height: 190px;
+  border: 0;
+}
+
+.steam-button {
+  display: none;
+}
+
+/* El widget de Steam tiene ancho fijo: en pantallas angostas va el botón */
+@media (max-width: 680px) {
+  .steam-widget {
+    display: none;
+  }
+
+  .steam-button {
+    display: inline-block;
+  }
 }
 
 /* Carrusel de arte */
@@ -162,7 +275,7 @@
 
 /* Tablets grandes / pantallas medianas */
 @media (max-width: 1200px) {
-  .text-content h1 {
+  .text-content h2 {
     font-size: 48px;
   }
 
@@ -206,7 +319,7 @@
 
 /* Móviles grandes */
 @media (max-width: 768px) {
-  .text-content h1 {
+  .text-content h2 {
     font-size: 36px;
   }
 
@@ -253,7 +366,7 @@
 
 /* Móviles pequeños */
 @media (max-width: 480px) {
-  .text-content h1 {
+  .text-content h2 {
     font-size: 28px;
   }
 
@@ -270,8 +383,23 @@
     border-radius: 16px;
   }
 
-  .gameplay-cards img {
+  .gameplay-card {
+    padding: 20px 22px 26px;
     border-radius: 30px;
+  }
+
+  .gameplay-card p {
+    font-size: 15px;
+  }
+
+  .video {
+    border-radius: 16px;
+  }
+
+  .video-play-icon {
+    width: 64px;
+    height: 64px;
+    font-size: 26px;
   }
 
   .carousel-btn {
@@ -282,7 +410,7 @@
 
 /* Móviles muy pequeños */
 @media (max-width: 360px) {
-  .text-content h1 {
+  .text-content h2 {
     font-size: 24px;
   }
 
@@ -293,4 +421,10 @@
   .carousel-btn {
     font-size: 1.5rem;
   }
+}
+
+/* El logo de Kirakira es el título (h1) de la página: sin cambiar su tamaño ni posición */
+.hero-logo .hero-title {
+  font: inherit;
+  margin: 0;
 }

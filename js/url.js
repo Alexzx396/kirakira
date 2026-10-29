@@ -45,6 +45,8 @@
     const link = event.target.closest("a[href]");
     if (!link || link.target === "_blank" || event.button !== 0 ||
         event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    // Links a una sección de la misma página (#trailer): solo bajan, no recargan
+    if (link.getAttribute("href").startsWith("#")) return;
     const url = new URL(link.href, location.href);
     if (url.origin === location.origin && url.pathname === "/" && !url.search) {
       event.preventDefault();

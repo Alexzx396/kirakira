@@ -183,7 +183,7 @@
     margin-top: 8%;
   }
 
-  .navbar-nav .nav-link h5 {
+  .navbar-nav .nav-link .h5 {
     font-size: 14px;
   }
 
@@ -288,7 +288,7 @@
     margin-right: 5px;
   }
 
-  .hero-steam .fa-3x {
+  .hero-steam .icon-3x {
     font-size: 2.25em;
   }
 }

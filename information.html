@@ -23,6 +23,57 @@
     <meta name="twitter:site" content="@etherdreams">
     <link rel="icon" href="/img-marca/favicon.png" type="image/png">
     <link rel="apple-touch-icon" href="/img-marca/apple-touch-icon.png">
+    <!-- Datos estructurados para Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "Kirakira Slimes",
+      "url": "https://etherdreams.cl/information",
+      "image": "https://etherdreams.cl/img/og-image.jpg",
+      "description": "Kirakira Slimes es un juego de puzles indie: combina slimes, llena la barra de poder y supera el récord, solo o con amigos en el modo versus local.",
+      "genre": [
+        "Puzzle",
+        "Casual",
+        "Indie"
+      ],
+      "gamePlatform": "PC",
+      "operatingSystem": "Windows",
+      "applicationCategory": "Game",
+      "playMode": [
+        "SinglePlayer",
+        "MultiPlayer"
+      ],
+      "datePublished": "2025-04-17",
+      "inLanguage": [
+        "en",
+        "es",
+        "ja"
+      ],
+      "author": {
+        "@type": "Organization",
+        "name": "Ether Dreams",
+        "url": "https://etherdreams.cl/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ether Dreams",
+        "url": "https://etherdreams.cl/"
+      },
+      "sameAs": [
+        "https://store.steampowered.com/app/2940660/Kirakira_Slimes/"
+      ],
+      "trailer": {
+        "@type": "VideoObject",
+        "name": "Kirakira Slimes - Tráiler oficial",
+        "description": "Tráiler oficial de Kirakira Slimes, el juego de puzles con slimes de Ether Dreams.",
+        "thumbnailUrl": "https://etherdreams.cl/img/trailer.webp",
+        "uploadDate": "2025-04-09T06:00:06-07:00",
+        "embedUrl": "https://www.youtube.com/embed/zesqI5sJhKM",
+        "contentUrl": "https://www.youtube.com/watch?v=zesqI5sJhKM"
+      }
+    }
+    </script>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,21 +81,21 @@
 
     <!-- Bootstrap 5.3.3 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha384-PPIZEGYM1v8zp5Py7UjFb79S58UeqCL9pYVnVPURKEqvioPROaVAJKKLzvH2rDnI" crossorigin="anonymous">
 
+    <!-- Fuente de títulos: se pide al principio porque la usa el menú -->
+    <link rel="preload" href="/fonts/DietherRound.woff2" as="font" type="font/woff2" crossorigin>
     <!-- Idioma (ES/EN) -->
-    <script src="/js/url.js?v=20261029c"></script>
-    <script src="/js/i18n.js?v=20261029c"></script>
+    <script src="/js/url.js?v=20261029e"></script>
+    <script src="/js/i18n.js?v=20261029e"></script>
     <!-- CSS -->
-    <link rel="stylesheet" href="css/responsive.css?v=20261029c">
-    <link rel="stylesheet" href="css/base.css?v=20261029c">
-    <link rel="stylesheet" href="css/components.css?v=20261029c">
-    <link rel="stylesheet" href="css/home.css?v=20261029c">
-    <link rel="stylesheet" href="css/about.css?v=20261029c">
-    <link rel="stylesheet" href="css/footer.css?v=20261029c">
-    <link rel="stylesheet" href="css/cards.css?v=20261029c">
-    <link rel="stylesheet" href="css/information.css?v=20261029c">
+    <link rel="stylesheet" href="css/responsive.css?v=20261029e">
+    <link rel="stylesheet" href="css/base.css?v=20261029e">
+    <link rel="stylesheet" href="css/components.css?v=20261029e">
+    <link rel="stylesheet" href="css/home.css?v=20261029e">
+    <link rel="stylesheet" href="css/about.css?v=20261029e">
+    <link rel="stylesheet" href="css/footer.css?v=20261029e">
+    <link rel="stylesheet" href="css/cards.css?v=20261029e">
+    <link rel="stylesheet" href="css/information.css?v=20261029e">
 
 </head>
 <body>
@@ -61,18 +112,18 @@
                 <button type="button" class="lang-btn" data-set-lang="en" lang="en">EN</button>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú" data-i18n-aria="nav.menu">
-                <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+                <span class="navbar-toggler-icon"><svg class="icon" viewBox="0 0 448 512" width="0.875em" height="1em" fill="currentColor" aria-hidden="true"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/"><h5 data-i18n="nav.home">INICIO</h5></a>
+                        <a class="nav-link" aria-current="page" href="/"><span class="h5 d-block" data-i18n="nav.home">INICIO</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/" data-page="/ourteams"><h5 data-i18n="nav.about">NOSOTROS</h5></a>
+                        <a class="nav-link" href="/" data-page="/ourteams"><span class="h5 d-block" data-i18n="nav.about">NOSOTROS</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/" data-page="/information"><h5>KIRAKIRA</h5></a>
+                        <a class="nav-link" href="/" data-page="/information"><span class="h5 d-block">KIRAKIRA</span></a>
                     </li>
                 </ul>
             </div>
@@ -93,11 +144,11 @@
                     <img src="/img/fondo.webp" alt="" class="img-fondo img-fluid w-100">
                     <!-- Contenedor para centrar la imagen de logo -->
                     <div class="hero-logo">
-                        <img src="/img/kirakiraslime_logo.webp" alt="Kirakira Slimes" class="logo-kirakira img-fluid logo-float">
+                        <h1 class="hero-title"><img src="/img/kirakiraslime_logo.webp" alt="Kirakira Slimes" class="logo-kirakira img-fluid logo-float"></h1>
                     </div>
                     <!-- Icono de Steam agregado -->
                     <div class="hero-steam hero-steam--low">
-                        <i class="fa-brands fa-steam fa-3x"></i>
+                        <svg class="icon icon-3x" viewBox="0 0 496 512" width="0.9688em" height="1em" fill="currentColor" aria-hidden="true"><path d="M496 256c0 137-111.2 248-248.4 248-113.8 0-209.6-76.3-239-180.4l95.2 39.3c6.4 32.1 34.9 56.4 68.9 56.4 39.2 0 71.9-32.4 70.2-73.5l84.5-60.2c52.1 1.3 95.8-40.9 95.8-93.5 0-51.6-42-93.5-93.7-93.5s-93.7 42-93.7 93.5v1.2L176.6 279c-15.5-.9-30.7 3.4-43.5 12.1L0 236.1C10.2 108.4 117.1 8 247.6 8 384.8 8 496 119 496 256zM155.7 384.3l-30.5-12.6a52.79 52.79 0 0 0 27.2 25.8c26.9 11.2 57.8-1.6 69-28.4 5.4-13 5.5-27.3.1-40.3-5.4-13-15.5-23.2-28.5-28.6-12.9-5.4-26.7-5.2-38.9-.6l31.5 13c19.8 8.2 29.2 30.9 20.9 50.7-8.3 19.9-31 29.2-50.8 21zm173.8-129.9c-34.4 0-62.4-28-62.4-62.3s28-62.3 62.4-62.3 62.4 28 62.4 62.3-27.9 62.3-62.4 62.3zm.1-15.6c25.9 0 46.9-21 46.9-46.8 0-25.9-21-46.8-46.9-46.8s-46.9 21-46.9 46.8c.1 25.8 21.1 46.8 46.9 46.8z"/></svg>
                     </div>
                     <div class="hero-tagline">
                         <div class="d-inline-block">
@@ -107,8 +158,8 @@
                     <!-- Botones de acción -->
                     <div class="hero-actions">
                         <div class="d-inline-block">
-                            <a href="https://store.steampowered.com/app/2940660/Kirakira_Slimes/" class="btn btn-primary m-1" data-i18n="hero.buy">COMPRAR</a>
-                            <a href="https://www.youtube.com/watch?v=zesqI5sJhKM" class="btn btn-primary m-1"><i class="fa-solid fa-play"></i> <span data-i18n="hero.trailer">TRÁILER</span></a>
+                            <a href="https://store.steampowered.com/app/2940660/Kirakira_Slimes/" class="btn btn-primary m-1" data-i18n="hero.buy" target="_blank" rel="noopener">COMPRAR</a>
+                            <a href="#trailer" class="btn btn-primary m-1"><svg class="icon" viewBox="0 0 384 512" width="0.75em" height="1em" fill="currentColor" aria-hidden="true"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg> <span data-i18n="hero.trailer">TRÁILER</span></a>
                         </div>
                     </div>
                 </div>
@@ -120,7 +171,7 @@
 <section class="about-unified-section">
     <div class="about-unified-section-content">
       <div class="text-content">
-        <h1 data-i18n="game.title">SOBRE EL JUEGO</h1>
+        <h2 data-i18n="game.title">SOBRE EL JUEGO</h2>
         <p data-i18n="game.text">Kirakira Slimes es un entretenido juego de puzles indie en el que debes combinar slimes de forma estratégica en un espacio cada vez más reducido. Fusiónalos desde el más pequeño hasta el Rey Slime para sumar muchos puntos y superar el récord.</p>
       </div>
       <div class="image-wrapper">
@@ -130,12 +181,35 @@
     </div> <br><br>
   
     <div class="gameplay-cards">
-      <img loading="lazy" src="/img/custon/Group 10.webp" alt="Combina dos slimes del mismo tipo para crear uno más grande y aumentar tu puntaje. Pero ten cuidado: mientras más slimes haya en la caja, más posibilidades tienes de perder." data-i18n-alt="alt.card1">
-      <img loading="lazy" src="/img/custon/Group 11.webp" alt="Al combinar slimes y sumar puntos llenas la barra de poder, que te da una habilidad extra. Tú decides cuándo y cómo usarla mejor." data-i18n-alt="alt.card2">
-      <img loading="lazy" src="/img/custon/Group 12.webp" alt="Hay 11 tipos de slimes jugables: combínalos, fusiónalos y potencia tus slimes en este puzle indie, solo o con amigos en el modo versus local." data-i18n-alt="alt.card3">
-    </div> <br><br><br><br>
+      <article class="gameplay-card">
+        <img loading="lazy" src="/img/custon/card-combina.webp" alt="" width="433" height="341">
+        <p data-i18n="card.1">Combina dos slimes del mismo tipo para crear uno más grande y aumentar tu puntaje. Pero ten cuidado: mientras más slimes haya en la caja, más posibilidades tienes de perder.</p>
+      </article>
+      <article class="gameplay-card">
+        <img loading="lazy" src="/img/custon/card-poder.webp" alt="" width="447" height="342">
+        <p data-i18n="card.2">Al combinar slimes y sumar puntos llenas la barra de poder, que te da una habilidad extra. Tú decides cuándo y cómo usarla mejor.</p>
+      </article>
+      <article class="gameplay-card">
+        <img loading="lazy" src="/img/custon/card-slimes.webp" alt="" width="432" height="340">
+        <p data-i18n="card.3">Hay 11 tipos de slimes jugables: combínalos, fusiónalos y potencia tus slimes en este puzle indie, solo o con amigos en el modo versus local.</p>
+      </article>
+    </div>
+    <br><br><br><br>
+    <div id="trailer" class="trailer">
+      <h2 class="h1" data-i18n="hero.trailer">TRÁILER</h2>
+      <div class="video">
+        <button type="button" class="video-play" data-video="zesqI5sJhKM" aria-label="Ver el tráiler de Kirakira Slimes" data-i18n-aria="trailer.play">
+          <img loading="lazy" src="/img/trailer.webp" alt="" width="1280" height="720">
+          <span class="video-play-icon"><svg class="icon" viewBox="0 0 384 512" width="0.75em" height="1em" fill="currentColor" aria-hidden="true"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span>
+        </button>
+      </div>
+      <iframe class="steam-widget" src="https://store.steampowered.com/widget/2940660/?l=spanish" data-i18n-src="steam.widget" title="Kirakira Slimes en Steam" loading="lazy"></iframe>
+      <!-- En celular el widget de Steam no cabe: botón en su lugar -->
+      <a href="https://store.steampowered.com/app/2940660/Kirakira_Slimes/" class="btn btn-primary steam-button" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 496 512" width="0.9688em" height="1em" fill="currentColor" aria-hidden="true"><path d="M496 256c0 137-111.2 248-248.4 248-113.8 0-209.6-76.3-239-180.4l95.2 39.3c6.4 32.1 34.9 56.4 68.9 56.4 39.2 0 71.9-32.4 70.2-73.5l84.5-60.2c52.1 1.3 95.8-40.9 95.8-93.5 0-51.6-42-93.5-93.7-93.5s-93.7 42-93.7 93.5v1.2L176.6 279c-15.5-.9-30.7 3.4-43.5 12.1L0 236.1C10.2 108.4 117.1 8 247.6 8 384.8 8 496 119 496 256zM155.7 384.3l-30.5-12.6a52.79 52.79 0 0 0 27.2 25.8c26.9 11.2 57.8-1.6 69-28.4 5.4-13 5.5-27.3.1-40.3-5.4-13-15.5-23.2-28.5-28.6-12.9-5.4-26.7-5.2-38.9-.6l31.5 13c19.8 8.2 29.2 30.9 20.9 50.7-8.3 19.9-31 29.2-50.8 21zm173.8-129.9c-34.4 0-62.4-28-62.4-62.3s28-62.3 62.4-62.3 62.4 28 62.4 62.3-27.9 62.3-62.4 62.3zm.1-15.6c25.9 0 46.9-21 46.9-46.8 0-25.9-21-46.8-46.9-46.8s-46.9 21-46.9 46.8c.1 25.8 21.1 46.8 46.9 46.8z"/></svg> <span data-i18n="trailer.buy">COMPRAR EN STEAM</span></a>
+    </div>
+    <br><br><br><br>
     <div class="gameplay-cards">
-        <h1 data-i18n="game.art">ARTE</h1>
+        <h2 class="h1" data-i18n="game.art">ARTE</h2>
     </div>
   </section>
 
@@ -166,8 +240,8 @@
 <!-- Bootstrap JS Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <!-- Custom JavaScript File -->
-<script src="/js/javascriptfile.js?v=20261029c"></script>
+<script src="/js/javascriptfile.js?v=20261029e"></script>
 <!-- Carrusel -->
-<script src="/js/custom.js?v=20261029c"></script>
+<script src="/js/custom.js?v=20261029e"></script>
 </body>
 </html>

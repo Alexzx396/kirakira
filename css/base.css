@@ -1,7 +1,8 @@
 /* Fuente de títulos (Manrope y Montserrat se cargan desde Google Fonts) */
 @font-face {
   font-family: 'dietherRound';
-  src: url('/fonts/DietherRound.ttf') format('truetype');
+  src: url('/fonts/DietherRound.woff2') format('woff2'),
+       url('/fonts/DietherRound.ttf') format('truetype');
   font-display: swap;
 }
 
@@ -22,7 +23,8 @@ body {
   overflow-x: hidden; 
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
   /* Manrope de respaldo: DietherRound no trae la Ñ ni minúsculas con tilde */
   font-family: 'dietherRound', 'Manrope', sans-serif;
   font-weight: bold;
@@ -61,6 +63,18 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Íconos SVG (antes Font Awesome): mismo tamaño y alineación que el texto */
+.icon {
+  display: inline-block;
+  vertical-align: -0.125em;
+  overflow: visible;
+}
+
+.icon-3x {
+  font-size: 3em;
+  vertical-align: -0.0667em;
+}
+
 .logo-float {
   animation: float 3s ease-in-out infinite;
 }
@@ -77,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-toggler-icon {
-  background-image: none; /* usamos el icono fa-bars de Font Awesome */
+  background-image: none; /* usamos el icono SVG de menú (.icon) */
   color: white;
   font-size: 1.2rem; 
   padding: 4px;

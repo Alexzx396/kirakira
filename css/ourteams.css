@@ -4,7 +4,7 @@
   padding: 80px 20px;
 }
 
-#nuestro-equipo h2 {
+#nuestro-equipo .equipo-kicker {
   font-size: 20px;
   color: white;
   text-transform: uppercase;
@@ -12,7 +12,7 @@
   margin-bottom: 5px;
 }
 
-#nuestro-equipo h1 {
+#nuestro-equipo .equipo-title {
   font-size: 60px;
   color: #c27cd0;
   font-weight: 900;
@@ -260,7 +260,7 @@
     padding: 56px 20px 24px;
   }
 
-  #nuestro-equipo h1 {
+  #nuestro-equipo .equipo-title {
     font-size: clamp(40px, 12vw, 60px);
   }
 

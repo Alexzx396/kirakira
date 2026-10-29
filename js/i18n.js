@@ -1,7 +1,8 @@
 // Idioma del sitio (español / inglés).
 // Se carga en el <head> para fijar el idioma antes de que se pinte la página.
 // - Textos cortos: elementos con data-i18n="clave" (data-i18n-aria para aria-label,
-//   data-i18n-alt para el texto alternativo de imágenes).
+//   data-i18n-alt para el texto alternativo de imágenes, data-i18n-src para iframes
+//   con versión por idioma, como el widget de Steam).
 // - Textos largos (Privacidad, Términos): bloques con data-lang="es" / data-lang="en",
 //   el CSS muestra solo el del idioma activo.
 (function () {
@@ -49,6 +50,7 @@
       "footer.privacy": "Privacidad",
       "footer.terms": "Términos y Condiciones",
       "footer.madeBy": "Sitio web creado por",
+      "footer.contact": "Contacto y prensa",
 
       "title.home": "Ether Dreams | Estudio indie de videojuegos de Chile",
       "title.game": "Kirakira Slimes | Ether Dreams",
@@ -63,9 +65,13 @@
       "notFound.game": "VER KIRAKIRA SLIMES",
 
       "alt.screenshot": "Captura de pantalla de Kirakira Slimes",
-      "alt.card1": "Combina dos slimes del mismo tipo para crear uno más grande y aumentar tu puntaje. Pero ten cuidado: mientras más slimes haya en la caja, más posibilidades tienes de perder.",
-      "alt.card2": "Al combinar slimes y sumar puntos llenas la barra de poder, que te da una habilidad extra. Tú decides cuándo y cómo usarla mejor.",
-      "alt.card3": "Hay 11 tipos de slimes jugables: combínalos, fusiónalos y potencia tus slimes en este puzle indie, solo o con amigos en el modo versus local.",
+      "card.1": "Combina dos slimes del mismo tipo para crear uno más grande y aumentar tu puntaje. Pero ten cuidado: mientras más slimes haya en la caja, más posibilidades tienes de perder.",
+      "card.2": "Al combinar slimes y sumar puntos llenas la barra de poder, que te da una habilidad extra. Tú decides cuándo y cómo usarla mejor.",
+      "card.3": "Hay 11 tipos de slimes jugables: combínalos, fusiónalos y potencia tus slimes en este puzle indie, solo o con amigos en el modo versus local.",
+      "trailer.play": "Ver el tráiler de Kirakira Slimes",
+      "trailer.buy": "COMPRAR EN STEAM",
+      "steam.widget": "https://store.steampowered.com/widget/2940660/?l=spanish",
+
       "alt.art1": "Arte de Kirakira Slimes 1",
       "alt.art2": "Arte de Kirakira Slimes 2",
       "alt.art3": "Arte de Kirakira Slimes 3"
@@ -113,6 +119,7 @@
       "footer.privacy": "Privacy",
       "footer.terms": "Terms and Conditions",
       "footer.madeBy": "Website made by",
+      "footer.contact": "Contact & press",
 
       "title.home": "Ether Dreams | Indie game studio from Chile",
       "title.game": "Kirakira Slimes | Ether Dreams",
@@ -127,9 +134,13 @@
       "notFound.game": "SEE KIRAKIRA SLIMES",
 
       "alt.screenshot": "Kirakira Slimes screenshot",
-      "alt.card1": "Combine two slimes of the same type to create a bigger one and increase your score. But be careful, the more slimes you have inside the box, the more chances you have to lose.",
-      "alt.card2": "By combining slimes and scoring points, you will fill the power up bar. This gives you an additional ability. You decide when and how to use it most effectively.",
-      "alt.card3": "There are 11 types of playable slimes in total - combine, merge and power up your slimes in this indie puzzle, either playing alone or with friends in local versus mode!",
+      "card.1": "Combine two slimes of the same type to create a bigger one and increase your score. But be careful, the more slimes you have inside the box, the more chances you have to lose.",
+      "card.2": "By combining slimes and scoring points, you will fill the power up bar. This gives you an additional ability. You decide when and how to use it most effectively.",
+      "card.3": "There are 11 types of playable slimes in total - combine, merge and power up your slimes in this indie puzzle, either playing alone or with friends in local versus mode!",
+      "trailer.play": "Watch the Kirakira Slimes trailer",
+      "trailer.buy": "BUY ON STEAM",
+      "steam.widget": "https://store.steampowered.com/widget/2940660/?l=english",
+
       "alt.art1": "Kirakira Slimes artwork 1",
       "alt.art2": "Kirakira Slimes artwork 2",
       "alt.art3": "Kirakira Slimes artwork 3"
@@ -161,6 +172,10 @@
     scope.querySelectorAll("[data-i18n-alt]").forEach(el => {
       const text = dict[el.dataset.i18nAlt];
       if (text !== undefined) el.setAttribute("alt", text);
+    });
+    scope.querySelectorAll("[data-i18n-src]").forEach(el => {
+      const src = dict[el.dataset.i18nSrc];
+      if (src !== undefined && el.getAttribute("src") !== src) el.setAttribute("src", src);
     });
     document.querySelectorAll("[data-set-lang]").forEach(btn => {
       const active = btn.dataset.setLang === lang;
