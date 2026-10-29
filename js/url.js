@@ -15,8 +15,25 @@
 
   if (path !== "/") {
     history.replaceState({ page: path }, "", "/" + location.hash);
+  } else if (location.search) {
+    // llegamos con /?inicio (ver abajo): dejar la barra limpia
+    history.replaceState(null, "", "/" + location.hash);
   }
 
   // Página real, para marcar el link activo del menú
   window.currentPage = path;
+
+  // Links a la portada: como la barra ya muestra "/", ir a "/" sería ir a la misma
+  // URL y el navegador reutilizaría la entrada del historial (con la página anterior).
+  // Con "/?inicio" es una navegación nueva; la barra se limpia al cargar.
+  document.addEventListener("click", function (event) {
+    const link = event.target.closest("a[href]");
+    if (!link || link.target === "_blank" || event.button !== 0 ||
+        event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    const url = new URL(link.href, location.href);
+    if (url.origin === location.origin && url.pathname === "/" && !url.search) {
+      event.preventDefault();
+      location.assign("/?inicio" + url.hash);
+    }
+  });
 })();
