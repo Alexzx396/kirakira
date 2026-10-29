@@ -13,22 +13,21 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
-    <!-- Boostrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5.3.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha384-PPIZEGYM1v8zp5Py7UjFb79S58UeqCL9pYVnVPURKEqvioPROaVAJKKLzvH2rDnI" crossorigin="anonymous">
+    <!-- Idioma (ES/EN) -->
+    <script src="/js/url.js"></script>
+    <script src="/js/i18n.js"></script>
     <!-- CSS -->
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
     
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/privacidad.css"> 
 
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -41,22 +40,27 @@
         <header >
             <nav class="navbar navbar-expand-lg" id="navegador">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="/img-marca/blanco-v3.png" width="180" alt="logo" class="logo-principal">
+                    <a class="navbar-brand" href="/">
+                        <img src="/img-marca/blanco-v3.png" width="180" alt="logo">
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <div class="lang-switch ms-auto order-lg-last" role="group" aria-label="Idioma / Language">
+                <button type="button" class="lang-btn" data-set-lang="es" lang="es">ES</button>
+                <span class="lang-sep" aria-hidden="true">|</span>
+                <button type="button" class="lang-btn" data-set-lang="en" lang="en">EN</button>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú" data-i18n-aria="nav.menu">
+                        <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
                     </button>
-                    <div class="collapse navbar-collapse justify-content-end textos" id="navbarNav">
-                        <ul class="navbar-nav menuItems">
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link animacion-nav" aria-current="page" href="/index.html" data-item='Home'><h5>HOME</h5></a>
+                                <a class="nav-link" aria-current="page" href="/"><h5 data-i18n="nav.home">INICIO</h5></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link animacion-nav" href="ourteams.html" data-item='ABOUT US'><h5>ABOUT US</h5></a>
+                                <a class="nav-link" href="/ourteams"><h5 data-i18n="nav.about">NOSOTROS</h5></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link animacion-nav" href="information.html" data-item='KIRAKIRA'><h5>KIRAKIRA</h5></a>
+                                <a class="nav-link" href="/information"><h5>KIRAKIRA</h5></a>
                             </li>
                         </ul>
                     </div>
@@ -70,6 +74,143 @@
         <main class="privacy-container" >
             
             <section >
+                <!-- Español -->
+                <div data-lang="es" lang="es">
+                <h1>POLÍTICA DE PRIVACIDAD</h1><br><br>
+                <p>Fecha de entrada en vigor: 7 de marzo de 2024</p>
+                <p>¡Gracias por jugar nuestros juegos! Esta Política de Privacidad describe:</p>
+                <ul>
+                    <li>Las formas en que recopilamos datos personales sobre usted y por qué lo hacemos</li>
+                    <li>Cómo usamos sus datos personales, y</li>
+                    <li>Las opciones que tiene sobre sus datos personales.</li>
+                </ul>
+                <p>Esta Política de Privacidad se aplica a los juegos, sitios web y servicios relacionados de Ether Dreams SpA (en conjunto, los “Servicios”). Cuando en esta política hablamos de “Ether Dreams” (o de términos similares como “nosotros”), nos referimos a Ether Dreams SpA. También puede encontrar los datos del responsable del tratamiento de la información personal que recopilamos a través de nuestros distintos Servicios en la sección “Contacto”, más abajo.</p>
+                <br>
+                <h2>LOS SERVICIOS</h2><br>
+                <p>El término “Servicios” se refiere a cualquier producto o servicio de Ether Dreams. Entre ellos:</p>
+                <ul>
+                    <li>Juegos como KiraKira Slime</li>
+                    <li>El sitio web www.etherdreams.cl</li>
+                </ul>
+                <br>
+                <h2>LA INFORMACIÓN QUE RECOPILAMOS</h2><br>
+                <p>Esta es la información que recopilamos sobre usted y cómo la usamos:</p>
+                <br>
+                <h3>Información que usted nos entrega:</h3>
+                <ul>
+                    <li>Nombre de jugador</li>
+                    <li>Sus mensajes al Servicio (como registros de chat y solicitudes de soporte)</li>
+                    <li>Otra información que decida entregarnos (como contraseña, país de residencia, dirección de correo electrónico o datos para identificar una cuenta perdida)</li>
+                    <li>Información que usa para realizar una compra (como número y fecha de vencimiento de la tarjeta de crédito)</li>
+                </ul>
+                <br>
+                <h3>Información que recopilamos automáticamente:</h3><br>
+                <ul>
+                    <li>Información sobre su cuenta y su progreso en el juego</li>
+                    <li>Información de uso y estadísticas sobre cómo interactúa con los Servicios y con otros jugadores dentro de ellos, incluidos el juego que jugó, cuánto tiempo y cuándo lo jugó, intentos, progreso y resultados, preferencias guardadas, informes de errores y más</li>
+                    <li>Su dirección IP y los identificadores de su dispositivo móvil (como el ID del dispositivo, el ID de publicidad, la dirección MAC o el IMEI)</li>
+                    <li>Información sobre su dispositivo, como nombre del dispositivo y sistema operativo, tipo de navegador, idioma, proveedor de internet, complementos y otras especificaciones del dispositivo o del sistema</li>
+                    <li>Datos de ubicación general</li>
+                    <li>Datos de geolocalización (mediante GPS, con su consentimiento)</li>
+                </ul>
+                <br>
+                <h3>Información que recibimos de nuestros socios:</h3><br>
+                <ul>
+                    <li>Información que recibimos si vincula una herramienta de terceros con los Servicios (como Facebook o Google)</li>
+                    <li>Datos demográficos (por ejemplo, para determinar la ubicación aproximada de su dirección IP)</li>
+                    <li>Datos para combatir el fraude (como el abuso de reembolsos en juegos o el fraude de clics en publicidad)</li>
+                    <li>Datos de las plataformas en las que funcionan los juegos (por ejemplo, para verificar pagos)</li>
+                    <li>Datos con fines publicitarios y analíticos, para que podamos mejorar su experiencia y los Servicios</li>
+                </ul>
+                <br>
+                <h2>CÓMO USAMOS SU INFORMACIÓN</h2><br><br>
+                <p>Para que el Servicio funcione. Tratamos los datos necesarios para:</p>
+                <ul>
+                    <li>Crear cuentas y permitirle jugar nuestros juegos y usar nuestros Servicios</li>
+                    <li>Operar los Servicios</li>
+                    <li>Verificar y confirmar pagos</li>
+                    <li>Proveer y entregar los productos y servicios que solicite</li>
+                    <li>Enviarle comunicaciones relacionadas con el Servicio</li>
+                </ul>
+                <br>
+                <p>Para adaptar mejor el Servicio a nuestros jugadores. Para ofrecer buenos Servicios a nuestros jugadores, tenemos un interés legítimo en recopilar y tratar los datos necesarios para:</p>
+                <ul>
+                    <li>Actualizar y desarrollar perfiles de jugador</li>
+                    <li>Desarrollar y mejorar los Servicios y la experiencia de juego</li>
+                    <li>Gestionar nuestra relación con usted</li>
+                    <li>Ofrecer funciones sociales como parte de los Servicios</li>
+                    <li>Personalizar su experiencia en el Servicio</li>
+                    <li>Responder a sus comentarios y preguntas y brindar soporte a los jugadores</li>
+                    <li>Ofrecerle promociones de Ether Dreams</li>
+                    <li>Enviarle información relacionada, como actualizaciones, alertas de seguridad y mensajes de soporte</li>
+                    <li>Permitirle comunicarse con otros jugadores</li>
+                </ul>
+
+                <p>Para mostrar publicidad personalizada. Para mostrarle publicidad personalizada en los Servicios y en otros sitios web y servicios (incluido el correo electrónico), tenemos un interés legítimo en tratar los datos necesarios para:</p>
+                <ul>
+                    <li>Hacer seguimiento del contenido al que accede en relación con los Servicios y de su comportamiento en línea</li>
+                    <li>Entregar, segmentar y mejorar nuestra publicidad y los Servicios</li>
+                </ul>
+
+                <p>Para mantener el Servicio seguro y justo. Garantizar condiciones de juego equitativas en los Servicios es una prioridad para nosotros. Para más información sobre nuestra política de uso aceptable, consulte los Términos de Servicio de Ether Dreams. Para mantener los Servicios y sus funciones sociales seguros y justos, combatir el fraude y asegurar un uso aceptable, tenemos un interés legítimo en tratar los datos necesarios para:</p>
+                <ul>
+                    <li>Analizar y supervisar el uso de los Servicios y de sus funciones sociales</li>
+                    <li>Moderar los chats de forma automática o manual</li>
+                    <li>Tomar medidas contra jugadores fraudulentos o que se comporten de forma indebida</li>
+                </ul>
+
+                <p>Con su consentimiento. Con su consentimiento, podemos tratar sus datos para otros fines, como usar su ubicación GPS para mostrarle eventos locales. Recopilamos las siguientes categorías de información personal y podemos venderla a terceros: identificadores, información comercial, información de actividad en internet u otras redes electrónicas, datos de geolocalización e inferencias obtenidas a partir de estas categorías.</p>
+                <h2>CÓMO COMPARTIMOS LA INFORMACIÓN</h2>
+                <p>Podemos compartir parte de la información que recopilamos para ayudar a operar y mejorar los Servicios. Algunos ejemplos de cómo compartimos información:</p>
+                <ul>
+                    <li>Con otros jugadores y usuarios, para habilitar funciones sociales y permitir, por ejemplo, que otros jugadores vean los datos de su perfil, su actividad en el juego y lean los mensajes que ha publicado.</li>
+                    <li>Con socios de Ether Dreams que prestan servicios para nosotros, como facilitar el juego y desarrollar funciones de los juegos. Estos socios tratan sus datos solo según las instrucciones de Ether Dreams para prestar los Servicios, como alojamiento, soporte a jugadores, publicidad, analítica y prevención del fraude.</li>
+                    <li>Con otras empresas y autoridades públicas para combatir el fraude y las actividades ilegales, prevenir o investigar infracciones de nuestros términos o políticas, proteger a otras personas de la muerte o de daños graves a su integridad o a sus bienes, y con autoridades públicas en respuesta a solicitudes legales (como una orden judicial o una citación).</li>
+                    <li>Con su consentimiento.</li>
+                    <li>También podemos compartir información que no lo identifica, incluida información agregada o anonimizada.</li>
+                </ul>
+                <p>Socios de publicidad y redes sociales. Los Servicios incluyen funciones de nuestros socios, como herramientas de interacción con redes sociales y publicidad dentro del juego. La lista de estos socios está disponible en partner-opt-out. Estos socios pueden acceder a sus datos y se rigen por sus propias políticas de privacidad. Le recomendamos revisar esas políticas para conocer mejor cómo tratan los datos.</p>
+                <br>
+                <h2>INFORMACIÓN ADICIONAL PARA RESIDENTES DE CALIFORNIA</h2>
+                <p>Lo siguiente se aplica a los residentes de California que interactúan con nuestros Servicios. La Ley de Privacidad del Consumidor de California (“CCPA”) otorga a los consumidores residentes en California ciertos derechos sobre su información personal.</p>
+                <ul>
+                    <li>Identificadores (como nombres y direcciones de correo electrónico)</li>
+                    <li>Información demográfica (como la edad)</li>
+                    <li>Información comercial (como el historial de compras)</li>
+                    <li>Actividad en internet o redes electrónicas (por ejemplo, detalles de juego o de uso del sitio web)</li>
+                    <li>Datos de geolocalización</li>
+                    <li>Otra “información personal” según la define la ley de California (como los datos de su tarjeta de crédito)</li>
+                    <li>Información del dispositivo</li>
+                    <li>Inferencias obtenidas a partir de cualquiera de estas categorías</li>
+                </ul>
+                <p>[Detalles adicionales sobre los derechos de la CCPA y cómo ejercerlos]</p>
+                <br>
+                <h2>INFORMACIÓN ADICIONAL PARA RESIDENTES DE LA UE</h2><br><br>
+                <p>El Reglamento General de Protección de Datos (“RGPD”) otorga a los ciudadanos de la UE ciertos derechos sobre su información personal. Esta política se aplica a toda la información personal recopilada o tratada por Ether Dreams en relación con nuestros Servicios, y a todos los ciudadanos de la UE que interactúan con ellos.</p>
+                <ul>
+                    <li>Identificadores (como nombres y direcciones de correo electrónico)</li>
+                    <li>Información demográfica (como la edad)</li>
+                    <li>Información comercial (como el historial de compras)</li>
+                    <li>Actividad en internet o redes electrónicas (por ejemplo, detalles de juego o de uso del sitio web)</li>
+                    <li>Datos de geolocalización</li>
+                    <li>Información del dispositivo</li>
+                    <li>Información de pago</li>
+                </ul>
+                <p>[Detalles adicionales sobre los derechos del RGPD y cómo ejercerlos]</p>
+                <br>
+                <h2>CÓMO PROTEGEMOS SU INFORMACIÓN</h2><br><br>
+                <p>Medidas de seguridad. Para ayudar a garantizar una experiencia de juego segura, Ether Dreams adopta medidas técnicas y organizativas adecuadas para proteger la información personal frente a accesos, divulgaciones, alteraciones o destrucciones no autorizadas. Revisamos y actualizamos periódicamente nuestras políticas y procedimientos de seguridad de datos para cumplir con las leyes de protección de datos aplicables.</p>
+                <p>Conservación de datos. Conservamos sus datos mientras su cuenta esté activa o mientras sea necesario para prestarle los Servicios. Por ejemplo, anonimizamos periódicamente las cuentas de juego que no se usan y revisamos y anonimizamos con regularidad los datos innecesarios. Tenga en cuenta que, si nos pide eliminar sus datos personales, conservaremos los datos que sean necesarios para nuestros intereses comerciales legítimos, como cumplir con nuestras obligaciones legales, resolver disputas y hacer cumplir nuestros acuerdos.</p>
+
+                <h2>CAMBIOS EN ESTA POLÍTICA</h2><br><br>
+                <p>Podemos actualizar periódicamente esta Política de Privacidad publicando una nueva versión en www.etherdreams.cl. Cuando hagamos un cambio, modificaremos la fecha que aparece al comienzo de la política (la “fecha de entrada en vigor”). Si sigue usando los Servicios después de esa fecha, se aplicará la Política de Privacidad actualizada.</p>
+                <br>
+                <h2>CONTACTO</h2><br><br>
+                <p>Correo electrónico: etherdreams.contact@gmail.com</p>
+                </div>
+
+                <!-- English -->
+                <div data-lang="en" lang="en">
                 <h1>PRIVACY POLICY</h1><br><br>
                 <p>Effective Date: March 7th, 2024</p>
                 <p>Thank you for playing our games! This Privacy Policy describes:</p>
@@ -78,7 +219,7 @@
                     <li>How we use your personal data, and</li>
                     <li>The choices you have about your personal data.</li>
                 </ul>
-                <p>This Privacy Policy applies to Eter Dreams SpA's games, websites, and related services (collectively, the “Services”). When we refer to “Ether Dreams” (or any similar terms like “we” or “us”) in this policy, we mean Ether Dreams SpA. You can also find details about the data controller for personal information we collect through our different Services under “Contact Us” below.</p>
+                <p>This Privacy Policy applies to Ether Dreams SpA's games, websites, and related services (collectively, the “Services”). When we refer to “Ether Dreams” (or any similar terms like “we” or “us”) in this policy, we mean Ether Dreams SpA. You can also find details about the data controller for personal information we collect through our different Services under “Contact Us” below.</p>
                 <br>
                 <h2>THE SERVICES</h2><br>
                 <p>The term “Services” describes any Ether Dreams products or services. These include:</p>
@@ -203,6 +344,7 @@
                 
                 
                 <p>Email: etherdreams.contact@gmail.com</p>
+                </div>
                 
             </section>
         </main>
@@ -210,13 +352,9 @@
         <!-- Footer -->
         <div id="footer-placeholder"></div>
         <!-- Bootstrap JS Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-        <!-- AOS JS -->
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <!-- Custom JavaScript File -->
         <script src="/js/javascriptfile.js"></script>
-        <!-- font Awesome-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     </body>
 </html>

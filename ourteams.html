@@ -17,34 +17,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Montserrat:ital,wght@1,900&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cairo&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Boostrap-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
-      crossorigin="anonymous"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css"
-    />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap 5.3.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha384-PPIZEGYM1v8zp5Py7UjFb79S58UeqCL9pYVnVPURKEqvioPROaVAJKKLzvH2rDnI" crossorigin="anonymous">
+    <!-- Idioma (ES/EN) -->
+    <script src="/js/url.js"></script>
+    <script src="/js/i18n.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/ourteams.css" />
 
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/components.css" />
-    <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/about.css" />
     <link rel="stylesheet" href="css/footer.css" />
@@ -55,52 +43,53 @@
     <header>
       <nav class="navbar navbar-expand-lg fixed-top" id="navegador">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="/">
             <img
               src="/img-marca/blanco-v3.png"
               width="180"
               alt="logo"
-              class="logo-principal"
             />
           </a>
-          <button
+          <div class="lang-switch ms-auto order-lg-last" role="group" aria-label="Idioma / Language">
+                <button type="button" class="lang-btn" data-set-lang="es" lang="es">ES</button>
+                <span class="lang-sep" aria-hidden="true">|</span>
+                <button type="button" class="lang-btn" data-set-lang="en" lang="en">EN</button>
+            </div>
+            <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
             aria-controls="navbarNav"
             aria-expanded="false"
-            aria-label="Toggle navigation"
+            aria-label="Abrir menú" data-i18n-aria="nav.menu"
           >
             <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
           </button>
           <div
-            class="collapse navbar-collapse justify-content-end textos"
+            class="collapse navbar-collapse justify-content-end"
             id="navbarNav"
           >
-            <ul class="navbar-nav menuItems">
+            <ul class="navbar-nav">
               <li class="nav-item">
                 <a
-                  class="nav-link animacion-nav"
+                  class="nav-link"
                   aria-current="page"
-                  href="index.html"
-                  data-item="Home"
-                  ><h5>HOME</h5></a
+                  href="/"
+                  ><h5 data-i18n="nav.home">INICIO</h5></a
                 >
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link animacion-nav"
-                  href="ourteams.html"
-                  data-item="ABOUT US"
-                  ><h5>ABOUT US</h5></a
+                  class="nav-link"
+                  href="/ourteams"
+                  ><h5 data-i18n="nav.about">NOSOTROS</h5></a
                 >
               </li>
               <li class="nav-item">
                 <a
-                  class="nav-link animacion-nav"
-                  href="information.html"
-                  data-item="KIRAKIRA"
+                  class="nav-link"
+                  href="/information"
                   ><h5>KIRAKIRA</h5></a
                 >
               </li>
@@ -112,43 +101,29 @@
     <!-- Home -->
     <section id="home">
       <div class="container-fluid px-0">
-        <div class="row no-gutters">
+        <div class="row g-0">
           <div class="col-12">
             <!-- Contenedor de imagen de fondo -->
-            <div class="position-relative text-center">
+            <div class="position-relative text-center about-hero">
               <img
                 src="/img/FondoNosotros.png"
-                alt="Imagen de fondo"
+                alt=""
                 class="img-fondo img-fluid w-100"
               />
 
               <!-- Contenedor para centrar la imagen de logo -->
-              <div
-                class="position-absolute"
-                style="top: 55%; left: 30%; transform: translate(-50%, -50%)"
-              >
-                <img
-                  src="/img/EtherTrasparente.png"
-                  class="img-fluid"
-                  style="width: 45%"
-                />
+              <div class="about-hero-logo">
+                <img src="/img/EtherTrasparente.png" class="img-fluid" alt="" />
               </div>
 
-              <div class="position-absolute w-50" style="top: -7%; left: 2%">
+              <div class="about-hero-text">
                 <div class="container">
-                  <h2 class="display-7 custom-color" id="card-title">WE ARE</h2>
-                  <h1 class="display-10">ETHER DREAMS</h1>
+                  <h2 data-i18n="team.weAre">SOMOS</h2>
+                  <h1>ETHER DREAMS</h1>
                   <div class="about-description">
-                    Ether dreams was founded in 2024 by a group of friends after
-                    a horrible experience in the game industry. We all have a
-                    shared passion for indie video games and are inspired by the
-                    possibility of positively impacting the digital
-                    entertainment industry and making our mark in the world of
-                    video game development.
+                    <span data-i18n="team.intro">Ether Dreams nació en 2024, fundado por un grupo de amigos después de una pésima experiencia en la industria de los videojuegos. Compartimos la pasión por los juegos indie y nos inspira la posibilidad de aportar algo positivo a la industria del entretenimiento digital y dejar nuestra huella en el desarrollo de videojuegos.</span>
                     <br /><br />
-                    <span class="highlighted-phrase"
-                      >Our dreams are beyond this planet.</span
-                    >
+                    <span class="highlighted-phrase" data-i18n="tagline">Nuestros sueños están más allá de este planeta.</span>
                   </div>
                 </div>
               </div>
@@ -160,7 +135,7 @@
 
     <!-- Sección Equipo -->
     <section id="nuestro-equipo" class="container">
-      <h2>SAY HELLO TO A</h2>
+      <h2 data-i18n="team.hello">TE PRESENTAMOS A NUESTRO</h2>
       <h1>DREAM TEAM</h1>
       <br />
 
@@ -188,7 +163,7 @@
             style="--color1: #a0e3fd; --color2: #1e7598"
           >
             <h5>ALBA</h5>
-            <p>UX & GRAPHIC DESIGNER</p>
+            <p data-i18n="role.alba">DISEÑO UX Y GRÁFICO</p>
           </div>
         </div>
 
@@ -203,7 +178,7 @@
             style="--color1: #3a796d; --color2: #245458"
           >
             <h5>ALEX</h5>
-            <p>WEB DEVELOPER</p>
+            <p data-i18n="role.alex">DESARROLLO WEB</p>
           </div>
         </div>
 
@@ -218,7 +193,7 @@
             style="--color1: #6367b3; --color2: #452a92"
           >
             <h5>BABU</h5>
-            <p>ILLUSTRATOR & CONCEPT ARTIST</p>
+            <p data-i18n="role.babu">ILUSTRACIÓN Y CONCEPT ART</p>
           </div>
         </div>
 
@@ -233,7 +208,7 @@
             style="--color1: #fcdd7e; --color2: #f8be75"
           >
             <h5>BASTIAN</h5>
-            <p>GAMEPLAY PROGRAMMER</p>
+            <p data-i18n="role.gameplay">PROGRAMACIÓN DE GAMEPLAY</p>
           </div>
         </div>
 
@@ -248,7 +223,7 @@
             style="--color1: #513b59; --color2: #2f1c36"
           >
             <h5>JIM</h5>
-            <p>DIRECTOR, PROGRAMMER & ANIMATOR</p>
+            <p data-i18n="role.jim">DIRECCIÓN, PROGRAMACIÓN Y ANIMACIÓN</p>
           </div>
         </div>
 
@@ -259,7 +234,7 @@
             style="--color1: #7E63B3; --color2: #CE0CFF"
           >
             <h5>LEO</h5>
-            <p>GAMEPLAY PROGRAMMER</p>
+            <p data-i18n="role.gameplay">PROGRAMACIÓN DE GAMEPLAY</p>
           </div>
         </div>
 
@@ -274,29 +249,17 @@
             style="--color1: #9d3b3c; --color2: #551517"
           >
             <h5>SEBA</h5>
-            <p>COMPOSER & AUDIO DESIGNER</p>
+            <p data-i18n="role.seba">COMPOSICIÓN Y DISEÑO DE AUDIO</p>
           </div>
         </div>
       </div>
     </section>
 
-    <div id="contacto-placeholder"></div>
     <!-- Footer -->
     <div id="footer-placeholder"></div>
     <!-- Bootstrap JS Bundle with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous"
-    ></script>
-    <!-- AOS JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- Custom JavaScript File -->
     <script src="/js/javascriptfile.js"></script>
-    <!-- font Awesome-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
   </body>
 </html>

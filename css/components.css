@@ -1,14 +1,3 @@
-.button-container {
-  position: absolute;
-  top: 85%; /* Ajustado para estar visible y accesible en todos los tamaños de pantalla */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%; /* Ocupa todo el ancho para mantener la consistencia */
-}
-
 .btn-primary {
   background-color: #000; /* Fondo negro para contraste */
   color: white; /* Texto blanco para legibilidad */
@@ -35,11 +24,6 @@
 }
 
 @media (max-width: 768px) {
-  .button-container {
-    top: 80%; /* Ajuste para optimizar visualización en tabletas */
-    width: 100%; /* Asegurar ancho completo */
-  }
-
   .btn-primary {
     font-size: 14px; /* Adecuado para dispositivos más pequeños */
     padding: 8px 16px; /* Padding más compacto */
@@ -48,10 +32,6 @@
 }
 
 @media (max-width: 480px) {
-  .button-container {
-    top: 75%; /* Ajuste para pantallas de teléfonos */
-  }
-
   .btn-primary {
     font-size: 12px; /* Reducción del tamaño de fuente para mejor adaptación */
     width: 90%; /* Uso del ancho completo para facilitar la accesibilidad */
@@ -60,9 +40,6 @@
 }
 
 @media (max-width: 360px) {
-  .button-container {
-    top: 70%; 
-  }
   .btn-primary {
     padding: 3px 10px; 
     width: 90%; 

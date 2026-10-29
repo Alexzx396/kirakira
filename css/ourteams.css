@@ -40,7 +40,6 @@
   transform: scale(1.1);
 }
 
-
 /* Grid con 3 columnas */
 .equipo-grid {
   display: grid;
@@ -57,8 +56,8 @@
   position: relative;
   width: 100%;
   max-width: 250px;
-  margin-top: 70px; 
-  
+  margin-top: 70px;
+  transition: transform 0.3s ease;
 }
 
 /* Slime sobre el card */
@@ -84,14 +83,9 @@
   transition: transform 0.3s ease;
 }
 
-.miembro-container {
-  transition: transform 0.3s ease;
-}
-
 .miembro-container:hover {
   transform: scale(1.05);
 }
-
 
 .miembro-card h5 {
   color: white;
@@ -107,59 +101,54 @@
   margin: 0;
 }
 
-
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400&display=swap");
-
 .about-description {
   font-family: "Manrope", sans-serif;
-  font-size: 20px;
+  font-size: clamp(15px, 1.4vw, 20px);
   font-weight: normal;
   color: rgba(255, 255, 255, 0.7);
   text-align: left;
   line-height: 1.5;
   letter-spacing: 0;
-  max-width: 800px;
+  /* que no pase sobre los slimes, que empiezan cerca de la mitad de la imagen */
+  max-width: min(800px, calc(45vw - 60px));
 }
 
 .highlighted-phrase {
   font-weight: 500;
   color: white;
-  font-size: 24px;
-}
-
-#home .text-container {
-  position: absolute;
-  margin-top: -20%;
-  left: 5%;
-  transform: translateY(-50%);
-  width: 40%;
-  color: white;
-  text-align: left;
-  padding: 20px;
+  font-size: clamp(16px, 1.67vw, 24px);
 }
 
 #home h2 {
   padding-top: 25%;
-  font-size: 35px;
+  /* tamaños proporcionales al ancho: en 1440px son los valores originales */
+  font-size: clamp(24px, 2.43vw, 35px);
   color: #c27cd0;
   text-align: left;
 }
 
 #home h1 {
-  font-size: 130px;
+  font-size: clamp(64px, 9vw, 130px);
   text-align: left;
 }
 
-#home-nosotros .text-container {
-  text-align: left;
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
+/* Portada: logo de fondo y texto sobre la imagen */
+.about-hero-logo {
+  position: absolute;
+  top: 55%;
+  left: 30%;
+  transform: translate(-50%, -50%);
 }
 
-#home-nosotros h2,
-#home-nosotros h1 {
-  text-align: left;
+.about-hero-logo img {
+  width: 45%;
+}
+
+.about-hero-text {
+  position: absolute;
+  top: -7%;
+  left: 2%;
+  width: 50%;
 }
 
 /* ✅ iPad & pantallas entre 699px y 1024px */
@@ -205,28 +194,84 @@
   }
 }
 
-/* 📱 Tablets medianas y móviles grandes (768px ↓) */
-@media (max-width: 768px) {
-  #home h1 {
-    font-size: clamp(28px, 8vw, 22px);
-    width: 250px;
+/* 📱 Tablets y móviles (1024px ↓): portada con la imagen de fondo */
+@media (max-width: 1024px) {
+  /* Portada: la imagen pasa a ser fondo y el texto queda arriba, sin taparse con el menú */
+  .about-hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 110px 20px 300px;
+    overflow: hidden;
+    text-align: left;
+  }
+
+  .about-hero .img-fondo {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    margin-top: 0;
+    object-fit: cover;
+    object-position: 72% bottom;
+  }
+
+  .about-hero-logo {
+    display: none;
+  }
+
+  .about-hero-text {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .about-hero-text .container {
+    padding: 0;
   }
 
   #home h2 {
-    font-size: clamp(18px, 4vw, 24px);
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 20px;
+  }
+
+  #home h1 {
+    font-size: clamp(40px, 12vw, 64px);
+    line-height: 1.05;
+    margin-bottom: 16px;
   }
 
   .about-description {
-    font-size: 13px;
+    font-size: 15px;
+    max-width: 600px;
+    margin: 0;
   }
 
   .highlighted-phrase {
-    font-size: 12px;
+    font-size: 16px;
+  }
+}
+
+/* 📱 Tablets medianas y móviles grandes (768px ↓) */
+@media (max-width: 768px) {
+  /* Equipo: sin la fila de iconos repetidos y sin huecos enormes */
+  #nuestro-equipo {
+    padding: 56px 20px 24px;
+  }
+
+  #nuestro-equipo h1 {
+    font-size: clamp(40px, 12vw, 60px);
+  }
+
+  .iconos-mini {
+    display: none;
   }
 
   .equipo-grid {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
+    margin: 0 auto 40px;
   }
 
   .slime-img {
@@ -239,36 +284,16 @@
   }
 
   .miembro-card h5 {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .miembro-card p {
-    font-size: 11px;
+    font-size: 12px;
   }
 }
 
 /* 📲 Móviles pequeños (480px ↓) */
 @media (max-width: 480px) {
-  #home h1 {
-    font-size: clamp(22px, 9vw, 18px);
-    width: 300px;
-    padding-top: 20%;
-  }
-
-  #home h2 {
-    font-size: clamp(14px, 4.5vw, 20px);
-    
-  }
-
-  .about-description {
-    font-size: 10px;
-    width: 300px;
-  }
-
-  .highlighted-phrase {
-    font-size: 10px;
-  }
-
   .equipo-grid {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -282,44 +307,11 @@
   .miembro-card {
     padding-top: 45px;
   }
-
-  .miembro-card h5 {
-    font-size: 14px;
-  }
-
-  .miembro-card p {
-    font-size: 10px;
-  }
 }
 
 /* 📟 Móviles muy pequeños (360px ↓) */
 @media (max-width: 360px) {
-  #home h1 {
-    font-size: clamp(18px, 8vw, 20px);
-  }
-
-  #home h2 {
-    font-size: clamp(12px, 4vw, 16px);
-  }
-
-  .about-description {
-    font-size: 9px;
-    width: 300px;
-  }
-
-  .highlighted-phrase {
-    font-size: 9px;
-  }
-
   .slime-img {
     width: 60%;
-  }
-
-  .miembro-card h5 {
-    font-size: 13px;
-  }
-
-  .miembro-card p {
-    font-size: 9px;
   }
 }

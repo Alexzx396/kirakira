@@ -1,3 +1,17 @@
+/* Sección de tarjetas (Social / Proyectos) */
+#proyectos {
+  margin-top: calc(72px + 1rem);
+  padding: 1.5rem;
+}
+
+#proyectos > .contenedor-interior {
+  padding: 3rem;
+}
+
+#proyectos .row {
+  padding-top: 3rem;
+}
+
 .contenedores .card {
   margin: 30px;
   padding: 35px 45px;
@@ -183,7 +197,7 @@
   }
 
   .contenedores .card-text {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -202,15 +216,42 @@
   }
 
   .contenedores .card-title {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .contenedores .card-title2 {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .contenedores .card-text {
-    padding: 20px;
-    font-size: 8px;
+    padding: 0 8px;
+    font-size: 14px;
+  }
+}
+
+/* Móvil: tarjetas apiladas con espacio para el personaje que asoma arriba */
+@media (max-width: 767.98px) {
+  #proyectos {
+    margin-top: 0;
+    padding: 0;
+  }
+
+  #proyectos > .contenedor-interior {
+    padding: 70px 4px 32px;
+  }
+
+  #proyectos .row {
+    padding-top: 0;
+    row-gap: 70px;
+  }
+
+  .contenedores .card {
+    margin: 0 auto;
+    padding: 50px 16px 24px;
+  }
+
+  .contenedores .card-icon {
+    width: 110px;
+    top: -60px;
   }
 }

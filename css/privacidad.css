@@ -1,26 +1,23 @@
 /* Estilos básicos y color de fondo */
 body {
     color: white; 
-    font-family: 'Monrope', sans-serif; 
-    background-size: 150%; 
+    font-family: 'Manrope', sans-serif; 
     background-position: 10px 80%; 
-    color: white; 
-    font-family: 'Monrope', sans-serif; 
     background-size: 120%; 
     background-repeat: no-repeat; 
     text-align: left;
-    font-size: 19px !important;
+    font-size: 19px;
   }
 
   h1 {
-    font-family: 'dietherRound', serif;  
+    font-family: 'dietherRound', 'Manrope', sans-serif;  
     font-weight: bold;
     font-size: 70px;
   }
   
 
   h2, h3, h4, h5, h6 {
-    font-family: 'dietherRound', serif;  
+    font-family: 'dietherRound', 'Manrope', sans-serif;  
   }
   
 
@@ -28,8 +25,8 @@ body {
     background-color: #000; 
     width: 100%; 
     margin: auto; 
-    padding: 400px; 
-    padding-top: 150px; 
+    /* columna de texto de 640px centrada (en 1440px equivale al padding de 400px que tenía) */
+    padding: 150px max(20px, calc(50% - 320px)) 400px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     border-radius: 8px; 
     overflow: auto; 
@@ -43,8 +40,7 @@ body {
     }
 
     main.privacy-container {
-        width: 95%;
-        padding: 50px; 
+        padding: 120px 32px 60px; 
         min-height: calc(100vh - 20px); 
     }
 
@@ -55,14 +51,14 @@ body {
 
 @media (max-width: 480px) {
     body {
-        font-size: 14px; 
+        font-size: 16px; 
     }
 
     main.privacy-container {
-        padding: 20px; 
+        padding: 110px 20px 48px; 
     }
 
     h1 {
-        font-size: 40px; 
+        font-size: 36px; 
     }
 }

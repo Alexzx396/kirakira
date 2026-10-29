@@ -3,16 +3,23 @@ RewriteEngine On
 # Establecer index.html como la página de inicio predeterminada
 DirectoryIndex index.html
 
+# /index y /index.html redirigen a la raíz (www.etherdreams.cl)
+RewriteCond %{THE_REQUEST} \s/+index(\.html)?[\s?] [NC]
+RewriteRule ^ / [R=301,L]
+
+# Redirigir para eliminar la extensión .html si se accede directamente
+RewriteCond %{THE_REQUEST} \s/+(.+)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L,NE]
+
 # Reescribir solo si la solicitud no es por un directorio existente
 RewriteCond %{REQUEST_FILENAME} !-d
 
 # Reescribir solo si la solicitud no es por un archivo existente
 RewriteCond %{REQUEST_FILENAME} !-f
 
-# Reescribir a ".html"
+# Reescribir a ".html" (/information sirve information.html)
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.+)$ $1.html [L,QSA]
 
-# Redirigir para eliminar la extensión .html si se accede directamente
-RewriteCond %{THE_REQUEST} \s/+(.+)\.html[\s?] [NC]
-RewriteRule ^ /%1 [R=301,L,NE]
+# El servidor de pruebas local no se publica
+RedirectMatch 404 ^/dev(/|$)

@@ -1,3 +1,10 @@
+/* Fuente de títulos (Manrope y Montserrat se cargan desde Google Fonts) */
+@font-face {
+  font-family: 'dietherRound';
+  src: url('/fonts/DietherRound.ttf') format('truetype');
+  font-display: swap;
+}
+
 /* Reset CSS y configuración inicial */
 * {
   margin: 0;
@@ -9,15 +16,15 @@
 body {
   background: linear-gradient(to right, #000000, #1d1911, #353023) !important;
   color: #fff;
-  font-family: 'Monrope', sans-serif;
+  font-family: 'Manrope', sans-serif;
   background-size: cover;
   background-position: center center;
   overflow-x: hidden; 
 }
 
-
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'dietherRound', serif;
+  /* Manrope de respaldo: DietherRound no trae la Ñ ni minúsculas con tilde */
+  font-family: 'dietherRound', 'Manrope', sans-serif;
   font-weight: bold;
 }
 
@@ -42,15 +49,6 @@ h1, h2, h3, h4, h5, h6 {
   transition: font-size 0.3s ease;
 }
 
-.steam-icon-container {
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #ffffff;
-  z-index: 10;
-}
-
 @keyframes float {
   0% {
     transform: translateY(0);
@@ -67,11 +65,9 @@ h1, h2, h3, h4, h5, h6 {
   animation: float 3s ease-in-out infinite;
 }
 
-
 #navegador a, #footer p {
   color: #fff;
 }
-
 
 .navbar-toggler {
   background-color: black;
@@ -81,11 +77,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-toggler-icon {
-  color: white; 
+  background-image: none; /* usamos el icono fa-bars de Font Awesome */
+  color: white;
   font-size: 1.2rem; 
   padding: 4px;
 }
-
 
 /* Media Queries para adaptar el diseño a diferentes tamaños de pantalla */
 @media (max-width: 1024px) {
@@ -97,21 +93,8 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 3.5rem;
   }
 
-  .h1, h2, h3, h4, h5, h6 {
-    font-family: 'dietherRound', serif;
-    font-weight: bold;
-  }
-
   .contenedores .card-text, .contenedores .btn-primary, .card-title.h2 {
     font-size: 1.25rem;
-  }
-
-  .steam-icon-container {
-    font-size: 40px;
-  }
-  .body {
-    background-image: url('/img/fondo-movil.png');
-    background-position: top center;
   }
 }
 
@@ -127,10 +110,6 @@ h1, h2, h3, h4, h5, h6 {
   .contenedores .card-text, .contenedores .btn-primary, .card-title.h2 {
     font-size: 1rem;
   }
-
-  .steam-icon-container {
-    display: none;
-  }
 }
 
 @media (max-width: 480px) {
@@ -141,11 +120,6 @@ h1, h2, h3, h4, h5, h6 {
   .contenedores .card-title, .contenedores .card-title2, .contenedores .card-text {
     text-align: center;
     font-size: 1.5rem;
-  }
-
-  .contenedores .btn-primary {
-    width: 650px;
-    text-align: right;
   }
 
   .card-title.h2 {
@@ -169,4 +143,10 @@ h1, h2, h3, h4, h5, h6 {
   #footer p {
     font-size: 0.875rem;
   }
+}
+
+/* Textos largos por idioma (Privacidad / Términos): solo se ve el del idioma activo */
+html[lang="es"] [data-lang="en"],
+html[lang="en"] [data-lang="es"] {
+  display: none;
 }

@@ -10,11 +10,17 @@
     <meta property="og:locale" content="es_ES" />
     <link rel="shortcut icon" href="./img-marca/Vector.png" type="image/x-icon">
     <title>Ether Dreams</title>
-    <!-- Boostrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
+    <!-- Bootstrap 5.3.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha384-PPIZEGYM1v8zp5Py7UjFb79S58UeqCL9pYVnVPURKEqvioPROaVAJKKLzvH2rDnI" crossorigin="anonymous">
+    <!-- Idioma (ES/EN) -->
+    <script src="/js/url.js"></script>
+    <script src="/js/i18n.js"></script>
     <!-- CSS -->
 
     <link rel="stylesheet" href="css/responsive.css">
@@ -22,7 +28,6 @@
 
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -34,22 +39,27 @@
         <header >
             <nav class="navbar navbar-expand-lg" id="navegador">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="/img-marca/blanco-v3.png" width="180" alt="logo" class="logo-principal">
+                    <a class="navbar-brand" href="/">
+                        <img src="/img-marca/blanco-v3.png" width="180" alt="logo">
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <div class="lang-switch ms-auto order-lg-last" role="group" aria-label="Idioma / Language">
+                <button type="button" class="lang-btn" data-set-lang="es" lang="es">ES</button>
+                <span class="lang-sep" aria-hidden="true">|</span>
+                <button type="button" class="lang-btn" data-set-lang="en" lang="en">EN</button>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú" data-i18n-aria="nav.menu">
+                        <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
                     </button>
-                    <div class="collapse navbar-collapse justify-content-end textos" id="navbarNav">
-                        <ul class="navbar-nav menuItems">
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link animacion-nav" aria-current="page" href="/index.html" data-item='Home'><h5>HOME</h5></a>
+                                <a class="nav-link" aria-current="page" href="/"><h5 data-i18n="nav.home">INICIO</h5></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link animacion-nav" href="ourteams.html" data-item='ABOUT US'><h5>ABOUT US</h5></a>
+                                <a class="nav-link" href="/ourteams"><h5 data-i18n="nav.about">NOSOTROS</h5></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link animacion-nav" href="information.html" data-item='KIRAKIRA'><h5>KIRAKIRA</h5></a>
+                                <a class="nav-link" href="/information"><h5>KIRAKIRA</h5></a>
                             </li>
                         </ul>
                     </div>
@@ -63,6 +73,133 @@
         <main class="privacy-container" >
             
             <section >
+                <!-- Español -->
+                <div data-lang="es" lang="es">
+                <h1>TÉRMINOS DE SERVICIO</h1><br><br>
+                <p>Fecha de entrada en vigor: 7 de marzo de 2024</p>
+                <p>Los términos de este acuerdo (los "Términos de Servicio") regulan la relación entre usted y Ether Dreams SpA, sociedad chilena (RUT 77.913.025-8) con domicilio en e LA REINA, Región METROPOLITANA DE SANTIAGO, Chile (en adelante, "Ether Dreams" o "nosotros") en relación con su uso de los juegos, sitios web y servicios relacionados de Ether Dreams (el "Servicio"). El uso del Servicio también se rige por la Política de Privacidad de Ether Dreams y por otras políticas pertinentes, que se incorporan a estos términos por referencia.</p>
+                <p>Antes de acceder al Servicio o usarlo, incluido navegar por cualquier sitio web de Ether Dreams o acceder a un juego, usted debe aceptar estos Términos de Servicio y la Política de Privacidad. También es posible que deba registrar una cuenta en el Servicio (una "Cuenta"). Al registrar una Cuenta o usar el Servicio de cualquier otra forma, usted declara tener 13 años o más. Si tiene entre 13 y 17 años, declara que su tutor legal ha revisado y aceptado estos Términos. Si accede al Servicio desde una red social ("Red Social"), como Facebook o Google+, deberá cumplir sus términos de servicio o de uso además de estos Términos de Servicio.</p>
+                <p>AL INSTALAR, USAR O ACCEDER DE CUALQUIER OTRA FORMA AL SERVICIO, USTED ACEPTA ESTOS TÉRMINOS DE SERVICIO. SI NO ESTÁ DE ACUERDO CON ELLOS, NO INSTALE, USE NI ACCEDA AL SERVICIO. EL USO DEL SERVICIO NO ES VÁLIDO DONDE ESTÉ PROHIBIDO.</p>
+                <p>Ether Dreams se reserva el derecho, a su discreción, de cambiar, modificar, agregar o eliminar partes de estos Términos de Servicio, de su Política de Privacidad y de otras políticas pertinentes de Ether Dreams en cualquier momento, publicando los términos modificados en el Servicio de Ether Dreams. Se considerará que usted acepta dichos cambios si sigue usando el Servicio. Si en algún momento no está de acuerdo con alguna parte de la versión vigente de nuestros Términos de Servicio, de la Política de Privacidad de Ether Dreams o de cualquier otra política, regla o código de conducta de Ether Dreams relacionado con su uso del Servicio, su licencia para usar el Servicio terminará de inmediato y deberá dejar de usarlo inmediatamente.</p>
+                <h2>1. Licencia</h2>
+                <br><h3>1.1. Otorgamiento de una licencia limitada para usar el Servicio</h3><br>
+                <p>Sujeto a que usted acepte y cumpla en todo momento estos Términos de Servicio y cualquier otra política pertinente de Ether Dreams, Ether Dreams le otorga una licencia limitada, no exclusiva, intransferible, no sublicenciable y revocable para acceder al Servicio y usarlo con fines de entretenimiento personal y no comerciales. Usted se compromete a no usar el Servicio para ningún otro fin.</p>
+                <p>Al uso del Servicio se aplican las siguientes restricciones:</p>
+                <ul>
+                    <li>No podrá crear una Cuenta ni acceder al Servicio si es menor de 13 años. Deberá restringir el uso por parte de menores y negar el acceso a niños menores de 13 años. Usted asume toda la responsabilidad por cualquier uso no autorizado del Servicio por parte de menores, y es responsable de cualquier uso que hagan los menores de su tarjeta de crédito u otro medio de pago (por ejemplo, PayPal).</li>
+                    <li>No podrá comprar, vender, arrendar ni regalar su Cuenta (ni intentar hacerlo), ni crear una Cuenta con una identidad o información falsa o en nombre de otra persona. No podrá usar el Servicio si Ether Dreams lo ha expulsado anteriormente o si se le ha prohibido jugar cualquier juego de Ether Dreams.</li>
+                    <li>Deberá usar su Cuenta solo con fines no comerciales. No podrá usar el Servicio para hacer publicidad, ni para solicitar o transmitir anuncios comerciales, incluidas cadenas, correo basura o spam, o mensajes repetitivos o engañosos a cualquier persona.</li>
+                </ul>
+                <br><h3>Datos de acceso y su Cuenta</h3><br>
+                <p>Es posible que deba elegir una contraseña para su Cuenta o que pueda usar otras credenciales para acceder a ella (los "Datos de Acceso"). No podrá compartir la Cuenta ni los Datos de Acceso, ni permitir que otra persona acceda a su Cuenta o hacer cualquier otra cosa que pueda poner en riesgo su seguridad. Si detecta o sospecha razonablemente cualquier vulneración de la seguridad, incluida, entre otras, la pérdida, el robo o la divulgación no autorizada de los Datos de Acceso, deberá notificarlo de inmediato a Ether Dreams y cambiar sus Datos de Acceso. Usted es el único responsable de mantener la confidencialidad de los Datos de Acceso y responderá por todos los usos que se hagan de ellos, incluidas las compras, los haya autorizado o no. Usted es responsable de todo lo que ocurra a través de su Cuenta.</p>
+                <p>Ether Dreams se reserva el derecho de eliminar o recuperar cualquier nombre de usuario en cualquier momento y por cualquier motivo, incluidos, entre otros, los reclamos de terceros que aleguen que un nombre de usuario infringe sus derechos.</p>
+                <br><h2>Limitaciones de la licencia</h2><br>
+                <p>Cualquier uso del Servicio que infrinja estas Limitaciones de la Licencia está estrictamente prohibido, puede dar lugar a la revocación inmediata de su licencia limitada y puede hacerlo responsable por infracciones a la ley.</p>
+                <p>Usted se compromete a no hacer, bajo ninguna circunstancia, lo siguiente:</p>
+                <ul>
+                    <li>Realizar cualquier acto que Ether Dreams considere contrario al espíritu o a la intención del Servicio, o hacer un uso indebido de los servicios de soporte de Ether Dreams.</li>
+                    <li>Usar o participar (directa o indirectamente) en el uso de trampas, exploits, software de automatización, bots, hacks, mods o cualquier software de terceros no autorizado diseñado para modificar o interferir con el Servicio, con cualquier juego de Ether Dreams o con cualquier experiencia de juego de Ether Dreams.</li>
+                    <li>Modificar, o hacer que se modifique, cualquier archivo que forme parte del Servicio o de cualquier juego de Ether Dreams sin el consentimiento expreso y por escrito de Ether Dreams.</li>
+                    <li>Interrumpir, interferir o afectar negativamente de cualquier otra forma el funcionamiento normal del Servicio, o actuar de una manera que pueda perjudicar la experiencia de otros usuarios al usar el Servicio o jugar los juegos de Ether Dreams. Esto incluye el intercambio de victorias y cualquier otra manipulación de los rankings, aprovechar errores del Servicio para obtener una ventaja injusta sobre otros jugadores y cualquier otro acto que abuse intencionalmente del diseño del Servicio o vaya en su contra.</li>
+                    <li>Interrumpir o sobrecargar, o ayudar a interrumpir o sobrecargar, cualquier computador o servidor (un "Servidor") usado para ofrecer o dar soporte al Servicio o a cualquier entorno de juego de Ether Dreams.</li>
+                    <li>Iniciar, ayudar o participar en cualquier tipo de ataque, incluidos, entre otros, la distribución de virus, los ataques de denegación de servicio contra el Servicio u otros intentos de interrumpir el Servicio o el uso y disfrute del Servicio por parte de otra persona.</li>
+                    <li>Intentar obtener acceso no autorizado al Servicio, a Cuentas registradas por otras personas o a los computadores, Servidores o redes conectados al Servicio por cualquier medio distinto de la interfaz de usuario proporcionada por Ether Dreams, incluido, entre otros, eludir o modificar, intentar eludir o modificar, o animar o ayudar a otra persona a eludir o modificar cualquier medida de seguridad, tecnología, dispositivo o software que forme parte del Servicio.</li>
+                    <li>Publicar información abusiva, amenazante, obscena, difamatoria, calumniosa o censurable u ofensiva por motivos raciales, sexuales, religiosos o de otro tipo, o mantener una conducta tóxica continuada, por ejemplo, publicando información de forma repetida sin que se la pidan.</li>
+                    <li>Publicar información que contenga desnudos, violencia excesiva o temas ofensivos, o que incluya un enlace a ese tipo de contenido.</li>
+                    <li>Acosar, abusar o dañar, o intentar hacerlo, o promover o incitar el acoso, el abuso o el daño, a otra persona o grupo, incluidos los empleados de Ether Dreams y sus representantes de atención al cliente.</li>
+                    <li>Poner a disposición a través del Servicio cualquier material o información que infrinja derechos de autor, marcas, patentes, secretos comerciales, derechos de privacidad o de imagen, u otros derechos de cualquier persona o entidad, o suplantar a otra persona, incluido, entre otros, un empleado de Ether Dreams.</li>
+                    <li>Aplicar ingeniería inversa, descompilar, desensamblar, descifrar o intentar de cualquier otra forma obtener el código fuente de cualquier software subyacente u otra propiedad intelectual usada para prestar el Servicio o cualquier juego de Ether Dreams, u obtener información del Servicio o de cualquier juego de Ether Dreams mediante cualquier método no autorizado expresamente por Ether Dreams.</li>
+                    <li>Solicitar o intentar solicitar Datos de Acceso u otras credenciales o información personal a otros usuarios del Servicio o de cualquier juego de Ether Dreams.</li>
+                    <li>Recopilar o publicar información privada de cualquier persona a través del Servicio, incluida información que permita identificarla (en forma de texto, imagen o video), documentos de identidad o información financiera.</li>
+                </ul>
+                <p>Ether Dreams se reserva el derecho de determinar qué conductas considera contrarias a las reglas de uso o fuera de la intención o del espíritu de estos Términos de Servicio o del propio Servicio, y de tomar medidas en consecuencia, que pueden incluir cerrar su Cuenta y prohibirle usar el Servicio total o parcialmente.</p>
+                <br><h2>1.2. Suspensión y cierre de la Cuenta y del Servicio</h2><br>
+                <p>SIN PERJUICIO DE CUALQUIER OTRA ACCIÓN, Ether Dreams PODRÁ LIMITAR, SUSPENDER, CERRAR, MODIFICAR O ELIMINAR CUENTAS O EL ACCESO AL SERVICIO O A PARTES DE ÉL SI USTED INCUMPLE, O Ether Dreams SOSPECHA QUE INCUMPLE, CUALQUIERA DE ESTOS TÉRMINOS DE SERVICIO, O POR CUALQUIER USO ILEGAL O INDEBIDO, REAL O PRESUNTO, DEL SERVICIO, CON O SIN AVISO PREVIO. COMO CONSECUENCIA DEL CIERRE O LA LIMITACIÓN DE LA CUENTA, USTED PUEDE PERDER SU NOMBRE DE USUARIO Y SU PERFIL EN EL SERVICIO, ASÍ COMO CUALQUIER BENEFICIO, PRIVILEGIO, OBJETO GANADO U OBJETO COMPRADO ASOCIADO A SU USO DEL SERVICIO, Y Ether Dreams NO ESTÁ OBLIGADA A COMPENSARLE POR ESAS PÉRDIDAS O CONSECUENCIAS.</p>
+                <p>SIN PERJUICIO DE NUESTRAS OTRAS ACCIONES, PODEMOS LIMITAR, SUSPENDER O CERRAR EL SERVICIO Y LAS CUENTAS DE USUARIO O PARTES DE ELLOS, PROHIBIR EL ACCESO A NUESTROS JUEGOS Y SITIOS Y A SUS CONTENIDOS, SERVICIOS Y HERRAMIENTAS, RETRASAR O ELIMINAR CONTENIDO ALOJADO Y TOMAR MEDIDAS TÉCNICAS Y LEGALES PARA IMPEDIR QUE LOS USUARIOS ACCEDAN AL SERVICIO SI CREEMOS QUE ESTÁN GENERANDO RIESGOS O POSIBLES RESPONSABILIDADES LEGALES, INFRINGIENDO DERECHOS DE PROPIEDAD INTELECTUAL DE TERCEROS O ACTUANDO DE FORMA CONTRARIA A LA LETRA O AL ESPÍRITU DE NUESTROS TÉRMINOS O POLÍTICAS. ADEMÁS, EN LAS CIRCUNSTANCIAS ADECUADAS Y A NUESTRA ENTERA DISCRECIÓN, PODEMOS SUSPENDER O CERRAR LAS CUENTAS DE USUARIOS QUE INFRINJAN REITERADAMENTE DERECHOS DE PROPIEDAD INTELECTUAL DE TERCEROS.</p>
+                <p>Ether Dreams SE RESERVA EL DERECHO DE CERRAR CUALQUIER CUENTA QUE HAYA ESTADO INACTIVA DURANTE 180 DÍAS.</p>
+                <p>Ether Dreams se reserva el derecho de dejar de ofrecer o de dar soporte al Servicio, a un juego concreto o a una parte del Servicio en cualquier momento, en cuyo caso su licencia para usar el Servicio o esa parte terminará automáticamente. En ese caso, Ether Dreams no estará obligada a ofrecer reembolsos, beneficios u otras compensaciones a los usuarios por el Servicio descontinuado. El cierre de su Cuenta puede incluir la desactivación de su acceso al Servicio o a cualquier parte de él, incluido cualquier contenido que usted u otras personas hayan enviado.</p>
+                <p>Usted puede cerrar su Cuenta en cualquier momento y por cualquier motivo escribiéndonos a etherdreams.contact@gmail.com para informar a Ether Dreams que desea cerrarla.</p>
+                <br><h2>2. Propiedad</h2><br>
+                <br><h3>2.1. Juegos y Servicio</h3><br>
+                <p>Todos los derechos, títulos e intereses sobre el Servicio (incluidos, entre otros, los juegos, títulos, código informático, temáticas, objetos, personajes, nombres de personajes, historias, diálogos, frases características, conceptos, arte, animaciones, sonidos, composiciones musicales, efectos audiovisuales, métodos de funcionamiento, derechos morales, documentación, transcripciones de chats dentro del juego, información de perfiles de personajes, grabaciones de partidas jugadas con un cliente de juego de Ether Dreams, y los clientes de juego y el software de servidor de Ether Dreams) pertenecen a Ether Dreams. Ether Dreams se reserva todos los derechos, incluidos, entre otros, todos los derechos de propiedad intelectual u otros derechos de propiedad, en relación con sus juegos y el Servicio.</p>
+                <br><h3>2.2. Cuentas</h3><br>
+                <p>SIN PERJUICIO DE CUALQUIER DISPOSICIÓN EN CONTRARIO DE ESTOS TÉRMINOS, USTED RECONOCE Y ACEPTA QUE NO TENDRÁ NINGÚN DERECHO DE PROPIEDAD NI OTRO INTERÉS PATRIMONIAL SOBRE LA CUENTA, Y RECONOCE Y ACEPTA ADEMÁS QUE TODOS LOS DERECHOS SOBRE LA CUENTA PERTENECEN Y PERTENECERÁN SIEMPRE A Ether Dreams, EN SU BENEFICIO.</p>
+                <br><h3>2.3. Objetos virtuales</h3><br>
+                <p>Ether Dreams es propietaria, tiene licencia o tiene de alguna otra forma derecho a usar todo el contenido que aparece en el Servicio o en los juegos de Ether Dreams. Sin perjuicio de cualquier disposición en contrario de estos términos, usted acepta que no tiene ningún derecho ni título sobre el contenido que aparece en el Servicio, incluidos, entre otros, los bienes virtuales o la moneda virtual que aparezcan o se originen en cualquier juego de Ether Dreams, ya sea que los haya ganado en un juego o comprado a Ether Dreams, ni sobre ningún otro atributo asociado a una Cuenta o almacenado en el Servicio.</p>
+                <br><h2>3. Contenido del usuario</h2><br>
+                <br><h3>3.1. Envío de contenido del usuario</h3><br>
+                <p>"Contenido del Usuario" significa cualquier comunicación, imagen, sonido y todo el material, los datos y la información que usted sube o transmite a través de un cliente de juego de Ether Dreams o del Servicio, o que suben o transmiten otros usuarios, incluido, entre otros, el texto de los chats. Al transmitir o enviar Contenido del Usuario mientras usa el Servicio, usted afirma, declara y garantiza que dicha transmisión o envío (a) es exacto y no es confidencial ni engañoso; (b) no infringe ninguna ley, restricción contractual ni derechos de terceros, y que cuenta con el permiso de cualquier tercero cuya información personal o propiedad intelectual forme parte del Contenido del Usuario; (c) está libre de virus, adware, spyware, gusanos u otro código malicioso; y (d) reconoce y acepta que cualquier información personal suya incluida en ese contenido será tratada en todo momento por Ether Dreams conforme a su Política de Privacidad.</p>
+                <br><h3>3.1.1. Revisión del contenido</h3><br>
+                <p>Ether Dreams no asume ninguna responsabilidad por la conducta de los usuarios que envían Contenido del Usuario, ni por supervisar el Servicio en busca de contenido o conductas inapropiadas. No revisamos previamente ni supervisamos todo el Contenido del Usuario. Usted usa el Servicio bajo su propio riesgo. Al usar el Servicio, puede verse expuesto a Contenido del Usuario ofensivo, indecente o que no corresponda a sus expectativas. Usted asume todos los riesgos asociados al uso de cualquier Contenido del Usuario disponible en relación con el Servicio. A nuestra discreción, nuestros representantes o nuestra tecnología pueden supervisar o grabar sus interacciones con el Servicio o sus comunicaciones (incluido el texto de los chats) mientras usa el Servicio.</p>
+                <p>Al aceptar estos Términos de Servicio, usted otorga su consentimiento irrevocable a dicha supervisión y grabación. Usted reconoce y acepta que no tiene ninguna expectativa de privacidad respecto de la transmisión de cualquier Contenido del Usuario, incluidos el texto de los chats y las comunicaciones de voz.</p>
+                <p>Ether Dreams se reserva el derecho, a su entera discreción, de revisar, supervisar, prohibir, editar, eliminar, deshabilitar el acceso o dejar de cualquier otra forma no disponible cualquier Contenido del Usuario (incluido el suyo) sin aviso, por cualquier motivo o sin motivo, en cualquier momento. Si en algún momento Ether Dreams decide, a su entera discreción, supervisar el Servicio, no por ello asume responsabilidad alguna por el Contenido del Usuario ni se obliga a modificar o eliminar el Contenido del Usuario inapropiado. Tenemos el derecho, pero no la obligación, de editar, rechazar la publicación o eliminar cualquier Contenido del Usuario a nuestra entera discreción.</p>
+
+                <br><h3>3.2. Uso de la información por otros miembros del Servicio</h3>
+                <br><h3>3.2.1. Espacios públicos</h3>
+                <p>El Servicio puede incluir foros, blogs y chats donde usted puede publicar Contenido del Usuario, incluidas sus observaciones y comentarios sobre temas determinados. Ether Dreams no puede garantizar que otros miembros no usen las ideas y la información que usted comparte. Por lo tanto, si tiene una idea o información que quiere mantener en reserva o que no quiere que otros usen, no la publique en el Servicio. Ether Dreams no tiene ninguna obligación de evaluar, usar ni compensarle por las ideas o la información que decida enviar.</p>
+                <br><h3>3.2.2. Responsabilidad por su propio contenido</h3>
+                <p>Usted es el único responsable de la información que publica en el Servicio, a través de él o en relación con él, y de la que entrega a otras personas. Ether Dreams puede rechazar, negarse a publicar o eliminar cualquier Contenido del Usuario por cualquier motivo o sin motivo, incluido, entre otros, el Contenido del Usuario que, a juicio exclusivo de Ether Dreams, infrinja estos Términos de Servicio.</p>
+
+                <br><h3>3.2.3. Licencia que usted otorga a Ether Dreams</h3>
+                <p>Por el presente, usted otorga a Ether Dreams una licencia irrevocable, perpetua, transferible, totalmente pagada, libre de regalías y mundial (incluido el derecho a sublicenciarla y cederla a terceros), y el derecho a copiar, reproducir, fijar, adaptar, modificar, crear obras derivadas, fabricar, comercializar, publicar, distribuir, vender, licenciar, sublicenciar, transferir, arrendar, transmitir, exhibir y ejecutar públicamente, dar acceso electrónico, difundir, comunicar al público por telecomunicación, mostrar, interpretar, almacenar en la memoria de un computador, y usar y explotar de cualquier forma su Contenido del Usuario, así como todas sus versiones modificadas y obras derivadas, en relación con la prestación del Servicio, incluidos su marketing y promoción. Asimismo, usted otorga a Ether Dreams el derecho a autorizar a terceros a ejercer cualquiera de los derechos otorgados a Ether Dreams en estos Términos de Servicio. Además, otorga a Ether Dreams el derecho incondicional e irrevocable de usar y explotar su nombre, su imagen y cualquier otra información o material incluido en cualquier Contenido del Usuario o relacionado con él, sin ninguna obligación hacia usted. Salvo en lo que la ley lo prohíba, usted renuncia a cualquier derecho de atribución o derecho moral que pueda tener sobre su Contenido del Usuario, independientemente de que este se altere o modifique de cualquier forma. Ether Dreams no reclama ningún derecho de propiedad sobre su Contenido del Usuario y nada de lo dispuesto en estos Términos de Servicio pretende limitar los derechos que usted pueda tener para usar y explotar su Contenido del Usuario. Ether Dreams no tiene ninguna obligación de supervisar ni de hacer valer sus derechos de propiedad intelectual sobre su Contenido del Usuario.</p>
+
+                <h3>3.3. Interacciones entre usuarios</h3>
+                <p>Usted es el único responsable de sus interacciones con otros usuarios del Servicio y con cualquier otra persona con la que interactúe a través del Servicio o de los juegos de Ether Dreams. Ether Dreams se reserva el derecho, pero no tiene la obligación, de intervenir de cualquier forma en estas disputas. Usted colaborará plenamente con Ether Dreams en la investigación de cualquier actividad presuntamente ilícita, fraudulenta o inapropiada, lo que incluye, entre otras cosas, dar a Ether Dreams acceso a cualquier parte de su Cuenta protegida por contraseña.</p>
+                <p>Si tiene una disputa con uno o más usuarios, usted nos libera (a nosotros y a nuestros directivos, directores, agentes, filiales, empresas conjuntas y empleados) de reclamos, demandas y daños (directos e indirectos) de cualquier tipo y naturaleza, conocidos o desconocidos, que surjan de dichas disputas o estén relacionados de cualquier forma con ellas.</p>
+
+                <br><h3>4. Precios y condiciones de compra</h3><br>
+                <br><h4>4.1. Compras</h4><br>
+                <p>En el Servicio puede comprar, con dinero "real", una licencia limitada, personal, intransferible, no sublicenciable y revocable para usar (a) "moneda virtual", incluidos, entre otros, dinero u oro virtual, todo para usar en los juegos de Ether Dreams; (b) "objetos virtuales dentro del juego" (junto con la "moneda virtual", los "Objetos Virtuales"); y (c) otros bienes o servicios (la "Mercancía"). Solo puede comprar Objetos Virtuales a nosotros o a nuestros socios autorizados a través del Servicio, y no de ninguna otra forma.</p>
+                <p>Ether Dreams puede gestionar, regular, controlar, modificar o eliminar los Objetos Virtuales o la Mercancía en cualquier momento, con o sin aviso. Ether Dreams no será responsable ante usted ni ante terceros si ejerce estos derechos.</p>
+                <p>Se prohíbe la transferencia de Objetos Virtuales y de Mercancía, salvo cuando el Servicio lo autorice expresamente. Salvo autorización expresa en el Servicio, usted no podrá vender, comprar, canjear ni transferir de cualquier otra forma Objetos Virtuales o Mercancía a ninguna persona o entidad, ni intentar hacerlo, incluidos, entre otros, Ether Dreams, otro usuario o cualquier tercero.</p>
+                <p>TODAS LAS COMPRAS Y CANJES DE OBJETOS VIRTUALES REALIZADOS A TRAVÉS DEL SERVICIO SON DEFINITIVOS Y NO REEMBOLSABLES.</p>
+                <p>La entrega de Objetos Virtuales para usar en los juegos de Ether Dreams es un servicio prestado por Ether Dreams que comienza inmediatamente después de que Ether Dreams acepta su compra.</p>
+
+                <br><h4>4.2. Pago de precios</h4><br>
+                <p>Usted se compromete a pagar todos los precios e impuestos aplicables en que incurra usted o cualquier persona que use una Cuenta registrada a su nombre. Ether Dreams puede modificar en cualquier momento los precios de los bienes y servicios ofrecidos a través del Servicio. USTED RECONOCE QUE Ether Dreams NO ESTÁ OBLIGADA A OTORGAR REEMBOLSOS POR NINGÚN MOTIVO Y QUE NO RECIBIRÁ DINERO NI OTRA COMPENSACIÓN POR LOS OBJETOS VIRTUALES NO UTILIZADOS CUANDO SE CIERRE UNA CUENTA, YA SEA DE FORMA VOLUNTARIA O INVOLUNTARIA.</p>
+
+                <br><h3>5. Actualizaciones del Servicio</h3><br>
+                <p>Usted entiende que el Servicio está en constante evolución. Ether Dreams puede exigirle que acepte actualizaciones del Servicio y de los juegos de Ether Dreams que tenga instalados en su dispositivo o computador. Usted reconoce y acepta que Ether Dreams puede actualizar el Servicio y los juegos de Ether Dreams, con o sin aviso. Es posible que de vez en cuando deba actualizar software de terceros para usar el Servicio y jugar los juegos de Ether Dreams.</p>
+                <br><h3>6. Exclusión de garantías</h3><br>
+                <p>SIN PERJUICIO DE LA RESPONSABILIDAD DE Ether Dreams DESCRITA MÁS ABAJO, EL SERVICIO SE PROPORCIONA "TAL CUAL" Y "SEGÚN DISPONIBILIDAD" PARA SU USO, SIN GARANTÍAS DE NINGÚN TIPO, EXPRESAS O IMPLÍCITAS, INCLUIDAS, ENTRE OTRAS, LAS GARANTÍAS DE COMERCIABILIDAD, IDONEIDAD PARA UN FIN DETERMINADO, TITULARIDAD Y NO INFRACCIÓN, Y LAS QUE SURJAN DEL CURSO DE LAS NEGOCIACIONES O DE LOS USOS COMERCIALES. Ether Dreams NO GARANTIZA QUE USTED PUEDA ACCEDER AL SERVICIO O USARLO EN LOS MOMENTOS O LUGARES QUE ELIJA; QUE EL SERVICIO FUNCIONE SIN INTERRUPCIONES NI ERRORES; QUE LOS DEFECTOS SE CORRIJAN; NI QUE EL JUEGO O EL SERVICIO ESTÉN LIBRES DE VIRUS U OTROS COMPONENTES DAÑINOS.</p>
+                <p>Algunas jurisdicciones no permiten excluir ciertas garantías. Por lo tanto, es posible que algunas de las exclusiones anteriores no se apliquen a usted.</p>
+
+                <br><h3>7. Limitación de responsabilidad; recurso único y exclusivo; indemnización</h3><br>
+                <p>EN LA MÁXIMA MEDIDA PERMITIDA POR LA LEY, Ether Dreams NO SERÁ RESPONSABLE ANTE USTED POR DAÑOS INDIRECTOS, INCIDENTALES, CONSECUENTES, ESPECIALES, PUNITIVOS U OTROS DAÑOS SIMILARES, INCLUIDOS, ENTRE OTROS, LA PÉRDIDA DE INGRESOS, EL LUCRO CESANTE, LA PÉRDIDA DE DATOS, LA INTERRUPCIÓN DEL NEGOCIO U OTRAS PÉRDIDAS INTANGIBLES (CUALQUIERA QUE SEA SU CALIFICACIÓN), QUE SURJAN DE ESTOS TÉRMINOS DE SERVICIO O DEL PROPIO SERVICIO O ESTÉN RELACIONADOS DE CUALQUIER FORMA CON ELLOS, YA SEA POR CONTRATO, RESPONSABILIDAD EXTRACONTRACTUAL O CUALQUIER OTRA TEORÍA JURÍDICA, Y AUNQUE SE HAYA ADVERTIDO A Ether Dreams DE LA POSIBILIDAD DE TALES DAÑOS. EN LA MEDIDA EN QUE LA LEY NO LO PROHÍBA, LA RESPONSABILIDAD DE Ether Dreams ANTE USTED NO SUPERARÁ EL MONTO QUE USTED HAYA PAGADO A Ether Dreams CONFORME A ESTOS TÉRMINOS DE SERVICIO EN LOS SEIS (6) MESES INMEDIATAMENTE ANTERIORES A LA FECHA EN QUE PRESENTE SU PRIMER RECLAMO. USTED RECONOCE Y ACEPTA QUE, SI NO HA PAGADO NADA A Ether Dreams DURANTE ESE PERÍODO, SU ÚNICO RECURSO (Y LA ÚNICA RESPONSABILIDAD DE Ether Dreams) ANTE CUALQUIER DISPUTA CON Ether Dreams ES DEJAR DE USAR EL SERVICIO Y CERRAR SU CUENTA.</p>
+                <p>NADA DE LO DISPUESTO EN ESTOS TÉRMINOS DE SERVICIO AFECTARÁ LOS DERECHOS LEGALES DE LOS CONSUMIDORES NI EXCLUIRÁ O LIMITARÁ LA RESPONSABILIDAD DE Ether Dreams POR NEGLIGENCIA GRAVE O CONDUCTA DOLOSA, NI POR MUERTE O LESIONES PERSONALES DERIVADAS DE CUALQUIER NEGLIGENCIA O FRAUDE DE Ether Dreams.</p>
+                <p>Usted se compromete a indemnizar, defender y mantener indemne a Ether Dreams (y a nuestros directivos, directores, agentes, filiales, empresas conjuntas y empleados) frente a cualquier reclamo, demanda, daño u otra pérdida, incluidos los honorarios razonables de abogados, que presente un tercero y que surja de su uso del Servicio o de cualquier incumplimiento de estos Términos de Servicio por su parte, o esté relacionado con ellos, siempre que lo anterior no se aplique si la infracción de derechos no es atribuible a una conducta suya intencional o negligente.</p>
+
+                <br><h3>8. Resolución de disputas y ley aplicable</h3><br>
+                <p>Si surge una disputa entre usted y Ether Dreams, le recomendamos encarecidamente que primero se comunique directamente con nosotros para buscar una solución, escribiendo a nuestro correo de soporte info@Ether Dreams.com. Si usted reside en los Estados Unidos, estos Términos de Servicio y cualquier disputa que surja de ellos o esté relacionada con ellos, con la Política de Privacidad o con el Servicio se regirán en todos sus aspectos por la ley chilena, sin considerar sus normas sobre conflicto de leyes. Usted acepta que cualquier reclamo o disputa que pueda tener contra Ether Dreams deberá resolverse exclusivamente ante un tribunal ubicado en Santiago, Chile. Si usted reside fuera de los Estados Unidos, acepta que todas las disputas entre usted y Ether Dreams se regirán por las leyes de Chile, sin considerar sus normas sobre conflicto de leyes. Usted acepta que cualquier reclamo o disputa que pueda tener contra Ether Dreams deberá resolverse exclusivamente ante un tribunal ubicado en Santiago, Chile.</p>
+
+                <br><h3>9. Divisibilidad</h3><br>
+                <p>Usted y Ether Dreams acuerdan que, si un tribunal competente declara ilegal o inaplicable, total o parcialmente, cualquier parte de estos Términos de Servicio o de la Política de Privacidad de Ether Dreams, esa disposición, en esa jurisdicción, quedará sin efecto solo en la medida de dicha declaración de invalidez o inaplicabilidad, sin afectar su validez o aplicabilidad en cualquier otra forma o jurisdicción y sin afectar las demás disposiciones de los términos, que seguirán plenamente vigentes.</p>
+                <h3>10. Disposiciones generales</h3>
+
+                <br><h4>10.1. Cesión</h4><br>
+                <p>Ether Dreams puede ceder o delegar estos Términos de Servicio o la Política de Privacidad de Ether Dreams, total o parcialmente, a cualquier persona o entidad en cualquier momento, con o sin su consentimiento. Usted no puede ceder ni delegar ningún derecho u obligación derivado de los Términos de Servicio o de la Política de Privacidad sin el consentimiento previo y por escrito de Ether Dreams, y cualquier cesión o delegación no autorizada que realice no tendrá efecto.</p>
+
+                <br><h4>10.2. Políticas complementarias</h4><br>
+                <p>Ether Dreams puede publicar políticas adicionales relacionadas con servicios específicos, como foros, concursos o programas de fidelización. Su derecho a usar esos servicios está sujeto a dichas políticas específicas y a estos Términos de Servicio.</p>
+
+                <br><h4>10.3. Acuerdo completo</h4><br>
+                <p>Estos Términos de Servicio, las políticas complementarias y los documentos incorporados expresamente por referencia (incluida la Política de Privacidad de Ether Dreams) contienen el acuerdo completo entre usted y Ether Dreams, y reemplazan todos los acuerdos anteriores entre las partes sobre esta materia, ya sean electrónicos, verbales o escritos, o establecidos por costumbre, práctica, política o precedente, entre usted y nosotros en relación con el Servicio.</p>
+
+                <br><h4>10.4. No renuncia</h4><br>
+                <p>El hecho de que Ether Dreams no exija o no haga cumplir estrictamente cualquier disposición de estos Términos de Servicio o de la Política de Privacidad de Ether Dreams, o de que no ejerza algún derecho previsto en ellos, no se interpretará como una renuncia o abandono del derecho de Ether Dreams a hacer valer o invocar esa disposición o derecho en ese u otro caso.</p>
+
+                <br><h4>10.5. Notificaciones</h4><br>
+                <p>Podemos notificarle mediante publicaciones en www.Ether Dreams.com, por correo electrónico o por cualquier otro medio de comunicación, usando los datos de contacto que usted nos haya entregado. Todas las notificaciones que usted envíe o que se le exijan conforme a estos Términos de Servicio o a la Política de Privacidad de Ether Dreams deberán hacerse por escrito y dirigirse a: Ether Dreams SpA, Nueva Providencia 1363 of 1404, Santiago, Chile, 7500589. Cualquier notificación que no cumpla con esta sección de Notificaciones no tendrá efecto legal.</p>
+
+                <br><h4>10.6. Medidas de equidad</h4><br>
+                <p>Usted reconoce que los derechos otorgados y las obligaciones asumidas en virtud de estos Términos de Servicio a favor de Ether Dreams son de naturaleza única e irremplazable, que su pérdida perjudicaría irreparablemente a Ether Dreams y que no puede compensarse solo con una indemnización monetaria, por lo que Ether Dreams tendrá derecho a medidas cautelares u otras medidas de equidad (sin la obligación de otorgar fianza o garantía ni de probar daños) en caso de cualquier incumplimiento o incumplimiento anticipado por su parte.</p>
+
+                <br><h4>10.7. Fuerza mayor</h4><br>
+                <p>Ether Dreams no será responsable de ningún retraso o incumplimiento que se deba a causas fuera de su control razonable, incluido, entre otros, cualquier incumplimiento debido a circunstancias imprevistas o a causas ajenas al control de Ether Dreams, como casos fortuitos, guerras, terrorismo, disturbios, embargos, actos de autoridades civiles o militares, incendios, inundaciones, accidentes, huelgas o escasez de medios de transporte, combustible, energía, mano de obra o materiales.</p>
+                </div>
+
+                <!-- English -->
+                <div data-lang="en" lang="en">
                 <h1>TERMS OF SERVICE</h1><br><br>
                 <p>Effective Date: March 7th, 2024</p>
                 <p>The terms of this agreement ("Terms of Service") govern the relationship between you and Ether Dreams SpA,  Chilean company (business ID 77.913.025-8) with its registered office at e LA REINA, Región METROPOLITANA DE
@@ -185,21 +322,16 @@
 
                 <br><h4>10.7. Force Majeure</h4><br>
                 <p>Ether Dreams shall not be liable for any delay or failure to perform resulting from causes outside the reasonable control of Ether Dreams, including without limitation any failure to perform hereunder due to unforeseen circumstances or cause beyond Ether Dreams's control such as acts of God, war, terrorism, riots, embargoes, acts of civil or military authorities, fire, floods, accidents, strikes, or shortages of transportation facilities, fuel, energy, labor or materials.</p>
-                <br><h4>10.7. Force Majeure</h4><br>
-                <p>Ether Dreams shall not be liable for any delay or failure to perform resulting from causes outside the reasonable control of Ether Dreams, including without limitation any failure to perform hereunder due to unforeseen circumstances or cause beyond Ether Dreams's control such as acts of God, war, terrorism, riots, embargoes, acts of civil or military authorities, fire, floods, accidents, strikes, or shortages of transportation facilities, fuel, energy, labor or materials.</p>
+                </div>
 
             </section>
         </main>
         <!-- Footer -->
         <div id="footer-placeholder"></div>
         <!-- Bootstrap JS Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-        <!-- AOS JS -->
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <!-- Custom JavaScript File -->
         <script src="/js/javascriptfile.js"></script>
-        <!-- font Awesome-->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     </body>
 </html>

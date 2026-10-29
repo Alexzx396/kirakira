@@ -42,7 +42,7 @@
 .text-content h1 {
   color: white;
   font-size: 56px;
-  font-family: 'dietherRound', sans-serif;
+  font-family: 'dietherRound', 'Manrope', sans-serif;
   margin-bottom: 15px;
   line-height: 1.2;
 }
@@ -51,7 +51,7 @@
   color: rgba(255, 255, 255, 0.7);
   font-size: 17px;
   font-family: 'Manrope', sans-serif;
-  font-weight: 200;
+  font-weight: 400;
   line-height: 1.4;
   letter-spacing: 0;
   margin: 0;
@@ -87,13 +87,76 @@
   z-index: 3;
 }
 
-/* Estilo para bunny en móviles */
-.bunny-mobile {
-  display: none;
-  width: 120px;
-  height: auto;
-  margin: 20px auto 0;
+/* Tarjetas de gameplay */
+.gameplay-cards {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 60px;
+  z-index: 2;
+  position: relative;
+  padding: 0 20px;
 }
+
+.gameplay-cards img {
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50px;
+  transition: transform 0.3s ease;
+}
+
+.gameplay-cards img:hover {
+  transform: scale(1.03);
+}
+
+/* Carrusel de arte */
+.art-carousel {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  height: 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(0,0,0,0.3);
+  color: white;
+  border: none;
+  font-size: 2.5rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carousel-btn.left { left: 20px; }
+.carousel-btn.right { right: 20px; }
 
 /* -------------------- RESPONSIVE -------------------- */
 
@@ -122,8 +185,10 @@
   }
 
   .text-content {
+    flex: 0 1 auto;
     max-width: 90%;
     padding: 0;
+    text-align: center;
   }
 
   .image-wrapper {
@@ -134,8 +199,8 @@
     display: none;
   }
 
-  .bunny-mobile {
-    display: block;
+  .gameplay-cards {
+    gap: 30px;
   }
 }
 
@@ -149,8 +214,40 @@
     font-size: 15px;
   }
 
-  .bunny-mobile {
-    width: 100px;
+  .about-unified-section {
+    padding: 40px 0;
+  }
+
+  .about-unified-section-content {
+    padding: 40px 16px 24px;
+    gap: 28px;
+  }
+
+  /* los <br> separadores solo hacen falta en escritorio */
+  .about-unified-section > br {
+    display: none;
+  }
+
+  .gameplay-cards {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+    gap: 24px;
+  }
+
+  .gameplay-cards + .gameplay-cards {
+    margin-top: 48px;
+  }
+
+  /* carrusel con proporción de la imagen en vez de alto de pantalla completa */
+  .art-carousel {
+    height: auto;
+    aspect-ratio: 16 / 10;
+  }
+
+  .carousel-btn {
+    font-size: 2rem;
+    padding: 8px 12px;
   }
 }
 
@@ -164,10 +261,6 @@
     font-size: 14px;
   }
 
-  .bunny-mobile {
-    width: 80px;
-  }
-
   .image-wrapper {
     padding: 8px;
     border-radius: 16px;
@@ -175,6 +268,15 @@
 
   .main-game-image {
     border-radius: 16px;
+  }
+
+  .gameplay-cards img {
+    border-radius: 30px;
+  }
+
+  .carousel-btn {
+    font-size: 1.8rem;
+    padding: 6px 10px;
   }
 }
 
@@ -188,7 +290,7 @@
     font-size: 13px;
   }
 
-  .bunny-mobile {
-    width: 70px;
+  .carousel-btn {
+    font-size: 1.5rem;
   }
 }

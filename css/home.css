@@ -15,6 +15,14 @@
     margin: auto;
   }
 
+  .logo-container {
+    position: absolute;
+    transform: translate(-10%, -50%);
+    z-index: 10;
+    width: auto;
+    display: block;
+  }
+
   #navegador a {
     color: white;
     font-size: 20px;
@@ -25,83 +33,222 @@
   }
 
   #navegador a:hover {
-    color: #87CEFA;
-  }
-
-
-  .logo-container {
-    position: absolute;
-    transform: translate(-10%, -50%); 
-    z-index: 10; 
-    width: auto; 
-    display: block; 
-  }
-
-  #navegador a {
-    color: white; 
-    font-size: 20px; 
-    font-weight: 900; 
-    margin: 10px; 
-    text-decoration: none; 
-    transition: color 0.3s ease-in-out; 
-  }
-
-  #navegador a:hover {
-    color: #C779D0 
+    color: #C779D0
   }
 
   .navbar-brand img {
     width: 100%;
-    max-width: 180px; 
+    max-width: 180px;
   }
 
   #navegador .nav-link {
-    font-size: 16px; 
-    margin: 5px; 
-    padding: 5px; 
+    font-size: 16px;
+    margin: 5px;
+    padding: 5px;
   }
 
+/* Selector de idioma ES | EN: "píldora" separada del menú, con el idioma activo en degradado */
+.lang-switch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 36px;
+  padding: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  background-color: rgba(0, 0, 0, 0.35);
+}
 
+/* línea vertical que separa el selector de los links del menú */
+.lang-switch::before {
+  content: "";
+  position: absolute;
+  left: -19px;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.lang-btn {
+  background: none;
+  border: 0;
+  border-radius: 999px;
+  padding: 4px 12px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.lang-btn:hover {
+  color: white;
+}
+
+.lang-btn.active {
+  background-image: linear-gradient(to right, #4bc0c8, #c779d0, #feac5e);
+  color: black;
+}
+
+.lang-sep {
+  display: none;
+}
+
+/* escritorio: ms-auto (Bootstrap, !important) dejaba el margen en 0 */
+@media (min-width: 992px) {
+  .lang-switch.ms-auto {
+    margin-left: 36px !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .lang-switch {
+    margin-left: 0;
+    margin-right: 12px;
+  }
+
+  /* en móvil va junto al botón de menú: sin línea separadora */
+  .lang-switch::before {
+    display: none;
+  }
+
+  .lang-btn {
+    font-size: 12px;
+    padding: 3px 10px;
+  }
+}
+
+/* Portada (index / information): logo, icono de Steam y botones sobre la imagen */
+.hero-logo,
+.hero-steam {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-logo {
+  top: 45%;
+}
+
+.hero-logo .logo-kirakira {
+  width: 100%;
+}
+
+.hero-steam {
+  top: 77%;
+}
+
+.hero-steam--low {
+  top: 80%;
+}
+
+.hero-tagline,
+.hero-actions {
+  position: absolute;
+  width: 100%;
+}
+
+.hero-tagline {
+  bottom: 24%;
+}
+
+.hero-actions {
+  bottom: 5%;
+}
 
 /* Media Queries para mejorar la responsividad */
 @media (max-width: 1024px) {
 
   .logo-container {
-    max-width: 150px; 
+    max-width: 150px;
   }
 }
 
 @media (max-width: 768px) {
   .logo-container {
-    max-width: 80px; 
+    max-width: 80px;
   }
   #navegador{
     background-color: black !important;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
-    
+
   }
 
   .img-fondo {
-    margin-top: 8%; 
+    margin-top: 8%;
   }
 
-
   .navbar-nav .nav-link h5 {
-    font-size: 14px; 
+    font-size: 14px;
   }
 
   #navegador a {
-    font-size: 16px; 
+    font-size: 16px;
   }
 
-  .logo-kirakira{
-    max-width: 170px; 
-    margin-bottom: 60px;
+  #navegador .nav-link {
+    padding: 8px 5px;
   }
 
-  .logo-kirakira-information{
-    max-width: 170px; 
-    margin-bottom: 10px;
+  /* Portada a pantalla completa con el fondo vertical */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 90px 20px 40px;
+    background: url('/img/fondo-movil.png') center bottom / cover no-repeat;
+  }
+
+  .hero .img-fondo {
+    display: none;
+  }
+
+  .hero-logo,
+  .hero-steam,
+  .hero-tagline,
+  .hero-actions {
+    position: static;
+    transform: none;
+    width: 100%;
+  }
+
+  .hero-logo .logo-kirakira {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .hero-steam,
+  .hero-tagline {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  }
+
+  .hero-tagline h6 {
+    margin: 0;
+    letter-spacing: 1px;
+  }
+
+  .hero-actions .d-inline-block {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-actions .btn-primary {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 !important;
+    padding: 12px 20px;
+    font-size: 15px;
   }
 }
 
@@ -112,66 +259,36 @@
   }
 
   #navegador .navbar-toggler {
-    margin-right: 10px; 
+    margin-right: 10px;
   }
-
 
   .logo-container {
-    width: 10%; 
+    width: 10%;
+  }
+}
+
+/* Celulares: logo + selector de idioma + botón de menú en una sola fila */
+@media (max-width: 575.98px) {
+  #navegador .container-fluid {
+    width: 100%;
+    padding: 0 12px;
   }
 
-  .navbar-nav .nav-link h5 {
-    font-size: 12px;
+  #navegador .navbar-brand {
+    margin: 0;
   }
 
-  #navegador .nav-link {
-    padding: 2px; 
-  }
-  #navegador {
-    height: -100%;
-  }
-  .logo-kirakira-information{
-    max-width: 90px; 
-    margin-bottom: -5px;
-  }
-  .logo-kirakira{
-    max-width: 100px; 
-    margin-bottom: 50px;
+  .navbar-brand img {
+    max-width: 140px;
   }
 }
 
 @media (max-width: 360px) {
-  #navegador {
-    background-color: black !important;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
-  }
-
-  
   #navegador .navbar-toggler {
-    margin-right: 5px; 
+    margin-right: 5px;
   }
 
-  .logo-container {
-    width: 10%; 
+  .hero-steam .fa-3x {
+    font-size: 2.25em;
   }
-
-  .navbar-nav .nav-link h5 {
-    font-size: 12px; 
-  }
-
-  #navegador .nav-link {
-    padding: 2px; 
-  }
-  #navegador {
-    height: -100%;
-  }
-  .logo-kirakira-information{
-    max-width: 60px; 
-    margin-bottom: -20px;
-  }
-  .logo-kirakira{
-    max-width: 65px; 
-    margin-bottom: 35px;
-  }
-  
 }

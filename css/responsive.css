@@ -7,20 +7,6 @@
         overflow-x: hidden; /* Evita desplazamiento horizontal */
         overflow-y: auto; /* Permite desplazamiento vertical si necesario */
     }
-    
-    .steam-icon-container, .logo-container {
-        display: none; 
-    }
-
-    .button-container {
-        padding: 10px; 
-        width: 100%; 
-        bottom: 10%; 
-        position: absolute;
-        left: 50%; 
-        transform: translateX(-50%); 
-        font-size: 14px; 
-    }
 }
 
 /* Estilos para dispositivos con pantalla menor a 768px */
@@ -28,10 +14,6 @@
     .contenedores .card {
         margin: 20px; 
         padding: 10px; 
-        max-height: 75vh; 
-    }
-    .steam-icon-container, .logo-container {
-        display: none; 
     }
 }
 
@@ -39,17 +21,5 @@
 @media (max-width: 480px) {
     .contenedores .card {
         margin: 10px; 
-    }
-    .steam-icon-container, .logo-container {
-        display: none; 
-    }
-}
-
-@-moz-document url-prefix() {
-    .vector {
-        width: auto; 
-    }
-    #acerca .contenedor-interior {
-        padding: auto; 
     }
 }
